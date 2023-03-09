@@ -1,0 +1,36 @@
+@@if(!context.link && !context.choose){
+  <div class="userhead-card@@if(context.class){ userhead-card__@@class}">
+    <img src="images/uploads/avatar.jpg" alt="" class="userhead-card__ava">
+    <span class="userhead-card__text">
+      <span>@@name</span>
+      <span>ID: 234567</span>
+      <span>ИНН: 3123123123</span>
+    </span>
+  </div><!-- /userhead-card -->
+}
+
+@@if(context.link){
+  <a href="#" class="userhead-module userhead-card userhead-card__bg js-choose-legal">
+    <img src="images/uploads/avatar.jpg" alt="" class="userhead-card__ava">
+    <span class="userhead-card__text">
+      <span>@@name</span>
+      <span>ID: 234567</span>
+      <span>ИНН: 3123123123</span>
+    </span>
+  </a><!-- /userhead-card -->
+}
+
+@@if(context.choose){
+  <div class="userhead-card userhead-card__bg">
+    <img src="images/uploads/avatar.jpg" alt="" class="userhead-card__ava">
+    <span class="userhead-card__text">
+      <span>@@name</span>
+      <span>ID: 234567</span>
+      <span>ИНН: 3123123123</span>
+      <span class="d-flex align-items-center justify-content-between">
+        <b>12 345 ₽</b>
+        <button class="btn btn-sm btn-light js-choose-back">Выбрать</button>
+      </span>
+    </span>
+  </div><!-- /userhead-card -->
+}

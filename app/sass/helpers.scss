@@ -1,0 +1,56 @@
+@import 'mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* variables */
+:root {
+  --color-bg: #F2F4F7;
+  --color-grey: #C5CAD1;
+  --color-text: #292E36;
+  --color-text2: #48505B;
+  --color-blue: #226EE0;
+  --color-red: #F22F52;
+}
+
+/* global */
+body {background: var(--color-bg); color: var(--color-text); @include font;}
+.row {margin-left: -5px; margin-right: -5px;}
+[class*='col-'] {padding-left: 5px; padding-right: 5px;}
+
+
+/* btn-nav */
+.btn-nav {
+  @include inp; background: url(../images/svg/bars.svg) center center no-repeat;
+  min-width: 24px; height: 24px; max-width: 24px; cursor: pointer; padding: 0; border: 0;
+}
+
+
+/* dropdown */
+.dropdown {
+  &-btn {
+    font-weight: 600; font-size: 13px; line-height: 18px; text-decoration: none; border-radius: 8px; display: flex;
+    color: var(--color-text); position: relative; border: 1px solid var(--color-grey); padding: 3px 12px; min-height: 42px;
+    align-items: center; padding-right: 26px;
+    &::after {@include bf; @include icon(chevron-blue-down,8px,5px); right: 12px; top: 50%; margin-top: -2px;}
+    &.show::after {transform: matrix(1,0,0,-1,0,0);}
+    &-pro {
+      text-align: left;
+      &::after {@include icon(chevron-blue-right,5px,8px); margin-top: -4px;}
+    }
+    small {display: block; font-weight: 500; font-size: 11px; line-height: 15px;}
+  }
+}
+
+
+/* buttons */
+.btn {
+  &-sm {padding: 6px 8px; font-weight: 500; font-size: 11px; line-height: 15px; border-radius: 6px;}
+  &-light {background: #FFFCFA; color: var(--color-blue);}
+}
+
+
+
+
+
+
+

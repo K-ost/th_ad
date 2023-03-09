@@ -1,0 +1,65 @@
+<div class="dropdown userhead">
+  <div class="userhead-link" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+    <img src="images/uploads/avatar.jpg" alt="">
+		<span>Иван Иванов</span>
+  </div>
+
+  <div class="dropdown-menu userhead-dropdown">
+    
+    <div class="userhead-page show" id="uh-page1">
+
+      <ul class="userhead-tabs" role="tablist">
+        <li>
+          <a href="#" class="nav-link active" data-bs-toggle="pill" data-bs-target="#individual">Физическое лицо</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#legal">Юридическое лицо</a>
+        </li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="individual">
+          @@include('inc/userhead-card.html', { "name": "Иван Иванов" })
+        </div>
+        <div class="tab-pane fade" id="legal">
+          @@include('inc/userhead-card.html', { "name": "ООО «Морской бриз»", "link": true })
+        </div>
+      </div>
+
+      @@include('inc/userhead-module.html', { "title": "рекламный кабинет", "text": "Рекламный кабинет #1", "price": "1000 ₽" })
+      @@include('inc/userhead-module.html', { "title": "Тариф", "text": "«Основной» <small>до 08.11.2030</small>" })
+      <div class="row">
+        <div class="col-6 userhead-grid">
+          @@include('inc/userhead-module.html', { "title": "сервисный баланс", "text": "12 345 ₽" })
+        </div>
+        <div class="col-6 userhead-grid">
+          @@include('inc/userhead-module.html', { "title": "бонусы", "text": "785 B" })
+        </div>
+      </div>
+
+      <ul class="userhead-nav">
+        <li class="userhead-nav__divider">
+          <a href="#" class="userhead-nav__icon userhead-nav__history">История баланса сообщений</a>
+        </li>
+        <li><a href="#" class="userhead-nav__icon userhead-nav__partners">Партнерский кабинет</a></li>
+        <li><a href="#" class="userhead-nav__icon userhead-nav__legal">Юридическим лицам</a></li>
+        <li class="userhead-nav__divider">
+          <a href="#" class="userhead-nav__icon userhead-nav__notify">Настройка оповещений</a>
+        </li>
+        <li><a href="#" class="userhead-nav__icon userhead-nav__settings">Настройки</a></li>
+        <li class="userhead-nav__divider">
+          <a href="#" class="userhead-nav__icon userhead-nav__exit">Выйти</a>
+        </li>
+      </ul>
+    </div><!-- /uh-page1 -->
+
+    <div class="userhead-page" id="uh-page2">
+      <div class="userhead-page__title">
+        <a href="#" class="userhead-page__back js-choose-back"></a>
+        Выберите юр. лицо
+      </div>
+      @@include('inc/userhead-card.html', { "name": "ООО «Морской бриз»", "choose": true })
+      @@include('inc/userhead-card.html', { "name": "ООО «Морской бриз»", "choose": true })
+      <a href="#" class="btn btn-outline-primary btn-plus"><span>Добавить новое</span></a>
+    </div><!-- /uh-page2 -->
+  </div>
+</div><!-- /userhead -->
