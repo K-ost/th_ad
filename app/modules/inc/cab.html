@@ -1,0 +1,17 @@
+<div class="cabitem@@if(context.big){ cabitem-big}">
+  <div class="cabitem-img">
+    <img src="images/svg/vk.svg" alt="">
+  </div>
+  <div class="cabitem-desc">
+    <div class="cabitem-title">@@title</div>
+    <div class="cabitem-text">@@text</div>
+  </div>
+  <div class="cabitem-balance">
+    <small>Баланс</small>
+    <div class="cabitem-balance__val">@@price ₽</div>
+  </div>
+  <button class="btn btn-light btn-sm">Выбрать</button>
+  @@if(context.dots){
+    <button class="btn-dots"></button>
+  }
+</div><!-- /cabitem -->

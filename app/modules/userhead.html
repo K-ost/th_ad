@@ -57,9 +57,13 @@
         <a href="#" class="userhead-page__back js-choose-back"></a>
         Выберите юр. лицо
       </div>
-      @@include('inc/userhead-card.html', { "name": "ООО «Морской бриз»", "choose": true })
-      @@include('inc/userhead-card.html', { "name": "ООО «Морской бриз»", "choose": true })
-      <a href="#" class="btn btn-outline-primary btn-plus"><span>Добавить новое</span></a>
+      <div class="userhead-cards">
+        @@include('inc/userhead-card.html', { "name": "ООО «Морской бриз»", "choose": true })
+        @@include('inc/userhead-card.html', { "name": "ООО «Морской бриз»", "choose": true })
+      </div>
+      <a href="#" class="btn btn-outline-primary btn-plus" data-bs-toggle="modal" data-bs-target="#newLegal">
+        <span>Добавить новое</span>
+      </a>
     </div><!-- /uh-page2 -->
   </div>
 </div><!-- /userhead -->

@@ -1,0 +1,13 @@
+<div class="modal modal-simple" id="newLegal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <h5 class="modal-title">Новое юр.лицо</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			@@include('input.html', { "label": "наименование", "place": "ООО «Морской бриз»", "text": "Укажите наименование юр.лица" })
+			@@include('input.html', { "label": "Инн", "place": "3123123123" })
+			@@include('input.html', { "label": "номер телефона", "place": "(900) - 000–00–00" })
+			@@include('input.html', { "label": "пополнение баланса", "place": "1000 ₽", "text": "Минимальная сумма пополнения 1000 ₽", "last": true })
+      <button class="btn btn-primary" disabled>Пополнить</button>
+    </div>
+  </div>
+</div><!-- /modal -->

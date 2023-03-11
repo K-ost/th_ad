@@ -1,0 +1,18 @@
+<div class="modal modal-simple modal-simple-xs" id="chooseCab" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <h5 class="modal-title">Выберите кабинет</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <p>Для создания поста на платформе VK выберите рекламный кабинет или создайте новый</p>
+      <div class="cabitem-row">
+        @@loop('cab.html', [
+          { "title": "Рекламный кабинет #1", "text": "Таргет", "price": "1 000" },
+          { "title": "Рекламный кабинет #2", "text": "Рассылка", "price": "5 995 106,81" },
+        ])
+      </div>
+      <div class="text-start">
+        <button class="btn btn-outline-primary btn-plus"><span>Создать новый</span></button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
