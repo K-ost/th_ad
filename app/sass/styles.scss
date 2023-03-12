@@ -5,7 +5,10 @@
 /* mainbox */
 .mainbox {
   height: 100vh; overflow: hidden; display: flex; flex-direction: column;
-  &_container {flex-grow: 1; overflow: auto; padding: 20px 30px;}
+  &_container {
+    flex-grow: 1; overflow: auto; padding: 20px 30px;
+    &-flexed {display: flex; flex-direction: column; padding-bottom: 0;}
+  }
 }
 
 
@@ -236,18 +239,28 @@
 
 /* maintable */
 .maintable {
-  overflow: auto; padding-bottom: 20px;
+  position: relative; padding-right: 32px; flex: 1; overflow: hidden;
+  &-area {overflow: auto; height: 100%;}
   &-body {border-collapse: collapse; width: 2490px;}
+  thead {position: sticky; top: 0; z-index: 100;}
   thead th {
-    background: #F2F4F7; border-bottom: 2px solid rgba(72, 80, 91, 0.3);
-    height: 59px; padding: 4px 8px; position: relative;
+    background: #F2F4F7; height: 59px; padding: 4px 8px; position: relative; min-width: 120px;
+    &.maintable-min {min-width: 0;}
+    &:first-child {padding-left: 17px;}
+    &::before {@include bf; border-bottom: 1px solid rgba(72, 80, 91, 0.3); width: 100%; left: 0; bottom: 0;}
+  }
+  tbody td {
+    background: #fff; border-bottom: 1px solid #e4e5e6; padding: 10px 8px;
+    height: 60px; color: #48505B; max-width: 150px;
+    &.maintable-pad {padding-left: 32px;}
+    &:first-child {padding-left: 17px;}
   }
   .btn-filter {margin-right: 6px;}
   &-locked::after {@include bf; @include icon(lock,10px,10px); top: 10px; right: 8px;}
   &-div {display: flex; align-items: center;}
-  &-name {font-weight: 600; color: #48505B;}
+  &-name {font-weight: 600; color: #48505B; white-space: nowrap;}
   &-icon {
-    min-width: 18px; max-width: 18px; height: 18px; margin: 0 6px 0 0;
+    min-width: 18px; max-width: 18px; height: 18px; margin: 0 6px 0 0; display: block;
     background-position: center center; background-repeat: no-repeat;
     &__age {background-image: url(../images/svg/userpic.svg);}
     &__members {background-image: url(../images/svg/members.svg);}
@@ -259,6 +272,27 @@
     &__return {background-image: url(../images/svg/refresh.svg);}
     &__efficient {background-image: url(../images/svg/efficient.svg);}
     &__subs {background-image: url(../images/svg/subs.svg);}
+    &__users {background-image: url(../images/svg/users-red.svg);}
+    &__basket {background-image: url(../images/svg/basket.svg);}
+    &__female {background-image: url(../images/svg/female.svg);}
+  }
+  &-settings {
+    border-radius: 8px; position: absolute; right: 0; top: 0; bottom: 0; width: 32px;
+    &-btn {
+      background: #fff url(../images/svg/sets.svg) center center no-repeat; @include inp;
+      border-radius: 4px; cursor: pointer; border: 0; padding: 0; width: 32px;
+      height: 59px; margin: 0; position: relative; z-index: 10;
+    }
+    &-scroll {
+      background: #e7e9ed url(../images/svg/chevron-blue-right.svg) center center / 8px no-repeat;
+      border-radius: 8px; width: 100%; position: absolute; bottom: 0; top: 52px; left: 0;
+    }
+  }
+
+  .form-control {
+    background: url(../images/svg/search-black.svg) right center / 12px no-repeat;
+    width: 158px; height: 22px; padding: 2px 0; border: 0; font-weight: 600;
+    border-bottom: 1px solid #e1e3e7; border-radius: 0;
   }
 }
 

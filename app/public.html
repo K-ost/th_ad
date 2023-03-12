@@ -1,27 +1,22 @@
-@@include('modules/header.html')
+@@include('modules/header.html', { "flex": true })
 
 <div class="topbar">
   <div class="row align-items-center">
     <div class="col-2">
+      <button class="btn btn-primary btn-sm">Подобрать паблики</button>
     </div>
     <div class="col-8 text-center">
       @@include('modules/inc/topmenu.html')
     </div>
     <div class="col-2 text-end">
+      <button class="btn btn-outline-primary btn-plus btn-sm" data-bs-toggle="modal" data-bs-target="#createPost">
+        <span>Новый пост</span>
+      </button>
     </div>
   </div><!-- /row -->
 </div><!-- /topbar -->
 
-<div class="row middlebar">
-  <div class="col-12 col-lg-4">
-    @@include('modules/top_features.html')
-  </div>
-  <div class="col-12 col-lg-4">
-    @@include('modules/inc/homebanner.html', { "post": true })
-  </div>
-</div><!-- /middlebar -->
-
-@@include('modules/table.html', { "empty": true })
+@@include('modules/table.html')
 
 @@include('modules/inc/create-post.html')
 

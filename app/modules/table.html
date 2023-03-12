@@ -1,6 +1,16 @@
 <div class="maintable">
-  <table class="maintable-body">
-    @@include('table/thead.html')
-    @@include('table/tbody.html')
-  </table>
+  <div class="maintable-area">
+    <table class="maintable-body">
+      @@include('table/thead.html')
+      @@if(!context.empty) {
+        @@include('table/tbody.html')
+      }
+    </table>
+  </div>
+  <div class="maintable-settings">
+    <button class="maintable-settings-btn"></button>
+    @@if(!context.empty) {
+      <div class="maintable-settings-scroll"></div>
+    }
+  </div>
 </div><!-- /maintable -->

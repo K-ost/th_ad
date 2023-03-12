@@ -1,15 +1,18 @@
 <thead>
   <tr>
-    <th>
+    <th class="maintable-min">
       <input type="checkbox" class="form-check">
     </th>
 
     <th>
-      <input type="search" class="form-control" placeholder="Паблик">
+      <div class="maintable-div">
+        <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#@@popup"></button>
+        <input type="text" class="form-control" placeholder="Паблик">
+      </div>
     </th>
 
-    <th class="maintable-locked">
-      <span class="btn-favorite"></span>
+    <th class="maintable-locked maintable-min">
+      <button class="btn-favorite"></button>
     </th>
 
     @@loop('th.html', [
@@ -17,7 +20,6 @@
       { "name": "Цена", "popup": "filterPrice", "lock": true },
       { "name": "Страна", "popup": "filterCountry", "lock": true },
       { "name": "Регион", "popup": "filterArea", "lock": true },
-      { "name": "Пол", "popup": "filterGender", "lock": true },
       { "name": "Пол", "popup": "filterGender", "lock": true },
       { "name": "Возраст", "popup": "filterAge", "lock": true, "icon": "age" },
       { "name": "Участников", "popup": "filterMembers", "lock": true, "icon": "members" },
@@ -30,9 +32,5 @@
       { "name": "Эффективность", "popup": "filterEficient", "lock": true, "icon": "efficient" },
       { "name": "Подписок", "popup": "filterSubs", "lock": true, "icon": "subs" }
     ])
-
-    <th>
-      <button class="btn-settings"></button>
-    </th>
   </tr>
 </thead>

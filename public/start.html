@@ -99,14 +99,14 @@
         </div>
       </div>
 
-      <a href="#" class="userhead-module">
+      <a href="#" class="userhead-module" data-bs-toggle="modal" data-bs-target="#chooseCab">
   <span class="userhead-module__desc">
     <span class="userhead-module__title">рекламный кабинет</span>
     <span class="userhead-module__text">Рекламный кабинет #1</span>
   </span>
   <span class="userhead-module__price">1000 ₽</span>
 </a><!-- /userhead-module -->
-      <a href="#" class="userhead-module">
+      <a href="#" class="userhead-module" >
   <span class="userhead-module__desc">
     <span class="userhead-module__title">Тариф</span>
     <span class="userhead-module__text">«Основной» <small>до 08.11.2030</small></span>
@@ -115,7 +115,7 @@
 </a><!-- /userhead-module -->
       <div class="row">
         <div class="col-6 userhead-grid">
-          <a href="#" class="userhead-module">
+          <a href="#" class="userhead-module" >
   <span class="userhead-module__desc">
     <span class="userhead-module__title">сервисный баланс</span>
     <span class="userhead-module__text">12 345 ₽</span>
@@ -124,7 +124,7 @@
 </a><!-- /userhead-module -->
         </div>
         <div class="col-6 userhead-grid">
-          <a href="#" class="userhead-module">
+          <a href="#" class="userhead-module" >
   <span class="userhead-module__desc">
     <span class="userhead-module__title">бонусы</span>
     <span class="userhead-module__text">785 B</span>
@@ -202,7 +202,7 @@
 	</div>
 </header><!-- /header -->
 
-<div class="mainbox_container">
+<div class="mainbox_container ">
 
 
 <div class="topbar">
@@ -211,10 +211,10 @@
     </div>
     <div class="col-8 text-center">
       <ul class="topmenu">
-  <li><a href="#" class="topmenu_icon topmenu_icon-chart active">Мои посевы</a></li>
+  <li><a href="start.html" class="topmenu_icon topmenu_icon-chart active">Мои посевы</a></li>
   <li><span class="topmenu_icon topmenu_icon-grid disabled">Маркет платформа</span></li>
   <li><span class="topmenu_icon topmenu_icon-list disabled">Списки пабликов</span></li>
-  <li><a href="#" class="topmenu_icon topmenu_icon-wallet" data-bs-toggle="modal" data-bs-target="#chooseCab">Рекламный кабинет</a></li>
+  <li><a href="main.html" class="topmenu_icon topmenu_icon-wallet">Рекламный кабинет</a></li>
 </ul>
     </div>
     <div class="col-2 text-end">
@@ -267,19 +267,23 @@
 </div><!-- /middlebar -->
 
 <div class="maintable">
-  <table class="maintable-body">
-    <thead>
+  <div class="maintable-area">
+    <table class="maintable-body">
+      <thead>
   <tr>
-    <th>
+    <th class="maintable-min">
       <input type="checkbox" class="form-check">
     </th>
 
     <th>
-      <input type="search" class="form-control" placeholder="Паблик">
+      <div class="maintable-div">
+        <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#@@popup"></button>
+        <input type="text" class="form-control" placeholder="Паблик">
+      </div>
     </th>
 
-    <th class="maintable-locked">
-      <span class="btn-favorite"></span>
+    <th class="maintable-locked maintable-min">
+      <button class="btn-favorite"></button>
     </th>
 
     <th class="maintable-locked">
@@ -305,12 +309,6 @@
     <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterArea"></button>
     
     <span class="maintable-name">Регион</span>
-  </div>
-</th><th class="maintable-locked">
-  <div class="maintable-div">
-    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterGender"></button>
-    
-    <span class="maintable-name">Пол</span>
   </div>
 </th><th class="maintable-locked">
   <div class="maintable-div">
@@ -379,59 +377,17 @@
     <span class="maintable-name">Подписок</span>
   </div>
 </th>
-
-    <th>
-      <button class="btn-settings"></button>
-    </th>
   </tr>
 </thead>
-    <tbody></tbody>
-  </table>
+      
+    </table>
+  </div>
+  <div class="maintable-settings">
+    <button class="maintable-settings-btn"></button>
+    
+  </div>
 </div><!-- /maintable -->
 
-<div class="modal modal-simple modal-simple-xs" id="chooseCab" tabindex="-1">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <h5 class="modal-title">Выберите кабинет</h5>
-			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      <p>Для создания поста на платформе VK выберите рекламный кабинет или создайте новый</p>
-      <div class="cabitem-row">
-        <div class="cabitem">
-  <div class="cabitem-img">
-    <img src="images/svg/vk.svg" alt="">
-  </div>
-  <div class="cabitem-desc">
-    <div class="cabitem-title">Рекламный кабинет #1</div>
-    <div class="cabitem-text">Таргет</div>
-  </div>
-  <div class="cabitem-balance">
-    <small>Баланс</small>
-    <div class="cabitem-balance__val">1 000 ₽</div>
-  </div>
-  <button class="btn btn-light btn-sm">Выбрать</button>
-  
-</div><!-- /cabitem --><div class="cabitem">
-  <div class="cabitem-img">
-    <img src="images/svg/vk.svg" alt="">
-  </div>
-  <div class="cabitem-desc">
-    <div class="cabitem-title">Рекламный кабинет #2</div>
-    <div class="cabitem-text">Рассылка</div>
-  </div>
-  <div class="cabitem-balance">
-    <small>Баланс</small>
-    <div class="cabitem-balance__val">5 995 106,81 ₽</div>
-  </div>
-  <button class="btn btn-light btn-sm">Выбрать</button>
-  
-</div><!-- /cabitem -->
-      </div>
-      <div class="text-start">
-        <button class="btn btn-outline-primary btn-plus"><span>Создать новый</span></button>
-      </div>
-    </div>
-  </div>
-</div><!-- /modal -->
 <div class="modal modal-simple" id="createPost" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
@@ -502,6 +458,49 @@
   <div class="form-field__text">Минимальная сумма пополнения 1000 ₽</div>
 </div>
       <button class="btn btn-primary" disabled>Пополнить</button>
+    </div>
+  </div>
+</div><!-- /modal -->
+<div class="modal modal-simple modal-simple-xs" id="chooseCab" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <h5 class="modal-title">Выберите кабинет</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <p>Для создания поста на платформе VK выберите рекламный кабинет или создайте новый</p>
+      <div class="cabitem-row">
+        <div class="cabitem">
+  <div class="cabitem-img">
+    <img src="images/svg/vk.svg" alt="">
+  </div>
+  <div class="cabitem-desc">
+    <div class="cabitem-title">Рекламный кабинет #1</div>
+    <div class="cabitem-text">Таргет</div>
+  </div>
+  <div class="cabitem-balance">
+    <small>Баланс</small>
+    <div class="cabitem-balance__val">1 000 ₽</div>
+  </div>
+  <button class="btn btn-light btn-sm">Выбрать</button>
+  
+</div><!-- /cabitem --><div class="cabitem">
+  <div class="cabitem-img">
+    <img src="images/svg/vk.svg" alt="">
+  </div>
+  <div class="cabitem-desc">
+    <div class="cabitem-title">Рекламный кабинет #2</div>
+    <div class="cabitem-text">Рассылка</div>
+  </div>
+  <div class="cabitem-balance">
+    <small>Баланс</small>
+    <div class="cabitem-balance__val">5 995 106,81 ₽</div>
+  </div>
+  <button class="btn btn-light btn-sm">Выбрать</button>
+  
+</div><!-- /cabitem -->
+      </div>
+      <div class="text-start">
+        <button class="btn btn-outline-primary btn-plus"><span>Создать новый</span></button>
+      </div>
     </div>
   </div>
 </div><!-- /modal -->
