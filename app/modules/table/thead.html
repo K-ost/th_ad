@@ -1,0 +1,38 @@
+<thead>
+  <tr>
+    <th>
+      <input type="checkbox" class="form-check">
+    </th>
+
+    <th>
+      <input type="search" class="form-control" placeholder="Паблик">
+    </th>
+
+    <th class="maintable-locked">
+      <span class="btn-favorite"></span>
+    </th>
+
+    @@loop('th.html', [
+      { "name": "Тематика", "popup": "filterSubject", "lock": true },
+      { "name": "Цена", "popup": "filterPrice", "lock": true },
+      { "name": "Страна", "popup": "filterCountry", "lock": true },
+      { "name": "Регион", "popup": "filterArea", "lock": true },
+      { "name": "Пол", "popup": "filterGender", "lock": true },
+      { "name": "Пол", "popup": "filterGender", "lock": true },
+      { "name": "Возраст", "popup": "filterAge", "lock": true, "icon": "age" },
+      { "name": "Участников", "popup": "filterMembers", "lock": true, "icon": "members" },
+      { "name": "Живые люди", "popup": "filterPeople", "lock": true, "icon": "user" },
+      { "name": "Охват записи", "popup": "filterCoverage", "lock": true, "icon": "cover" },
+      { "name": "Прогресс", "popup": "filterProgress", "lock": true, "icon": "progress" },
+      { "name": "Посты на стене", "popup": "filterPosts", "lock": true, "icon": "posts" },
+      { "name": "Реклам в группе", "popup": "filterAds", "lock": true, "icon": "ads" },
+      { "name": "Отдача", "popup": "filterReturn", "lock": true, "icon": "return" },
+      { "name": "Эффективность", "popup": "filterEficient", "lock": true, "icon": "efficient" },
+      { "name": "Подписок", "popup": "filterSubs", "lock": true, "icon": "subs" }
+    ])
+
+    <th>
+      <button class="btn-settings"></button>
+    </th>
+  </tr>
+</thead>

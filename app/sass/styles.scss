@@ -234,7 +234,33 @@
 }
 
 
-
+/* maintable */
+.maintable {
+  overflow: auto; padding-bottom: 20px;
+  &-body {border-collapse: collapse; width: 2490px;}
+  thead th {
+    background: #F2F4F7; border-bottom: 2px solid rgba(72, 80, 91, 0.3);
+    height: 59px; padding: 4px 8px; position: relative;
+  }
+  .btn-filter {margin-right: 6px;}
+  &-locked::after {@include bf; @include icon(lock,10px,10px); top: 10px; right: 8px;}
+  &-div {display: flex; align-items: center;}
+  &-name {font-weight: 600; color: #48505B;}
+  &-icon {
+    min-width: 18px; max-width: 18px; height: 18px; margin: 0 6px 0 0;
+    background-position: center center; background-repeat: no-repeat;
+    &__age {background-image: url(../images/svg/userpic.svg);}
+    &__members {background-image: url(../images/svg/members.svg);}
+    &__user {background-image: url(../images/svg/user.svg);}
+    &__cover {background-image: url(../images/svg/eye.svg);}
+    &__progress {background-image: url(../images/svg/progress.svg);}
+    &__posts {background-image: url(../images/svg/posts.svg);}
+    &__ads {background-image: url(../images/svg/ads.svg);}
+    &__return {background-image: url(../images/svg/refresh.svg);}
+    &__efficient {background-image: url(../images/svg/efficient.svg);}
+    &__subs {background-image: url(../images/svg/subs.svg);}
+  }
+}
 
 
 

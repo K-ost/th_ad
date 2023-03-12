@@ -1,57 +1,5 @@
 @@include('modules/header.html')
 
-<div class="topbar">
-  <div class="row align-items-center">
-    <div class="col-2">
-      <a href="#" class="btn btn-primary btn-sm btn-plus"><span>Создать пост</span></a>
-    </div>
-    <div class="col-8 text-center">
-      @@include('modules/inc/topmenu.html')
-    </div>
-    <div class="col-2 text-end">
-      <a href="#" class=  "btn btn-outline-primary btn-sm btn-plus"><span>Новый пост</span></a>
-    </div>
-  </div><!-- /row -->
-</div><!-- /topbar -->
-
-<div class="row middlebar">
-  <div class="col-12 col-lg-4">
-    @@include('modules/top_features.html')
-  </div>
-  <div class="col-12 col-lg-4">
-    @@include('modules/inc/homebanner.html', { "img": true })
-  </div>
-</div><!-- /middlebar -->
-
-
-<div class="max680">
-
-  <div class="pageheader">
-    <div class="pageheader-title">Список кабинетов</div>
-    <a href="#" class="icon_link icon_link-info">Справка</a>
-    <button class="btn btn-primary btn-plus"><span>Создать рекламный кабинет</span></button>
-  </div><!-- /pageheader -->
-
-  @@include('modules/bonus.html')
-
-  @@include('modules/filter.html')
-  
-  <div class="cabitem-row">
-    @@loop('modules/inc/cab.html', [
-      { "title": "Продажа автошин в Магнитогорске", "text": "Таргет", "price": "134 450", "dots": true, "big": true },
-      { "title": "Продажа автошин в Магнитогорске", "text": "Таргет", "price": "134 450", "dots": true, "big": true },
-      { "title": "Продажа автошин в Магнитогорске", "text": "Таргет", "price": "134 450", "dots": true, "big": true }
-    ])
-  </div><!-- /cabitem-row -->
-
-  <div class="dashedbox">
-    <p>Создайте свой первый рекламный кабинет</p>
-    <p><a href="#">Создать рекламный кабинет</a></p>
-  </div><!-- /dashedbox -->
-</div><!-- /max680 -->
-
-
-@@include('modules/inc/choose-cab.html')
-@@include('modules/inc/create-post.html')
+<p>1. <a href="start.html" target="_blank">start</a></p>
 
 @@include('modules/footer.html')

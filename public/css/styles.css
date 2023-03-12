@@ -248,6 +248,23 @@ a {
   border-radius: 0;
 }
 
+/* btn-filter */
+.btn-filter {
+  background: url(../images/svg/filter-small.svg) center center no-repeat;
+  border: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  outline: none;
+  min-width: 16px;
+  max-width: 16px;
+  height: 16px;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
 /* modal-simple */
 .modal-simple .modal-dialog {
   width: 100%;
@@ -979,6 +996,87 @@ a {
   position: absolute;
   right: 32px;
   top: 32px;
+}
+
+/* maintable */
+.maintable {
+  overflow: auto;
+  padding-bottom: 20px;
+}
+.maintable-body {
+  border-collapse: collapse;
+  width: 2490px;
+}
+.maintable thead th {
+  background: #F2F4F7;
+  border-bottom: 2px solid rgba(72, 80, 91, 0.3);
+  height: 59px;
+  padding: 4px 8px;
+  position: relative;
+}
+.maintable .btn-filter {
+  margin-right: 6px;
+}
+.maintable-locked::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../images/svg/lock.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  width: 10px;
+  height: 10px;
+  top: 10px;
+  right: 8px;
+}
+.maintable-div {
+  display: flex;
+  align-items: center;
+}
+.maintable-name {
+  font-weight: 600;
+  color: #48505B;
+}
+.maintable-icon {
+  min-width: 18px;
+  max-width: 18px;
+  height: 18px;
+  margin: 0 6px 0 0;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.maintable-icon__age {
+  background-image: url(../images/svg/userpic.svg);
+}
+.maintable-icon__members {
+  background-image: url(../images/svg/members.svg);
+}
+.maintable-icon__user {
+  background-image: url(../images/svg/user.svg);
+}
+.maintable-icon__cover {
+  background-image: url(../images/svg/eye.svg);
+}
+.maintable-icon__progress {
+  background-image: url(../images/svg/progress.svg);
+}
+.maintable-icon__posts {
+  background-image: url(../images/svg/posts.svg);
+}
+.maintable-icon__ads {
+  background-image: url(../images/svg/ads.svg);
+}
+.maintable-icon__return {
+  background-image: url(../images/svg/refresh.svg);
+}
+.maintable-icon__efficient {
+  background-image: url(../images/svg/efficient.svg);
+}
+.maintable-icon__subs {
+  background-image: url(../images/svg/subs.svg);
 }
 
 @media screen and (max-width: 1200px) {
