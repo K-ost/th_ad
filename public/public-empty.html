@@ -205,16 +205,204 @@
 <div class="mainbox_container ">
 
 
-<p>1. <a href="start.html" target="_blank">start</a></p>
-<p>2. <a href="start2.html" target="_blank">start 2</a></p>
-<p>3. <a href="main0.html" target="_blank">main no cabinets</a></p>
-<p>4. <a href="main.html" target="_blank">main cabinets</a></p>
-<p>5. <a href="public.html" target="_blank">public list</a></p>
-<p>6. <a href="public-empty.html" target="_blank">public list empty</a></p>
+<div class="topbar">
+  <div class="row align-items-center">
+    <div class="col-2">
+      <button class="btn btn-primary btn-sm">Подобрать паблики</button>
+    </div>
+    <div class="col-8 text-center">
+      <ul class="topmenu">
+  <li><a href="start.html" class="topmenu_icon topmenu_icon-chart active">Мои посевы</a></li>
+  <li><span class="topmenu_icon topmenu_icon-grid disabled">Маркет платформа</span></li>
+  <li><span class="topmenu_icon topmenu_icon-list disabled">Списки пабликов</span></li>
+  <li><a href="main.html" class="topmenu_icon topmenu_icon-wallet">Рекламный кабинет</a></li>
+</ul>
+    </div>
+    <div class="col-2 text-end">
+      <button class="btn btn-outline-primary btn-plus btn-sm" data-bs-toggle="modal" data-bs-target="#createPost">
+        <span>Новый пост</span>
+      </button>
+    </div>
+  </div><!-- /row -->
+</div><!-- /topbar -->
 
+<div class="maintable maintable-empty">
+  <div class="maintable-area">
+    <table class="maintable-body">
+      <thead>
+  <tr>
+    <th class="maintable-min">
+      <input type="checkbox" class="form-check">
+    </th>
 
+    <th>
+      <div class="maintable-div">
+        <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#@@popup"></button>
+        <input type="text" class="form-control" placeholder="Паблик">
+      </div>
+    </th>
 
+    <th class="maintable-locked maintable-min">
+      <button class="btn-favorite"></button>
+    </th>
 
+    <th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterSubject"></button>
+    
+    <span class="maintable-name">Тематика</span>
+  </div>
+</th><th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterPrice"></button>
+    
+    <span class="maintable-name">Цена</span>
+  </div>
+</th><th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterCountry"></button>
+    
+    <span class="maintable-name">Страна</span>
+  </div>
+</th><th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterArea"></button>
+    
+    <span class="maintable-name">Регион</span>
+  </div>
+</th><th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterGender"></button>
+    
+    <span class="maintable-name">Пол</span>
+  </div>
+</th><th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterAge"></button>
+    <span class="maintable-icon maintable-icon__age"></span>
+    <span class="maintable-name">Возраст</span>
+  </div>
+</th><th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterMembers"></button>
+    <span class="maintable-icon maintable-icon__members"></span>
+    <span class="maintable-name">Участников</span>
+  </div>
+</th><th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterPeople"></button>
+    <span class="maintable-icon maintable-icon__user"></span>
+    <span class="maintable-name">Живые люди</span>
+  </div>
+</th><th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterCoverage"></button>
+    <span class="maintable-icon maintable-icon__cover"></span>
+    <span class="maintable-name">Охват записи</span>
+  </div>
+</th><th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterProgress"></button>
+    <span class="maintable-icon maintable-icon__progress"></span>
+    <span class="maintable-name">Прогресс</span>
+  </div>
+</th><th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterPosts"></button>
+    <span class="maintable-icon maintable-icon__posts"></span>
+    <span class="maintable-name">Посты на стене</span>
+  </div>
+</th><th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterAds"></button>
+    <span class="maintable-icon maintable-icon__ads"></span>
+    <span class="maintable-name">Реклам в группе</span>
+  </div>
+</th><th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterReturn"></button>
+    <span class="maintable-icon maintable-icon__return"></span>
+    <span class="maintable-name">Отдача</span>
+  </div>
+</th><th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterEficient"></button>
+    <span class="maintable-icon maintable-icon__efficient"></span>
+    <span class="maintable-name">Эффективность</span>
+  </div>
+</th><th class="maintable-locked">
+  <div class="maintable-div">
+    <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterSubs"></button>
+    <span class="maintable-icon maintable-icon__subs"></span>
+    <span class="maintable-name">Подписок</span>
+  </div>
+</th>
+  </tr>
+</thead>
+      
+    </table>
+  </div>
+  <div class="maintable-settings">
+    <button class="maintable-settings-btn"></button>
+    
+  </div>
+</div><!-- /maintable -->
+
+<div class="max680">
+  <div class="bonus_banner bonus_banner-plus">
+  <div class="bonus_banner__desc">
+    <div class="bonus_banner__top">
+      <div class="bonus_banner__title">Добавьте паблики в список</div>
+      <div class="bonus_banner__text">Откройте подбор пабликов по списку или целевой аудитории и добавьте нужные в список пабликов</div>
+    </div>
+    <div class="bonus_banner__bottom">
+      <button class="btn btn-primary">Начать</button>
+    </div>
+  </div>
+  <button class="btn-close btn-close-light"></button>
+</div><!-- /bonus_banner -->
+</div><!-- /max680 -->
+
+<div class="modal modal-simple" id="createPost" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <h5 class="modal-title">Переход к созданию поста</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <ol class="created_list">
+        <li>
+          <p><b>Создание рекламного поста VK</b></p>
+          <ul>
+            <li>создайте пост, который вы планируете продвигать в сообществах,</li>
+            <li>отправьте на модерацию.</li>
+          </ul>
+        </li>
+        <li>
+          <p><b>Модерация поста</b></p>
+          <ul>
+            <li>дождитесь уведомления VK о завершении модерации поста</li>
+          </ul>
+        </li>
+        <li>
+          <p><b>Размещение поста в сообществах</b></p>
+          <ul>
+            <li>возвращайтесь в наш сервис «Посевы», чтобы разместить пост в сообществах.</li>
+          </ul>
+        </li>
+        <li>
+          <p><b>Отслеживание статистики</b></p>
+          <ul>
+            <li>перейдите во вкладку «Мои посевы» для отслеживания статистики размещений.</li>
+          </ul>
+        </li>
+      </ol><!-- /created_list -->
+			
+      <div class="text-end">
+        <button class="btn btn-primary">Создать пост VK</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
 
 </div><!-- /mainbox_container -->
 </div><!-- /mainbox -->

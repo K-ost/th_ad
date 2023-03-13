@@ -226,7 +226,7 @@
   </div><!-- /row -->
 </div><!-- /topbar -->
 
-<div class="maintable">
+<div class="maintable ">
   <div class="maintable-area">
     <table class="maintable-body">
       <thead>
@@ -1193,6 +1193,32 @@
     
   </div>
 </div><!-- /maintable -->
+
+<div class="choosebar">
+  <div class="choosebar-name">Выбрано: 4 паблика с общим бюджетом: 4 000 ₽</div>
+  <div class="choosebar-buttons">
+    <button class="btn btn-link btn-remove" data-bs-toggle="modal" data-bs-target="#removeList">
+      <span>Удалить из списка</span>
+    </button>
+    <button class="btn btn-primary btn-next">
+      <span>Сделать посев</span>
+    </button>
+  </div>
+</div><!-- /choosebar -->
+
+<div class="modal modal-simple" id="removeList" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <h5 class="modal-title modal-title-icon modal-title-icon__remove">Удаление из списка</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <p>Вы действительно хотите удалить выбранные паблики из списка?</p>
+      <div class="modal-simple-bottom">
+        <button class="btn btn-light" data-bs-dismiss="modal">Отменить</button>
+        <button class="btn btn-danger" data-bs-dismiss="modal">Удалить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
 
 <div class="modal modal-simple" id="createPost" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">

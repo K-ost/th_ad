@@ -14,15 +14,13 @@
 
 <div class="row middlebar">
   <div class="col-12 col-lg-4">
-    @@include('modules/top_features.html', { "title": "Нет постов" })
+    @@include('modules/top_features.html', { "title": "Запись №1 от 01.01.2022 00:00" })
   </div>
   <div class="col-12 col-lg-4">
-    @@include('modules/inc/homebanner.html', { "post": true })
+    @@include('modules/inc/homebanner.html', { "img": true })
   </div>
 </div><!-- /middlebar -->
 
 @@include('modules/table.html', { "empty": true })
-
-@@include('modules/inc/create-post.html')
 
 @@include('modules/footer.html')

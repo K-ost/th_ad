@@ -1,4 +1,4 @@
-@@include('modules/header.html', { "flex": true })
+@@include('modules/header.html')
 
 <div class="topbar">
   <div class="row align-items-center">
@@ -16,9 +16,16 @@
   </div><!-- /row -->
 </div><!-- /topbar -->
 
-@@include('modules/table.html')
+@@include('modules/table.html', { "empty": true })
 
-@@include('modules/choosebar.html')
+<div class="max680">
+  @@include('modules/bonus.html', {
+    "title": "Добавьте паблики в список",
+    "text": "Откройте подбор пабликов по списку или целевой аудитории и добавьте нужные в список пабликов",
+    "btn": "Начать",
+    "type": "plus"
+  })
+</div><!-- /max680 -->
 
 @@include('modules/inc/create-post.html')
 

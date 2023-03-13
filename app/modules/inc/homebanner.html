@@ -2,9 +2,16 @@
   <div class="homebanner-desc">
     <div class="homebanner-title">Создайте запись для публикации</div>
     <div class="homebanner-text">Разместите запись на платформе VK для начала работы с посевами <a href="#">Подробнее</a></div>
-    <a href="#" class="btn btn-primary btn-plus btn-sm" data-bs-toggle="modal" data-bs-target="#createPost">
-      <span>Создать пост</span>
-    </a>
+    @@if(context.img){
+      <a href="#" class="btn btn-primary btn-sm">
+        Подобрать паблики
+      </a>
+    }
+    @@if(context.post){
+      <a href="#" class="btn btn-primary btn-plus btn-sm" data-bs-toggle="modal" data-bs-target="#createPost">
+        <span>Создать пост</span>
+      </a>
+    }
   </div>
   @@if(context.img){<div class="homebanner-image"></div>}
   @@if(context.post){

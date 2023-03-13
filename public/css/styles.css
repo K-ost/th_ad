@@ -188,6 +188,9 @@ a {
 .btn:disabled {
   opacity: 0.5;
 }
+.btn-danger {
+  background-color: var(--color-red);
+}
 .btn-primary {
   background: var(--color-blue);
   color: #fff;
@@ -250,6 +253,52 @@ a {
 }
 .btn-plus.btn-outline-primary:hover span::before {
   background-image: url(../images/svg/plus-white.svg);
+}
+.btn-next span {
+  padding-right: 28px;
+  position: relative;
+}
+.btn-next span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../images/svg/rarr.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  width: 18px;
+  height: 14px;
+  right: 0;
+  top: 50%;
+  margin-top: -7px;
+}
+.btn-link {
+  text-decoration: none;
+}
+.btn-remove {
+  color: var(--color-red) !important;
+}
+.btn-remove span {
+  padding-right: 32px;
+  position: relative;
+}
+.btn-remove span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../images/svg/remove.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  right: 0;
+  top: 50%;
+  margin-top: -12px;
 }
 
 /* btn-dots */
@@ -324,10 +373,30 @@ a {
   font-size: 24px;
   line-height: 30px;
   margin: 0 30px 24px 0;
+  position: relative;
 }
 .modal-simple .modal-title-small {
   font-size: 16px;
   line-height: 22px;
+}
+.modal-simple .modal-title-icon {
+  padding-left: 40px;
+}
+.modal-simple .modal-title-icon::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../images/svg/remove.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  left: 0;
+  top: 50%;
+  margin-top: -15px;
 }
 .modal-simple .btn-close {
   position: absolute;
@@ -347,6 +416,17 @@ a {
 .modal-simple-xs .btn-close {
   top: 16px;
   right: 16px;
+}
+.modal-simple-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.modal-simple-bottom .btn {
+  margin-right: 16px;
+}
+.modal-simple-bottom .btn:last-child {
+  margin-right: 0;
 }
 
 .btn-close {
@@ -369,6 +449,10 @@ a {
 
 #chooseCab .modal-dialog {
   max-width: 550px;
+}
+
+#removeList .modal-dialog {
+  max-width: 584px;
 }
 
 /* topmenu */
@@ -1028,9 +1112,20 @@ a {
   padding: 32px;
   color: #F2F4F7;
   position: relative;
+  min-height: 216px;
+  display: flex;
+  flex-direction: column;
 }
 .bonus_banner__desc {
   max-width: 342px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.bonus_banner__top {
+  flex: 1;
 }
 .bonus_banner__title {
   color: #fff;
@@ -1045,6 +1140,29 @@ a {
   position: absolute;
   right: 32px;
   top: 32px;
+  z-index: 10;
+}
+.bonus_banner-percent::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 16px;
+  background: url(../images/svg/percent.svg) right center no-repeat;
+}
+.bonus_banner-plus::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 16px;
+  background: url(../images/svg/icon-plus.svg) calc(100% - 70px) center no-repeat;
 }
 
 /* maintable */
@@ -1061,6 +1179,14 @@ a {
 .maintable-body {
   border-collapse: collapse;
   width: 2490px;
+}
+.maintable-empty {
+  flex: auto;
+  margin-bottom: 43px;
+}
+.maintable-empty .maintable-area {
+  height: auto;
+  overflow: hidden;
 }
 .maintable thead {
   position: sticky;
@@ -1222,78 +1348,34 @@ a {
   border-radius: 0;
 }
 
-@media screen and (max-width: 1200px) {
-  .container {
-    width: 992px;
-  }
-
-  .md4 {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-  }
-
-  .md6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  .md12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+/* choosebar */
+.choosebar {
+  background: #fff;
+  border-top: 1px solid rgba(72, 80, 91, 0.3);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 16px 30px;
+  z-index: 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-@media screen and (max-width: 1020px) {
-  .container {
-    width: 720px;
-  }
-
-  .tb4 {
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
-  }
-
-  .tb6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  .tb12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+.choosebar-name {
+  background: #F2F4F7;
+  border-radius: 10px;
+  color: #48505B;
+  font-weight: 600;
+  padding: 12px;
 }
-@media screen and (max-width: 750px) {
-  .container {
-    width: 460px;
-  }
-
-  .sm6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  .sm12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+.choosebar-buttons {
+  display: flex;
+  align-items: center;
 }
-@media screen and (max-width: 490px) {
-  html {
-    -webkit-text-size-adjust: none;
-  }
-
-  .container {
-    margin: 0 15px;
-    width: auto;
-  }
-
-  .xs6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  .xs12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
+.choosebar .btn {
+  margin-right: 16px;
+}
+.choosebar .btn:last-child {
+  margin-right: 0;
 }
