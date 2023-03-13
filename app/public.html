@@ -3,7 +3,7 @@
 <div class="topbar">
   <div class="row align-items-center">
     <div class="col-2">
-      <button class="btn btn-primary btn-sm">Подобрать паблики</button>
+      <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#choosePublic">Подобрать паблики</button>
     </div>
     <div class="col-8 text-center">
       @@include('modules/inc/topmenu.html')
@@ -21,5 +21,7 @@
 @@include('modules/choosebar.html')
 
 @@include('modules/inc/create-post.html')
+
+@@include('modules/public-choose.html')
 
 @@include('modules/footer.html')

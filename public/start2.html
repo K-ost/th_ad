@@ -384,10 +384,102 @@
     </table>
   </div>
   <div class="maintable-settings">
-    <button class="maintable-settings-btn"></button>
+    <button class="maintable-settings-btn" data-bs-toggle="modal" data-bs-target="#tableFilters"></button>
     
   </div>
 </div><!-- /maintable -->
+
+
+<div class="modal modal-simple" id="tableFilters" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-content-bg">
+      <h5 class="modal-title">Отображение фильтров</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <ul class="tableFilters-list">
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Тематика
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Цена
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Страна
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Регион
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Пол
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Возраст
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Количество участников
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Живые люди
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Охват записи
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Прогресс
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Посты на стене
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Реклам в группе
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Отдача
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Эффективность
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Количество подписок
+</label>
+        </li>
+      </ul>
+			
+      <div class="text-end">
+        <button class="btn btn-primary">Применить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
 
 </div><!-- /mainbox_container -->
 </div><!-- /mainbox -->
@@ -399,22 +491,46 @@
 			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			<div class="form-field ">
   <label class="form-label">наименование</label>
-  <input type="text" class="form-control" placeholder="ООО «Морской бриз»">
+  
+  
+    <input type="text" class="form-control" placeholder="ООО «Морской бриз»">
+  
+  
+
   <div class="form-field__text">Укажите наименование юр.лица</div>
 </div>
 			<div class="form-field ">
   <label class="form-label">Инн</label>
-  <input type="text" class="form-control" placeholder="3123123123">
+  
+  
+    <input type="text" class="form-control" placeholder="3123123123">
+  
+  
+
   
 </div>
-			<div class="form-field ">
-  <label class="form-label">номер телефона</label>
-  <input type="text" class="form-control" placeholder="(900) - 000–00–00">
-  
-</div>
+			<div class="form-field">
+        <label class="form-label">номер телефона</label>
+        <div class="phone_field">
+  <div class="dropdown">
+    <a href="#" class="phone_field-choose phone_field-rus" data-bs-toggle="dropdown">+7</a>
+    <ul class="dropdown-menu">
+      <li class="phone_field-rus">+7</li>
+      <li class="phone_field-usa">+44</li>
+      <li class="phone_field-kaz">+997</li>
+    </ul>
+  </div>
+  <input type="tel" class="form-control" placeholder="(900) - 000–00–00">
+</div><!-- /phone_field -->
+      </div>
 			<div class="form-field last">
   <label class="form-label">пополнение баланса</label>
-  <input type="text" class="form-control" placeholder="1000 ₽">
+  
+  
+    <input type="text" class="form-control" placeholder="1000 ₽">
+  
+  
+
   <div class="form-field__text">Минимальная сумма пополнения 1000 ₽</div>
 </div>
       <button class="btn btn-primary" disabled>Пополнить</button>

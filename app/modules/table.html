@@ -8,9 +8,12 @@
     </table>
   </div>
   <div class="maintable-settings">
-    <button class="maintable-settings-btn"></button>
+    <button class="maintable-settings-btn" data-bs-toggle="modal" data-bs-target="#tableFilters"></button>
     @@if(!context.empty) {
       <div class="maintable-settings-scroll"></div>
     }
   </div>
 </div><!-- /maintable -->
+
+
+@@include('inc/table-filters.html')

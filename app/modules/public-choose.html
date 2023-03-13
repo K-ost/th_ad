@@ -1,0 +1,58 @@
+<div class="modal modal-simple" id="choosePublic" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-content-bg">
+      <h5 class="modal-title">Подбор пабликов</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <ul class="public_menu">
+        <li><a href="#" class="public_menu-list active">По списку</a></li>
+        <li><a href="#" class="public_menu-users">По целевой аудитории</a></li>
+      </ul><!-- /public_menu -->
+      
+      @@include('inc/iconmenu.html')
+
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="choosePublic1">
+          @@include('inc/input.html', { "label": "пользователи ВКОНТАКТЕ", "place": "По одной ссылке или ID пользователей в строке", "area": true })
+        </div><!-- /tab-pane -->
+
+        <div class="tab-pane fade" id="choosePublic2">
+          <div class="form-field">
+            <label class="form-label">ПАБЛИКИ ВКОНТАКТЕ</label>
+            @@include('inc/file.html', { "disabled": true })
+            <div class="form-field__text">Поддерживаются списки в формате .csv и .xls</div>
+          </div>
+          <div class="form-field">
+            @@include('inc/chosenfile.html', { "name": "Последняя выгрузка паблики.csv" })
+          </div>
+        </div><!-- /tab-pane -->
+
+        <div class="tab-pane fade" id="choosePublic3">
+          <div class="form-field">
+            <label class="form-label">списки пабликов</label>
+            Select...
+          </div>
+        </div><!-- /tab-pane -->
+
+        <div class="tab-pane fade" id="choosePublic4">
+          <div class="form-field">
+            <label class="form-label">ПАБЛИКИ ВКОНТАКТЕ</label>
+            Select...
+          </div>
+        </div><!-- /tab-pane -->
+      </div><!-- /tab-content -->
+
+      <div class="form-field text-end">
+        <button class="btn btn-primary" disabled>Добавить</button>
+      </div>
+
+      <div class="form-field last disabled">
+        <label class="form-label">добавленные паблики</label>
+        <input type="text" class="form-control" placeholder="Открыть список пабликов">
+        <div class="form-field__text">Добавлено 0 пабликов</div>
+      </div>
+
+      <button class="btn btn-primary btn-plus" disabled>Применить</button>
+    </div>
+  </div>
+</div><!-- /modal -->

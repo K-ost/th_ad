@@ -208,7 +208,7 @@
 <div class="topbar">
   <div class="row align-items-center">
     <div class="col-2">
-      <button class="btn btn-primary btn-sm">Подобрать паблики</button>
+      <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#choosePublic">Подобрать паблики</button>
     </div>
     <div class="col-8 text-center">
       <ul class="topmenu">
@@ -1187,12 +1187,104 @@
     </table>
   </div>
   <div class="maintable-settings">
-    <button class="maintable-settings-btn"></button>
+    <button class="maintable-settings-btn" data-bs-toggle="modal" data-bs-target="#tableFilters"></button>
     
       <div class="maintable-settings-scroll"></div>
     
   </div>
 </div><!-- /maintable -->
+
+
+<div class="modal modal-simple" id="tableFilters" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-content-bg">
+      <h5 class="modal-title">Отображение фильтров</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <ul class="tableFilters-list">
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Тематика
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Цена
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Страна
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Регион
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Пол
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Возраст
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Количество участников
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Живые люди
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Охват записи
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Прогресс
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Посты на стене
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Реклам в группе
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Отдача
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Эффективность
+</label>
+        </li>
+        <li>
+          <label class="check-field">
+  <input type="checkbox" class="form-check" checked> Количество подписок
+</label>
+        </li>
+      </ul>
+			
+      <div class="text-end">
+        <button class="btn btn-primary">Применить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
 
 <div class="choosebar">
   <div class="choosebar-name">Выбрано: 4 паблика с общим бюджетом: 4 000 ₽</div>
@@ -1261,6 +1353,85 @@
   </div>
 </div><!-- /modal -->
 
+<div class="modal modal-simple" id="choosePublic" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-content-bg">
+      <h5 class="modal-title">Подбор пабликов</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <ul class="public_menu">
+        <li><a href="#" class="public_menu-list active">По списку</a></li>
+        <li><a href="#" class="public_menu-users">По целевой аудитории</a></li>
+      </ul><!-- /public_menu -->
+      
+      <ul class="iconmenu" role="tablist">
+  <li><a href="#" class="iconmenu-icon iconmenu-icon-edit active" data-bs-toggle="pill" data-bs-target="#choosePublic1"></a></li>
+  <li><a href="#" class="iconmenu-icon iconmenu-icon-copy" data-bs-toggle="pill" data-bs-target="#choosePublic2"></a></li>
+  <li><a href="#" class="iconmenu-icon iconmenu-icon-cloud" data-bs-toggle="pill" data-bs-target="#choosePublic3"></a></li>
+  <li><a href="#" class="iconmenu-icon iconmenu-icon-book" data-bs-toggle="pill" data-bs-target="#choosePublic4"></a></li>
+</ul><!-- /iconmenu -->
+
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="choosePublic1">
+          <div class="form-field ">
+  <label class="form-label">пользователи ВКОНТАКТЕ</label>
+  
+  
+  
+    <textarea class="form-control" placeholder="По одной ссылке или ID пользователей в строке"></textarea>
+  
+
+  
+</div>
+        </div><!-- /tab-pane -->
+
+        <div class="tab-pane fade" id="choosePublic2">
+          <div class="form-field">
+            <label class="form-label">ПАБЛИКИ ВКОНТАКТЕ</label>
+            <div class="filebox">
+  <div class="filebox-name disabled">Загрузить из файла</div>
+  <input type="file" class="form-file" disabled>
+</div><!-- /filebox -->
+            <div class="form-field__text">Поддерживаются списки в формате .csv и .xls</div>
+          </div>
+          <div class="form-field">
+            <div class="chosenfile">
+  <span>Последняя выгрузка паблики.csv</span>
+  <button class="chosenfile-remove"></button>
+</div><!-- /chosenfile -->
+          </div>
+        </div><!-- /tab-pane -->
+
+        <div class="tab-pane fade" id="choosePublic3">
+          <div class="form-field">
+            <label class="form-label">списки пабликов</label>
+            Select...
+          </div>
+        </div><!-- /tab-pane -->
+
+        <div class="tab-pane fade" id="choosePublic4">
+          <div class="form-field">
+            <label class="form-label">ПАБЛИКИ ВКОНТАКТЕ</label>
+            Select...
+          </div>
+        </div><!-- /tab-pane -->
+      </div><!-- /tab-content -->
+
+      <div class="form-field text-end">
+        <button class="btn btn-primary" disabled>Добавить</button>
+      </div>
+
+      <div class="form-field last disabled">
+        <label class="form-label">добавленные паблики</label>
+        <input type="text" class="form-control" placeholder="Открыть список пабликов">
+        <div class="form-field__text">Добавлено 0 пабликов</div>
+      </div>
+
+      <button class="btn btn-primary btn-plus" disabled>Применить</button>
+    </div>
+  </div>
+</div><!-- /modal -->
+
 </div><!-- /mainbox_container -->
 </div><!-- /mainbox -->
 
@@ -1271,22 +1442,46 @@
 			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			<div class="form-field ">
   <label class="form-label">наименование</label>
-  <input type="text" class="form-control" placeholder="ООО «Морской бриз»">
+  
+  
+    <input type="text" class="form-control" placeholder="ООО «Морской бриз»">
+  
+  
+
   <div class="form-field__text">Укажите наименование юр.лица</div>
 </div>
 			<div class="form-field ">
   <label class="form-label">Инн</label>
-  <input type="text" class="form-control" placeholder="3123123123">
+  
+  
+    <input type="text" class="form-control" placeholder="3123123123">
+  
+  
+
   
 </div>
-			<div class="form-field ">
-  <label class="form-label">номер телефона</label>
-  <input type="text" class="form-control" placeholder="(900) - 000–00–00">
-  
-</div>
+			<div class="form-field">
+        <label class="form-label">номер телефона</label>
+        <div class="phone_field">
+  <div class="dropdown">
+    <a href="#" class="phone_field-choose phone_field-rus" data-bs-toggle="dropdown">+7</a>
+    <ul class="dropdown-menu">
+      <li class="phone_field-rus">+7</li>
+      <li class="phone_field-usa">+44</li>
+      <li class="phone_field-kaz">+997</li>
+    </ul>
+  </div>
+  <input type="tel" class="form-control" placeholder="(900) - 000–00–00">
+</div><!-- /phone_field -->
+      </div>
 			<div class="form-field last">
   <label class="form-label">пополнение баланса</label>
-  <input type="text" class="form-control" placeholder="1000 ₽">
+  
+  
+    <input type="text" class="form-control" placeholder="1000 ₽">
+  
+  
+
   <div class="form-field__text">Минимальная сумма пополнения 1000 ₽</div>
 </div>
       <button class="btn btn-primary" disabled>Пополнить</button>
