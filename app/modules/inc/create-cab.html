@@ -1,0 +1,21 @@
+<div class="modal modal-simple" id="createCab" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <h5 class="modal-title">Создание кабинета</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			@@include('input.html', { "label": "Название рекламного кабинета", "place": "Новый рекламный кабинет" })
+      <div class="form-field">
+        @@include('radio.html', { "name": "face", "title": "Физическое лицо", "checked": true })
+        @@include('radio.html', { "name": "face", "title": "Юридическое лицо" })
+      </div>
+			@@include('input.html', { "label": "ФИО", "place": "Иванов Иван Иванович", "text": "Укажите имя или наименование юр.лица", "success": true })
+      @@include('input.html', { "label": "Инн", "place": "3123123123" })
+			<div class="form-field">
+        <label class="form-label">номер телефона</label>
+        @@include('phone-field.html', { "success": true })
+      </div>
+			@@include('input.html', { "label": "Сумма пополнения", "place": "1000 ₽", "text": "Минимальная сумма пополнения 1000 ₽", "last": true })
+      <button class="btn btn-primary" disabled>Пополнить</button>
+    </div>
+  </div>
+</div><!-- /modal -->

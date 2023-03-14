@@ -7,6 +7,7 @@
   --color-text2: #48505B;
   --color-blue: #226EE0;
   --color-red: #F22F52;
+  --color-green: #0A9422;
 }
 
 /* global */
@@ -135,6 +136,12 @@ a {
   background: #fff;
   opacity: 0.5;
 }
+.form-field .check-field {
+  margin-right: 16px;
+}
+.form-field .check-field:last-child {
+  margin-right: 0;
+}
 .form-label {
   font-weight: 600;
   font-size: 11px;
@@ -166,11 +173,83 @@ a {
 .form-control-sm {
   height: 32px;
 }
+.form-control.success {
+  border-color: var(--color-green);
+}
 
 textarea.form-control {
   display: block;
   height: 120px;
   resize: none;
+}
+
+/* select2 */
+.select2 {
+  width: auto !important;
+}
+
+.form-field .select2 {
+  width: 100% !important;
+}
+
+.select2-selection__arrow {
+  display: none !important;
+}
+
+.select2-container--default .select2-selection--single {
+  background: #fff;
+  border: 1px solid #C5CAD1;
+  border-radius: 8px;
+  min-height: 40px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  box-shadow: none !important;
+  position: relative;
+}
+.select2-container--default .select2-selection--single::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../images/svg/chevron-blue-down.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  width: 8px;
+  height: 5px;
+  right: 16px;
+  top: 50%;
+  margin-top: -2px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  padding: 0 36px 0 12px;
+  line-height: 38px;
+}
+.select2-container--default.select2-container--open {
+  border-radius: 8px;
+}
+.select2-container--default.select2-container--open .select2-selection--single::after {
+  transform: matrix(1, 0, 0, -1, 0, 0);
+}
+.select2-container--default .select2-results__option {
+  padding: 7px 13px;
+  color: var(--color-grey);
+}
+.select2-container--default .select2-results__option:hover {
+  background: var(--color-primary);
+}
+.select2-container--default .select2-search__field {
+  border-radius: 6px;
+  outline: none;
+}
+
+.select2-dropdown {
+  z-index: 10000;
+  background: #fff;
+  border-radius: 8px;
+  border: 1px solid #C5CAD1;
 }
 
 /* checkboxes & radio buttons */
@@ -190,6 +269,25 @@ textarea.form-control {
 }
 .form-check:checked {
   background-color: var(--color-blue);
+  background-position: center center;
+  border-color: var(--color-blue);
+}
+
+.form-radio {
+  background: #fff url(../images/svg/radio.svg) center -9999px no-repeat;
+  border: 1px solid #C5CAD1;
+  border-radius: 50px;
+  width: 16px;
+  height: 16px;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  min-height: 0;
+  cursor: pointer;
+}
+.form-radio:checked {
   background-position: center center;
   border-color: var(--color-blue);
 }
@@ -841,6 +939,72 @@ textarea.form-control {
   display: inline-block;
   width: 100%;
   margin: 0 0 12px;
+}
+
+/* phone_field */
+.phone_field {
+  background: #fff;
+  border: 1px solid #C5CAD1;
+  border-radius: 8px;
+  height: 40px;
+  display: flex;
+}
+.phone_field.success {
+  border-color: var(--color-green);
+}
+.phone_field-choose {
+  color: #48505B;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0 22px 0 12px;
+  line-height: 38px;
+}
+.phone_field-choose::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../images/svg/chevron-down.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  width: 8px;
+  height: 5px;
+  right: 10px;
+  top: 50%;
+  margin-top: -2px;
+}
+.phone_field-input {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 12px 12px 12px 0;
+  height: 38px;
+  width: 100%;
+  border: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  outline: none;
+  flex: 1;
+  background: 0;
+}
+.phone_field-input::placeholder {
+  color: #818A99;
+}
+.phone_field .dropdown-menu {
+  margin-top: 12px !important;
+  min-width: 0;
+}
+.phone_field .dropdown-menu li {
+  padding: 6px 12px;
+  font-size: 13px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.phone_field .dropdown-menu li:hover {
+  background: #ededed;
 }
 
 /* mainbox */

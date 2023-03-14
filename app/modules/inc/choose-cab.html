@@ -1,9 +1,9 @@
 <div class="modal modal-simple modal-simple-xs" id="chooseCab" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <h5 class="modal-title">Выберите кабинет</h5>
+      <h5 class="modal-title">@@title</h5>
 			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      <p>Для создания поста на платформе VK выберите рекламный кабинет или создайте новый</p>
+      @@if(context.text){<p>Для создания поста на платформе VK выберите рекламный кабинет или создайте новый</p>}
       <div class="cabitem-row">
         @@loop('cab.html', [
           { "title": "Рекламный кабинет #1", "text": "Таргет", "price": "1 000" },
@@ -11,7 +11,9 @@
         ])
       </div>
       <div class="text-start">
-        <button class="btn btn-outline-primary btn-plus"><span>Создать новый</span></button>
+        <button class="btn btn-outline-primary btn-plus" data-bs-toggle="modal" data-bs-target="#createCab">
+          <span>Создать новый</span>
+        </button>
       </div>
     </div>
   </div>

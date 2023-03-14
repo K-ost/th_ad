@@ -1,3 +1,20 @@
+$(function() {
+
+  // Select2
+  $('.js-select2').select2({
+    minimumResultsForSearch: 5
+  });
+
+  // js-dropdown
+  $('.js-dropdown').each(function() {
+    $(this).find('.dropdown-menu li').on('click', function() {
+      let text = $(this).text();
+      $(this).closest('.dropdown').find('.dropdown-link').text(text);
+    });
+  });
+
+});
+
 
 // js-choose-legal
 document.querySelector('.js-choose-legal').addEventListener('click', e => {
@@ -14,3 +31,5 @@ backs.forEach(el => {
     document.querySelector('#uh-page2').classList.remove('show')
   })
 })
+
+

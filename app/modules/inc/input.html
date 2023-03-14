@@ -2,7 +2,7 @@
   @@if(context.label){<label class="form-label">@@label</label>}
   
   @@if(!context.area){
-    <input type="text" class="form-control" placeholder="@@place">
+    <input type="text" class="form-control @@if(context.success){success}" placeholder="@@place">
   }
   @@if(context.area){
     <textarea class="form-control" placeholder="@@place"></textarea>

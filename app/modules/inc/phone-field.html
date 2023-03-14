@@ -1,11 +1,11 @@
-<div class="phone_field">
-  <div class="dropdown">
-    <a href="#" class="phone_field-choose phone_field-rus" data-bs-toggle="dropdown">+7</a>
+<div class="phone_field @@if(context.success){success}">
+  <div class="dropdown js-dropdown">
+    <a href="#" class="dropdown-link phone_field-choose" data-bs-toggle="dropdown">+7</a>
     <ul class="dropdown-menu">
-      <li class="phone_field-rus">+7</li>
-      <li class="phone_field-usa">+44</li>
-      <li class="phone_field-kaz">+997</li>
+      <li>+7</li>
+      <li>+44</li>
+      <li>+997</li>
     </ul>
   </div>
-  <input type="tel" class="form-control" placeholder="(900) - 000–00–00">
+  <input type="tel" class="phone_field-input" placeholder="(900) - 000–00–00">
 </div><!-- /phone_field -->
