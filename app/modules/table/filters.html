@@ -1,0 +1,38 @@
+<div class="modal modal-filter" id="filterPublic" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Паблик</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        @@include('../inc/input.html', { "place": "Имя или ссылка (Enter)" })
+        @@include('../inc/input.html', { "place": "Исключить из выдачи (Enter)" })
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+
+
+<div class="modal modal-filter" id="filterSubject" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Тематика</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <p>Select...</p>
+        <p>Select...</p>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->

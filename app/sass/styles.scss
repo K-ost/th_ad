@@ -174,7 +174,13 @@
 
 /* cabitem */
 .cabitem {
-  display: flex; align-items: center; padding: 12px; margin: 0 0 10px;
+  display: flex; align-items: center; padding: 12px; margin: 0 0 10px; position: relative;
+  &.disabled {
+    &::before {
+      @include bf; background: #fff; opacity: 0.5; border-radius: 10px;
+      width: 100%; left: 0; top: 0; bottom: 0;
+    }
+  }
   &:last-child {margin: 0;}
   &-row {margin: 0 0 24px;}
   &-big {

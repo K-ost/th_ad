@@ -277,7 +277,7 @@
 
     <th>
       <div class="maintable-div">
-        <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#@@popup"></button>
+        <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterPublic"></button>
         <input type="text" class="form-control" placeholder="Паблик">
       </div>
     </th>
@@ -479,6 +479,427 @@
     </div>
   </div>
 </div><!-- /modal -->
+<div class="modal modal-filter" id="filterPublic" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Паблик</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="form-field ">
+  
+  
+  
+    <input type="text" class="form-control " placeholder="Имя или ссылка (Enter)">
+  
+  
+
+  
+</div>
+        <div class="form-field ">
+  
+  
+  
+    <input type="text" class="form-control " placeholder="Исключить из выдачи (Enter)">
+  
+  
+
+  
+</div>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+
+
+<div class="modal modal-filter" id="filterSubject" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Тематика</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <p>Select...</p>
+        <p>Select...</p>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<div class="modal modal-filter" id="filterPrice" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Цена</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="price_range">
+
+          
+          <span>От</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>— до</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>₽</span>
+          
+
+          
+
+          
+          
+        </div>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<div class="modal modal-filter" id="filterAge" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Возраст</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="price_range">
+
+          
+          <span>От</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>— до</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>лет</span>
+          
+
+          
+
+          
+          <select class="select2">
+            <option></option>
+            <option>10%</option>
+            <option>20%</option>
+            <option>30%</option>
+            <option>40%</option>
+            <option>50%</option>
+          </select>
+          
+          
+        </div>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<div class="modal modal-filter" id="filterMembers" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Участников</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="price_range">
+
+          
+          <span>От</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>— до</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>чел</span>
+          
+
+          
+
+          
+          
+        </div>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<div class="modal modal-filter" id="filterPeople" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Живые люди</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="price_range">
+
+          
+
+          
+          <span>Более</span>
+          
+
+          
+          <select class="select2">
+            <option></option>
+            <option>10%</option>
+            <option>20%</option>
+            <option>30%</option>
+            <option>40%</option>
+            <option>50%</option>
+          </select>
+          
+          
+        </div>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<div class="modal modal-filter" id="filterCoverage" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Охват записи</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="price_range">
+
+          
+          <span>От</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>— до</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>чел</span>
+          
+
+          
+
+          
+          
+        </div>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<div class="modal modal-filter" id="filterProgress" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Прогресс</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="price_range">
+
+          
+          <span>От</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>— до</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>чел</span>
+          
+
+          
+
+          
+          
+        </div>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<div class="modal modal-filter" id="filterPosts" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Посты на стене</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="price_range">
+
+          
+          <span>От</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>— до</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>шт</span>
+          
+
+          
+
+          
+          
+        </div>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<div class="modal modal-filter" id="filterAds" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Реклам в группе</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="price_range">
+
+          
+          <span>От</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>— до</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>шт</span>
+          
+
+          
+
+          
+          
+        </div>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<div class="modal modal-filter" id="filterReturn" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Отдача</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="price_range">
+
+          
+
+          
+          <span>Более</span>
+          
+
+          
+          <select class="select2">
+            <option></option>
+            <option>10%</option>
+            <option>20%</option>
+            <option>30%</option>
+            <option>40%</option>
+            <option>50%</option>
+          </select>
+          
+          
+        </div>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<div class="modal modal-filter" id="filterEficient" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Эффективность</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="price_range">
+
+          
+
+          
+          <span>Более</span>
+          
+
+          
+          <select class="select2">
+            <option></option>
+            <option>10%</option>
+            <option>20%</option>
+            <option>30%</option>
+            <option>40%</option>
+            <option>50%</option>
+          </select>
+          
+          
+        </div>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+<div class="modal modal-filter" id="filterSubs" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Подписок</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="price_range">
+
+          
+          <span>От</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>— до</span>
+          <input type="text" class="form-control" placeholder="00 000">
+          <span>шт</span>
+          
+
+          
+
+          
+          
+        </div>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
 
 </div><!-- /mainbox_container -->
 </div><!-- /mainbox -->
@@ -543,7 +964,7 @@
 			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       <p>Для создания поста на платформе VK выберите рекламный кабинет или создайте новый</p>
       <div class="cabitem-row">
-        <div class="cabitem">
+        <div class="cabitem ">
   <div class="cabitem-img">
     <img src="images/svg/vk.svg" alt="">
   </div>
@@ -557,7 +978,7 @@
   </div>
   <button class="btn btn-light btn-sm">Выбрать</button>
   
-</div><!-- /cabitem --><div class="cabitem">
+</div><!-- /cabitem --><div class="cabitem ">
   <div class="cabitem-img">
     <img src="images/svg/vk.svg" alt="">
   </div>
