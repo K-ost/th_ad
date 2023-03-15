@@ -207,6 +207,7 @@
 <div class="topbar">
   <div class="row align-items-center">
     <div class="col-2">
+      <a href="#" class="btn btn-primary btn-sm btn-plus"><span>Создать пост</span></a>
     </div>
     <div class="col-8 text-center">
       <ul class="topmenu">
@@ -254,7 +255,7 @@
     <div class="homebanner-title">Создайте запись для публикации</div>
     <div class="homebanner-text">Разместите запись на платформе VK для начала работы с посевами <a href="#">Подробнее</a></div>
     
-      <a href="#" class="btn btn-primary btn-sm">
+      <a href="#" class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#choosePublic">
         Подобрать паблики
       </a>
     
@@ -897,6 +898,85 @@
         <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
         <button class="btn btn-primary">Сохранить</button>
       </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+
+<div class="modal modal-simple" id="choosePublic" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-content-bg">
+      <h5 class="modal-title">Подбор пабликов</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <ul class="public_menu">
+        <li><a href="#" class="public_menu-list active">По списку</a></li>
+        <li><a href="#" class="public_menu-users">По целевой аудитории</a></li>
+      </ul><!-- /public_menu -->
+      
+      <ul class="iconmenu" role="tablist">
+  <li><a href="#" class="iconmenu-icon iconmenu-icon-edit active" data-bs-toggle="pill" data-bs-target="#choosePublic1"></a></li>
+  <li><a href="#" class="iconmenu-icon iconmenu-icon-copy" data-bs-toggle="pill" data-bs-target="#choosePublic2"></a></li>
+  <li><a href="#" class="iconmenu-icon iconmenu-icon-cloud" data-bs-toggle="pill" data-bs-target="#choosePublic3"></a></li>
+  <li><a href="#" class="iconmenu-icon iconmenu-icon-book" data-bs-toggle="pill" data-bs-target="#choosePublic4"></a></li>
+</ul><!-- /iconmenu -->
+
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="choosePublic1">
+          <div class="form-field ">
+  <label class="form-label">пользователи ВКОНТАКТЕ</label>
+  
+  
+  
+    <textarea class="form-control" placeholder="По одной ссылке или ID пользователей в строке"></textarea>
+  
+
+  
+</div>
+        </div><!-- /tab-pane -->
+
+        <div class="tab-pane fade" id="choosePublic2">
+          <div class="form-field">
+            <label class="form-label">ПАБЛИКИ ВКОНТАКТЕ</label>
+            <div class="filebox">
+  <div class="filebox-name disabled">Загрузить из файла</div>
+  <input type="file" class="form-file" disabled>
+</div><!-- /filebox -->
+            <div class="form-field__text">Поддерживаются списки в формате .csv и .xls</div>
+          </div>
+          <div class="form-field">
+            <div class="chosenfile">
+  <span>Последняя выгрузка паблики.csv</span>
+  <button class="chosenfile-remove"></button>
+</div><!-- /chosenfile -->
+          </div>
+        </div><!-- /tab-pane -->
+
+        <div class="tab-pane fade" id="choosePublic3">
+          <div class="form-field">
+            <label class="form-label">списки пабликов</label>
+            Select...
+          </div>
+        </div><!-- /tab-pane -->
+
+        <div class="tab-pane fade" id="choosePublic4">
+          <div class="form-field">
+            <label class="form-label">ПАБЛИКИ ВКОНТАКТЕ</label>
+            Select...
+          </div>
+        </div><!-- /tab-pane -->
+      </div><!-- /tab-content -->
+
+      <div class="form-field text-end">
+        <button class="btn btn-primary" disabled>Добавить</button>
+      </div>
+
+      <div class="form-field last disabled">
+        <label class="form-label">добавленные паблики</label>
+        <input type="text" class="form-control" placeholder="Открыть список пабликов">
+        <div class="form-field__text">Добавлено 0 пабликов</div>
+      </div>
+
+      <button class="btn btn-primary btn-plus" disabled>Применить</button>
     </div>
   </div>
 </div><!-- /modal -->

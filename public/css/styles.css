@@ -39,6 +39,14 @@ a {
   margin: 0 auto;
 }
 
+.text-success {
+  color: var(--color-green) !important;
+}
+
+.text-danger {
+  color: var(--color-red) !important;
+}
+
 /* btn-nav */
 .btn-nav {
   -webkit-appearance: none;
@@ -125,8 +133,11 @@ a {
 .form-field.last {
   margin: 0 0 24px;
 }
-.form-field:last-child {
+.form-field.lastchild {
   margin: 0;
+}
+.form-field.disabled {
+  opacity: 0.5;
 }
 .form-field.disabled::before {
   content: "";
@@ -136,8 +147,6 @@ a {
   left: 0;
   top: 0;
   bottom: 0;
-  background: #fff;
-  opacity: 0.5;
 }
 .form-field .check-field {
   margin-right: 16px;
@@ -187,74 +196,6 @@ textarea.form-control {
 }
 
 /* select2 */
-.select2 {
-  width: auto !important;
-}
-
-.form-field .select2 {
-  width: 100% !important;
-}
-
-.select2-selection__arrow {
-  display: none !important;
-}
-
-.select2-container--default .select2-selection--single {
-  background: #fff;
-  border: 1px solid #C5CAD1;
-  border-radius: 8px;
-  min-height: 40px;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-  box-shadow: none !important;
-  position: relative;
-}
-.select2-container--default .select2-selection--single::after {
-  content: "";
-  position: absolute;
-  display: block;
-  background-image: url("../images/svg/chevron-blue-down.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  display: inline-block;
-  vertical-align: middle;
-  width: 8px;
-  height: 5px;
-  right: 16px;
-  top: 50%;
-  margin-top: -2px;
-}
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-  padding: 0 36px 0 12px;
-  line-height: 38px;
-}
-.select2-container--default.select2-container--open {
-  border-radius: 8px;
-}
-.select2-container--default.select2-container--open .select2-selection--single::after {
-  transform: matrix(1, 0, 0, -1, 0, 0);
-}
-.select2-container--default .select2-results__option {
-  padding: 7px 13px;
-  color: var(--color-grey);
-}
-.select2-container--default .select2-results__option:hover {
-  background: var(--color-primary);
-}
-.select2-container--default .select2-search__field {
-  border-radius: 6px;
-  outline: none;
-}
-
-.select2-dropdown {
-  z-index: 10000;
-  background: #fff;
-  border-radius: 8px;
-  border: 1px solid #C5CAD1;
-}
-
 /* checkboxes & radio buttons */
 .form-check {
   background: #fff url(../images/svg/check.svg) center -9999px/10px no-repeat;
@@ -421,6 +362,7 @@ textarea.form-control {
 .btn-primary {
   background: var(--color-blue);
   color: #fff;
+  border: 0;
 }
 .btn-primary:hover {
   background: var(--color-blue);
@@ -480,6 +422,26 @@ textarea.form-control {
 }
 .btn-plus.btn-outline-primary:hover span::before {
   background-image: url(../images/svg/plus-white.svg);
+}
+.btn-add span {
+  padding-right: 32px;
+  position: relative;
+}
+.btn-add span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../images/svg/add.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  right: 0;
+  top: 50%;
+  margin-top: -12px;
 }
 .btn-next span {
   padding-right: 28px;
@@ -619,6 +581,10 @@ textarea.form-control {
   content: "";
   position: absolute;
   display: block;
+  left: 0;
+  top: 50%;
+}
+.modal-simple .modal-title-icon__remove::before {
   background-image: url("../images/svg/remove.svg");
   background-repeat: no-repeat;
   background-position: center center;
@@ -627,9 +593,18 @@ textarea.form-control {
   vertical-align: middle;
   width: 30px;
   height: 30px;
-  left: 0;
-  top: 50%;
   margin-top: -15px;
+}
+.modal-simple .modal-title-icon__check::before {
+  background-image: url("../images/svg/check-o.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  margin-top: -16px;
 }
 .modal-simple .btn-close {
   position: absolute;
@@ -684,7 +659,7 @@ textarea.form-control {
   max-width: 550px;
 }
 
-#removeList .modal-dialog {
+#removeList .modal-dialog, #publicAdded .modal-dialog {
   max-width: 584px;
 }
 
@@ -1868,4 +1843,107 @@ textarea.form-control {
 }
 .choosebar .btn:last-child {
   margin-right: 0;
+}
+
+/* publicbox */
+.publicbox {
+  background: #fff;
+  border-bottom: 1px solid #C5CAD1;
+  box-shadow: 0px 1px 4px rgba(18, 42, 69, 0.2);
+  border-radius: 8px;
+  display: flex;
+  margin: 0 0 8px;
+  position: relative;
+  color: #515A69;
+  line-height: 16px;
+}
+.publicbox:last-child {
+  margin: 0;
+}
+.publicbox-container {
+  margin: 0 0 32px;
+}
+.publicbox-scroll {
+  max-height: 276px;
+  overflow-y: auto;
+  margin: 0 -18px 0 -1px;
+  padding: 0 18px 0 1px;
+}
+.publicbox-col {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-right: 1px solid transparent;
+}
+.publicbox-col:last-child {
+  border: 0;
+}
+.publicbox-disabled::after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 8px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
+  opacity: 0.5;
+  z-index: 10;
+}
+.publicbox img {
+  display: block;
+}
+.publicbox-check {
+  min-width: 42px;
+  max-width: 42px;
+  justify-content: center;
+}
+.publicbox-desc {
+  flex: 1;
+}
+.publicbox-img {
+  margin-right: 12px;
+  min-width: 38px;
+  max-width: 38px;
+}
+.publicbox-img img {
+  border-radius: 50%;
+}
+.publicbox-title {
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.publicbox-title a {
+  text-decoration: none;
+}
+.publicbox-time {
+  min-width: 100px;
+  max-width: 100px;
+  justify-content: center;
+}
+.publicbox-time a {
+  text-decoration: none;
+}
+.publicbox-price {
+  min-width: 100px;
+  max-width: 100px;
+  justify-content: center;
+}
+.publicbox-status {
+  min-width: 80px;
+  max-width: 80px;
+  justify-content: center;
+  color: var(--color-blue);
+}
+.publicbox-head {
+  background: #E7E9ED;
+  border: 0;
+  box-shadow: none;
+  font-weight: 600;
+  line-height: 18px;
+}
+.publicbox-head .publicbox-col {
+  border-right-color: #fff;
+  color: #48505B !important;
 }

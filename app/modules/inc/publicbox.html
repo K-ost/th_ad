@@ -1,0 +1,27 @@
+<div class="publicbox@@if(context.disabled){ publicbox-disabled}">
+  <div class="publicbox-col publicbox-check">
+    <input type="checkbox" class="form-check">
+  </div>
+  <div class="publicbox-col publicbox-desc">
+    <div class="publicbox-img">
+      <img src="images/svg/img-icon.svg" alt="">
+    </div>
+    <div class="publicbox-body">
+      <div class="publicbox-title">
+        <a href="#">@@title</a>
+      </div>
+      <div class="publicbox-text">Описание паблика</div>
+    </div>
+  </div>
+  <div class="publicbox-col publicbox-time">
+    @@if(context.time === "success"){<span class="text-success">Установлено</span>}
+    @@if(context.time === "danger"){<a href="#" class="text-danger">Установить</a>}
+  </div>
+  <div class="publicbox-col publicbox-price">1000 ₽</div>
+  <div class="publicbox-col publicbox-status">
+    @@if(!context.status){-}
+    @@if(context.status === "success"){<img src="images/svg/check-green.svg" alt="">}
+    @@if(context.status === "danger"){<img src="images/svg/error-red.svg" alt="">}
+    @@if(context.status === "progress"){<img src="images/svg/progress-icon.svg" alt="">}
+  </div>
+</div><!-- /publicbox -->

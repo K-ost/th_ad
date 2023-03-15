@@ -7,9 +7,48 @@
 <p>5. <a href="public.html" target="_blank">public list</a></p>
 <p>6. <a href="public-empty.html" target="_blank">public list empty</a></p>
 
-<p style="height: 200px;"></p>
+<p style="height: 70px;"></p>
 
-
+<div class="publicbox-container">
+  @@include('modules/inc/publicbox-head.html')
+  <div class="publicbox-scroll">
+    @@include('modules/inc/publicbox.html', {
+      "title": "Наименование паблика",
+      "status": "success",
+      "time": "success"
+    })
+    @@include('modules/inc/publicbox.html', {
+      "title": "Наименование паблика",
+      "status": "danger",
+      "time": "success"
+    })
+    @@include('modules/inc/publicbox.html', {
+      "title": "Наименование паблика",
+      "status": "progress",
+      "time": "success"
+    })
+    @@include('modules/inc/publicbox.html', {
+      "title": "Наименование паблика",
+      "time": "danger",
+      "disabled": true
+    })
+    @@include('modules/inc/publicbox.html', {
+      "title": "Наименование паблика",
+      "status": "danger",
+      "time": "success"
+    })
+    @@include('modules/inc/publicbox.html', {
+      "title": "Наименование паблика",
+      "status": "progress",
+      "time": "success"
+    })
+    @@include('modules/inc/publicbox.html', {
+      "title": "Наименование паблика",
+      "time": "danger",
+      "disabled": true
+    })
+  </div>
+</div><!-- /publicbox-container -->
 
 <!-- <div class="gsel">
   <div class="gsel-select">

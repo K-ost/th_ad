@@ -3,6 +3,7 @@
 <div class="topbar">
   <div class="row align-items-center">
     <div class="col-2">
+      <a href="#" class="btn btn-primary btn-sm btn-plus"><span>Создать пост</span></a>
     </div>
     <div class="col-8 text-center">
       @@include('modules/inc/topmenu.html')
@@ -22,5 +23,7 @@
 </div><!-- /middlebar -->
 
 @@include('modules/table.html', { "empty": true })
+
+@@include('modules/public-choose.html')
 
 @@include('modules/footer.html')

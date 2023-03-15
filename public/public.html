@@ -1709,6 +1709,9 @@
 <div class="choosebar">
   <div class="choosebar-name">Выбрано: 4 паблика с общим бюджетом: 4 000 ₽</div>
   <div class="choosebar-buttons">
+    <button class="btn btn-light btn-add" data-bs-toggle="modal" data-bs-target="#publicAdded">
+      <span>В список пабликов</span>
+    </button>
     <button class="btn btn-link btn-remove" data-bs-toggle="modal" data-bs-target="#removeList">
       <span>Удалить из списка</span>
     </button>
@@ -1718,6 +1721,18 @@
   </div>
 </div><!-- /choosebar -->
 
+<div class="modal modal-simple" id="publicAdded" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <h5 class="modal-title modal-title-icon modal-title-icon__check">Паблики добавлены</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      <p>Выбранные паблики успешно добавлены в список пабликов</p>
+      <div class="modal-simple-bottom">
+        <button class="btn btn-light" data-bs-dismiss="modal">Отменить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
 <div class="modal modal-simple" id="removeList" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
