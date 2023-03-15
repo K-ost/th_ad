@@ -278,6 +278,13 @@ textarea.form-control {display: block; height: 120px; resize: none;}
 #removeList .modal-dialog, #publicAdded .modal-dialog {max-width: 584px;}
 #choosePublic .modal-dialog {max-width: 404px;}
 #tableFilters .modal-dialog {max-width: 820px;}
+#showRecord {
+  .modal-dialog {max-width: 458px;}
+  .modal-content {font-weight: 500; font-size: 11px; line-height: 15px;}
+  .modal-title {font-size: 13px; line-height: 18px; margin: 0 0 10px;}
+  .btn-close {top: 10px; right: 10px;}
+}
+
 
 
 /* modal table filters */

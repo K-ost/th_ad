@@ -671,6 +671,24 @@ textarea.form-control {
   max-width: 820px;
 }
 
+#showRecord .modal-dialog {
+  max-width: 458px;
+}
+#showRecord .modal-content {
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 15px;
+}
+#showRecord .modal-title {
+  font-size: 13px;
+  line-height: 18px;
+  margin: 0 0 10px;
+}
+#showRecord .btn-close {
+  top: 10px;
+  right: 10px;
+}
+
 /* modal table filters */
 .modal-filter .modal-dialog {
   max-width: 280px;
@@ -1843,6 +1861,21 @@ textarea.form-control {
 }
 .choosebar .btn:last-child {
   margin-right: 0;
+}
+
+/* recordbox */
+.recordbox {
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px 10px 16px;
+  margin: 0 0 10px;
+}
+.recordbox-title {
+  font-weight: 600;
+  color: var(--color-text);
 }
 
 /* publicbox */

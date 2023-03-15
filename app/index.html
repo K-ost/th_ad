@@ -50,6 +50,10 @@
   </div>
 </div><!-- /publicbox-container -->
 
+@@loop('modules/inc/recordbox.html', [ {}, {}, {} ])
+
+<p style="height: 70px;"></p>
+
 <!-- <div class="gsel">
   <div class="gsel-select">
     <input type="text" class="gsel-input" placeholder="Choose...">
@@ -71,5 +75,7 @@
   </div>
 </div> -->
 
+
+@@include('modules/inc/show-record.html')
 
 @@include('modules/footer.html')

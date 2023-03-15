@@ -335,6 +335,14 @@
 }
 
 
+/* recordbox */
+.recordbox {
+  background: #fff; border-radius: 10px; display: flex; align-items: center;
+  justify-content: space-between; padding: 10px 10px 10px 16px; margin: 0 0 10px;
+  &-title {font-weight: 600; color: var(--color-text);}
+}
+
+
 /* publicbox */
 .publicbox {
   background: #fff; border-bottom: 1px solid #C5CAD1; box-shadow: 0px 1px 4px rgba(18, 42, 69, 0.2);
