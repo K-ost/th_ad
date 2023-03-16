@@ -2433,6 +2433,23 @@ textarea.form-control {
   display: block;
   left: 0;
   top: 0;
+  width: 24px;
+  height: 24px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+}
+.modulebox-text__members::before {
+  background-image: url(../images/svg/members.svg);
+}
+.modulebox-text__date::before {
+  background-image: url(../images/svg/partners-red.svg);
+}
+.modulebox-text__planet::before {
+  background-image: url(../images/svg/planet.svg);
+}
+.modulebox-text__close::before {
+  background-image: url(../images/svg/close-red.svg);
 }
 .modulebox-text__flexed {
   display: flex;
@@ -2443,4 +2460,28 @@ textarea.form-control {
   max-width: 20px;
   display: block;
   margin: 0 8px 0 0;
+}
+.modulebox-images {
+  display: flex;
+}
+.modulebox-images img {
+  width: 48px;
+  margin: 0 16px 0 0;
+}
+.modulebox_card {
+  display: flex;
+  align-items: center;
+}
+.modulebox_card-img {
+  min-width: 48px;
+  max-width: 48px;
+  display: block;
+  margin: 0 10px 0 0;
+}
+.modulebox_card-title {
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+.modulebox_card-title a {
+  text-decoration: none;
 }
