@@ -1,0 +1,15 @@
+<div class="calendar">
+  <div id="datepicker"></div>
+  <div class="calendar-section">
+    <div class="calendar-title">Время показа:</div>
+    <div class="calendar-row">
+      @@include('radio.html', { "name": "time", "title": "В доступное время" })
+    </div>
+    <div class="calendar-row">
+      @@include('radio.html', { "name": "time", "title": "В период", "period": true })
+    </div>
+  </div>
+  <div class="calendar-footer">
+    <button class="btn btn-xs btn-accept"><span>Применить</span></button>
+  </div>
+</div><!-- /calendar -->

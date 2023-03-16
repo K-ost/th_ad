@@ -1,3 +1,11 @@
-<label class="check-field">
-  <input type="radio" name="@@name" class="form-radio" @@if(context.checked){checked}> @@title
+<label class="check-field @@if(context.period){check-field__flex}">
+  <input type="radio" name="@@name" class="form-radio" @@if(context.checked){checked}>
+  <span>@@title</span>
+  @@if(context.period){
+    <div class="date_period">
+      <input type="text" class="form-control" placeholder="10:00">
+      <span class="date_period-divider"></span>
+      <input type="text" class="form-control" placeholder="22:00">
+    </div><!-- /date_period -->
+  }
 </label>

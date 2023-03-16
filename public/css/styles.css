@@ -237,7 +237,8 @@ textarea.form-control {
 }
 
 .check-field {
-  display: inline-block;
+  display: inline;
+  align-items: center;
   position: relative;
   padding-left: 20px;
   line-height: 16px;
@@ -248,6 +249,38 @@ textarea.form-control {
   position: absolute;
   left: 0;
   top: 0;
+}
+.check-field__flex {
+  display: inline-flex;
+  align-items: center;
+}
+.check-field__flex span {
+  margin-right: 6px;
+  white-space: nowrap;
+}
+.check-field__flex .form-check, .check-field__flex .form-radio {
+  top: 50%;
+  margin-top: -8px;
+}
+
+/* date_period */
+.date_period {
+  display: flex;
+  align-items: center;
+}
+.date_period-divider {
+  background: #404651;
+  min-width: 13px;
+  max-width: 13px;
+  height: 1px;
+  margin: 0 6px;
+  display: block;
+}
+.date_period .form-control {
+  height: 32px;
+  width: 52px;
+  padding: 8px 2px;
+  text-align: center;
 }
 
 /* input file */
@@ -488,6 +521,32 @@ textarea.form-control {
   right: 0;
   top: 50%;
   margin-top: -12px;
+}
+.btn-accept {
+  padding-right: 0;
+  padding-left: 0;
+  border: 0;
+  color: var(--color-blue);
+}
+.btn-accept span {
+  padding-left: 18px;
+  position: relative;
+}
+.btn-accept span::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../images/svg/check-blue.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  top: 50%;
+  margin-top: -8px;
 }
 
 /* btn-dots */
@@ -1061,6 +1120,65 @@ textarea.form-control {
 }
 .phone_field .dropdown-menu li:hover {
   background: #ededed;
+}
+
+/* calendar */
+.datepicker .table-condensed {
+  border-collapse: collapse;
+  width: 100%;
+}
+.datepicker .table-condensed thead .dow {
+  text-align: center;
+  height: 40px;
+  padding-bottom: 8px;
+  color: #818A99;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 12px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.datepicker .table-condensed tbody td {
+  height: 40px;
+  text-align: center;
+  font-weight: 500;
+  color: var(--color-text2);
+  line-height: 16px;
+  padding-bottom: 8px;
+}
+.datepicker .table-condensed tbody td.old, .datepicker .table-condensed tbody td.new {
+  color: #818a49;
+}
+
+.calendar {
+  background: #fff;
+  border: 1px solid #C5CAD1;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(18, 42, 69, 0.25);
+  padding: 8px 16px 16px;
+  max-width: 256px;
+}
+.calendar .datepicker {
+  margin: 0 0 10px;
+}
+.calendar-section {
+  margin: 0 0 10px;
+}
+.calendar-title {
+  font-weight: 600;
+  color: var(--color-text2);
+  margin: 0 0 6px;
+}
+.calendar-row {
+  margin: 0 0 6px;
+}
+.calendar-row:last-child {
+  margin: 0;
+}
+.calendar-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 /* mainbox */

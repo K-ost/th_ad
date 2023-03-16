@@ -13,6 +13,13 @@ $(function() {
     });
   });
 
+  // datepicker
+  $('#datepicker').datepicker({
+    format: "dd.mm.yyyy",
+    language: "ru",
+    todayHighlight: true
+  });
+
 });
 
 
