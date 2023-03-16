@@ -1,0 +1,117 @@
+@@include('modules/header.html')
+
+<div class="page_header">
+  <button class="btn-back"></button>
+  <img src="images/svg/img-icon.svg" alt="">
+  <h1>Наименование паблика</h1>
+</div><!-- /page_header -->
+
+
+<div class="row row-big">
+  <div class="col-12 col-lg-4">
+
+    <div class="module">
+      <div class="module-inner module-inner-pad">
+        <div class="row module-row">
+          <div class="col-6 modulebox-grid">
+            <div class="modulebox">
+              <div class="modulebox-title">Подписчики:</div>
+              <div class="modulebox-text modulebox-text__icon modulebox-text__members">1 000 000</div>
+            </div><!-- /modulebox -->
+          </div><!-- /col -->
+          <div class="col-6 modulebox-grid">
+            <div class="modulebox">
+              <div class="modulebox-title">Домен:</div>
+              <div class="modulebox-text"><a href="#">@domen</a></div>
+            </div><!-- /modulebox -->
+          </div><!-- /col -->
+          <div class="col-6 modulebox-grid">
+            <div class="modulebox">
+              <div class="modulebox-title">Категория:</div>
+              <div class="modulebox-text modulebox-text__icon modulebox-text__users">Знакомства</div>
+            </div><!-- /modulebox -->
+          </div><!-- /col -->
+          <div class="col-6 modulebox-grid">
+            <div class="modulebox">
+              <div class="modulebox-title">Регион регистрации:</div>
+              <div class="modulebox-text modulebox-text__flexed"><img src="images/svg/flag.svg" alt=""> Москва</div>
+            </div><!-- /modulebox -->
+          </div><!-- /col -->
+          <div class="col-6 modulebox-grid">
+            <div class="modulebox">
+              <div class="modulebox-title">Доступ:</div>
+              <div class="modulebox-text modulebox-text__icon modulebox-text__close">Закрытая</div>
+            </div><!-- /modulebox -->
+          </div><!-- /col -->
+          <div class="col-6 modulebox-grid">
+            <div class="modulebox">
+              <div class="modulebox-title">Цель:</div>
+              <div class="modulebox-text modulebox-text__icon modulebox-text__planet">Информация</div>
+            </div><!-- /modulebox -->
+          </div><!-- /col -->
+        </div>
+      </div>
+    </div><!-- /module -->
+
+
+  </div><!-- /col -->
+
+  <div class="col-12 col-lg-8">
+
+    <div class="module">
+      <div class="module-inner">
+        <div class="module-header">
+          <div class="module-title">Качество аудитории</div>
+        </div>
+        @@include('modules/stat/quality.html')
+      </div>
+    </div><!-- /module -->
+
+    <div class="row row-big">
+
+      <div class="col-12 col-md-8 module">
+        <div class="module-inner">
+          <div class="module-header">
+            <div class="module-title">Пол и возраст</div>
+            <div>
+              <div class="item-male">58.4%</div>
+              <div class="item-female">41.6%</div>
+            </div>
+          </div>
+          chart is gonna be here...
+        </div>
+      </div><!-- /module -->
+
+      <div class="col-12 col-md-4 module">
+        <div class="module-inner module-inner-pad">
+          <div class="module-header">
+            <div class="module-title">География</div>
+          </div>
+          @@loop('modules/stat/country.html', [
+            { "title": "Страна 1", "val": "80%" },
+            { "title": "Страна 2", "val": "100%" },
+            { "title": "Страна 3", "val": "54%" },
+            { "title": "Страна 4", "val": "30%" },
+            { "title": "Страна 5", "val": "0%" }
+          ])
+        </div>
+      </div><!-- /module -->
+      
+    </div><!-- /row -->
+
+    <div class="module">
+      <div class="module-inner">
+        <div class="module-header">
+          <div class="module-title">Активность по времени</div>
+          <div>
+            tabs are gonna be here...
+          </div>
+        </div>
+        chart is gonna be here...
+      </div>
+    </div><!-- /module -->
+
+  </div><!-- /col -->
+</div><!-- /row -->
+
+@@include('modules/footer.html')
