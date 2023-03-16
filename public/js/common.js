@@ -17,7 +17,11 @@ $(function() {
   $('#datepicker').datepicker({
     format: "dd.mm.yyyy",
     language: "ru",
-    todayHighlight: true
+    todayHighlight: true,
+    templates: {
+      leftArrow: '<span class="datepicker-prev"></span>',
+      rightArrow: '<span class="datepicker-next"></span>'
+    }
   });
 
 });
@@ -39,4 +43,15 @@ backs.forEach(el => {
   })
 })
 
-
+// Show calendar
+document.querySelectorAll('.js-calendar').forEach(el => {
+  el.addEventListener('click', e => {
+    e.preventDefault()
+    document.querySelector('#calendar1').classList.add('opened')
+  })
+})
+document.querySelectorAll('.js-calendar-dismiss').forEach(el => {
+  el.addEventListener('click', e => {
+    e.target.closest('.calendar').classList.remove('opened')
+  })
+})

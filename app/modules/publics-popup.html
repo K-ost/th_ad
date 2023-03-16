@@ -1,0 +1,49 @@
+<div class="modal modal-simple" id="choosePublics" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-content-bg">
+      <h5 class="modal-title modal-title-icon">
+        <button class="btn-back" data-bs-toggle="modal" data-bs-target="#makeSowing"></button>
+        Выберите паблики и время размещения записи
+      </h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <div class="publicbox-container">
+        @@include('inc/publicbox-head.html')
+        <div class="publicbox-scroll">
+          @@loop('inc/publicbox.html', [
+            {
+              "title": "Наименование паблика",
+              "status": "success",
+              "time": "success"
+            },
+            {
+              "title": "Наименование паблика",
+              "status": "danger",
+              "time": "success"
+            },
+            {
+              "title": "Наименование паблика",
+              "status": "progress",
+              "time": "success"
+            },
+            {
+              "title": "Наименование паблика",
+              "time": "danger",
+              "disabled": true
+            },
+            {
+              "title": "Наименование паблика",
+              "status": "danger",
+              "time": "success"
+            }
+          ])
+        </div>
+      </div><!-- /publicbox-container -->
+      
+      <button class="btn btn-primary">Сделать посев в 3 пабликах на сумму 3 000 ₽</button>
+      <div class="text-center">Вы можете закрыть окно во время размещения</div>
+    </div>
+  </div>
+</div><!-- /modal -->
+
+@@include('inc/calendar.html')

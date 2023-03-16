@@ -8,6 +8,7 @@
   --color-grey: #C5CAD1;
   --color-text: #292E36;
   --color-text2: #48505B;
+  --color-hover: #EBF3FF;
   --color-blue: #226EE0;
   --color-red: #F22F52;
   --color-green: #0A9422;
@@ -248,6 +249,13 @@ textarea.form-control {display: block; height: 120px; resize: none;}
   &.active {background-image: url(../images/svg/star-active.svg);}
 }
 
+/* btn-back */
+.btn-back {
+  background: url(../images/svg/chevron-blue-left.svg) center center no-repeat;
+  border: 0; @include inp; padding: 0; border-radius: 0; cursor: pointer;
+  min-width: 32px; height: 32px;
+}
+
 
 /* modal-simple */
 .modal-simple {
@@ -267,6 +275,7 @@ textarea.form-control {display: block; height: 120px; resize: none;}
       &::before {@include bf; left: 0; top: 50%;}
       &__remove::before {@include icon(remove,30px,30px); margin-top: -15px;}
       &__check::before {@include icon(check-o,32px,32px); margin-top: -16px;}
+      .btn-back {position: absolute; left: 0; top: -2px;}
     }
   }
   .btn-close {position: absolute; top: 32px; right: 32px;}
@@ -296,6 +305,11 @@ textarea.form-control {display: block; height: 120px; resize: none;}
 #removeList .modal-dialog, #publicAdded .modal-dialog {max-width: 584px;}
 #choosePublic .modal-dialog {max-width: 404px;}
 #tableFilters .modal-dialog {max-width: 820px;}
+#makeSowing .modal-dialog {max-width: 584px;}
+#choosePublics {
+  .modal-dialog {max-width: 655px;}
+  .text-center {padding-top: 10px; color: var(--color-text2);}
+}
 #showRecord {
   .modal-dialog {max-width: 458px;}
   .modal-content {font-weight: 500; font-size: 11px; line-height: 15px;}
@@ -496,17 +510,33 @@ textarea.form-control {display: block; height: 120px; resize: none;}
     }
     tbody {
       td {
-        height: 40px; text-align: center; font-weight: 500; color: var(--color-text2);
-        line-height: 16px; padding-bottom: 8px;
-        &.old, &.new {color: #818a49;}
+        height: 32px; text-align: center; font-weight: 600; color: var(--color-text2);
+        line-height: 32px; border-radius: 32px; min-width: 32px; padding: 0; cursor: pointer;
+        &.old, &.new {color: #818a49; font-weight: 400;}
+        &.active {background: var(--color-blue); color: #fff;}
+        &.today {background: var(--color-hover); color: var(--color-blue);}
       }
     }
+  }
+  &-switch {font-weight: 600; color: var(--color-text2); text-align: center; padding: 10px 0;}
+  &-prev, &-next {
+    min-width: 24px; background: url(../images/svg/chevron-blue-right.svg) center center / 6px no-repeat;
+    height: 24px; border-radius: 50%; display: block; cursor: pointer;
+  }
+  &-prev {transform: matrix(-1,0,0,1,0,0);}
+  .month, .year, .decade, .century {
+    width: 23%; border-radius: 8px; display: block; float: left; height: 40px;
+    margin: 1%; line-height: 40px; background: var(--color-bg);
+    &.focused {background: var(--color-hover); color: var(--color-blue);}
+    &:hover {background: var(--color-blue); color: #fff;}
   }
 }
 .calendar {
   background: #fff; border: 1px solid #C5CAD1; border-radius: 8px;
   box-shadow: 0px 8px 16px rgba(18, 42, 69, 0.25); padding: 8px 16px 16px;
-  max-width: 256px;
+  max-width: 256px; position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 10000;
+  transition: all 200ms ease-in-out; opacity: 0; visibility: hidden;
+  &.opened {opacity: 1; visibility: visible;}
   .datepicker {margin: 0 0 10px;}
   &-section {margin: 0 0 10px;}
   &-title {font-weight: 600; color: var(--color-text2); margin: 0 0 6px;}
@@ -516,7 +546,6 @@ textarea.form-control {display: block; height: 120px; resize: none;}
   }
   &-footer {display: flex; align-items: center; justify-content: flex-end;}
 }
-
 
 
 

@@ -1715,7 +1715,7 @@
     <button class="btn btn-link btn-remove" data-bs-toggle="modal" data-bs-target="#removeList">
       <span>Удалить из списка</span>
     </button>
-    <button class="btn btn-primary btn-next">
+    <button class="btn btn-primary btn-next" data-bs-toggle="modal" data-bs-target="#makeSowing">
       <span>Сделать посев</span>
     </button>
   </div>
@@ -1866,6 +1866,213 @@
     </div>
   </div>
 </div><!-- /modal -->
+
+<div class="modal modal-simple" id="makeSowing" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-content-bg">
+      <h5 class="modal-title">Выберите кабинет и запись<br> для посева</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <div class="text-start">
+        <button class="btn btn-outline-primary btn-plus"><span>Создать новый</span></button>
+      </div>
+      
+      <div class="text-end">
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choosePublics">Выбрать время</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+
+<div class="modal modal-simple" id="choosePublics" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-content-bg">
+      <h5 class="modal-title modal-title-icon">
+        <button class="btn-back" data-bs-toggle="modal" data-bs-target="#makeSowing"></button>
+        Выберите паблики и время размещения записи
+      </h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <div class="publicbox-container">
+        <div class="publicbox publicbox-head">
+  <div class="publicbox-col publicbox-check">
+    <input type="checkbox" class="form-check">
+  </div>
+  <div class="publicbox-col publicbox-desc">Список пабликов</div>
+  <div class="publicbox-col publicbox-time">Время</div>
+  <div class="publicbox-col publicbox-price">Стоимость</div>
+  <div class="publicbox-col publicbox-status">Статус</div>
+</div><!-- /publicbox -->
+        <div class="publicbox-scroll">
+          <div class="publicbox">
+  <div class="publicbox-col publicbox-check">
+    <input type="checkbox" class="form-check">
+  </div>
+  <div class="publicbox-col publicbox-desc">
+    <div class="publicbox-img">
+      <img src="images/svg/img-icon.svg" alt="">
+    </div>
+    <div class="publicbox-body">
+      <div class="publicbox-title">
+        <a href="#">Наименование паблика</a>
+      </div>
+      <div class="publicbox-text">Описание паблика</div>
+    </div>
+  </div>
+  <div class="publicbox-col publicbox-time">
+    <a href="#" class="text-success js-calendar">Установлено</a>
+    
+  </div>
+  <div class="publicbox-col publicbox-price">1000 ₽</div>
+  <div class="publicbox-col publicbox-status">
+    
+    <img src="images/svg/check-green.svg" alt="">
+    
+    
+  </div>
+</div><!-- /publicbox --><div class="publicbox">
+  <div class="publicbox-col publicbox-check">
+    <input type="checkbox" class="form-check">
+  </div>
+  <div class="publicbox-col publicbox-desc">
+    <div class="publicbox-img">
+      <img src="images/svg/img-icon.svg" alt="">
+    </div>
+    <div class="publicbox-body">
+      <div class="publicbox-title">
+        <a href="#">Наименование паблика</a>
+      </div>
+      <div class="publicbox-text">Описание паблика</div>
+    </div>
+  </div>
+  <div class="publicbox-col publicbox-time">
+    <a href="#" class="text-success js-calendar">Установлено</a>
+    
+  </div>
+  <div class="publicbox-col publicbox-price">1000 ₽</div>
+  <div class="publicbox-col publicbox-status">
+    
+    
+    <img src="images/svg/error-red.svg" alt="">
+    
+  </div>
+</div><!-- /publicbox --><div class="publicbox">
+  <div class="publicbox-col publicbox-check">
+    <input type="checkbox" class="form-check">
+  </div>
+  <div class="publicbox-col publicbox-desc">
+    <div class="publicbox-img">
+      <img src="images/svg/img-icon.svg" alt="">
+    </div>
+    <div class="publicbox-body">
+      <div class="publicbox-title">
+        <a href="#">Наименование паблика</a>
+      </div>
+      <div class="publicbox-text">Описание паблика</div>
+    </div>
+  </div>
+  <div class="publicbox-col publicbox-time">
+    <a href="#" class="text-success js-calendar">Установлено</a>
+    
+  </div>
+  <div class="publicbox-col publicbox-price">1000 ₽</div>
+  <div class="publicbox-col publicbox-status">
+    
+    
+    
+    <img src="images/svg/progress-icon.svg" alt="">
+  </div>
+</div><!-- /publicbox --><div class="publicbox publicbox-disabled">
+  <div class="publicbox-col publicbox-check">
+    <input type="checkbox" class="form-check">
+  </div>
+  <div class="publicbox-col publicbox-desc">
+    <div class="publicbox-img">
+      <img src="images/svg/img-icon.svg" alt="">
+    </div>
+    <div class="publicbox-body">
+      <div class="publicbox-title">
+        <a href="#">Наименование паблика</a>
+      </div>
+      <div class="publicbox-text">Описание паблика</div>
+    </div>
+  </div>
+  <div class="publicbox-col publicbox-time">
+    
+    <a href="#" class="text-danger js-calendar">Установить</a>
+  </div>
+  <div class="publicbox-col publicbox-price">1000 ₽</div>
+  <div class="publicbox-col publicbox-status">
+    -
+    
+    
+    
+  </div>
+</div><!-- /publicbox --><div class="publicbox">
+  <div class="publicbox-col publicbox-check">
+    <input type="checkbox" class="form-check">
+  </div>
+  <div class="publicbox-col publicbox-desc">
+    <div class="publicbox-img">
+      <img src="images/svg/img-icon.svg" alt="">
+    </div>
+    <div class="publicbox-body">
+      <div class="publicbox-title">
+        <a href="#">Наименование паблика</a>
+      </div>
+      <div class="publicbox-text">Описание паблика</div>
+    </div>
+  </div>
+  <div class="publicbox-col publicbox-time">
+    <a href="#" class="text-success js-calendar">Установлено</a>
+    
+  </div>
+  <div class="publicbox-col publicbox-price">1000 ₽</div>
+  <div class="publicbox-col publicbox-status">
+    
+    
+    <img src="images/svg/error-red.svg" alt="">
+    
+  </div>
+</div><!-- /publicbox -->
+        </div>
+      </div><!-- /publicbox-container -->
+      
+      <button class="btn btn-primary">Сделать посев в 3 пабликах на сумму 3 000 ₽</button>
+      <div class="text-center">Вы можете закрыть окно во время размещения</div>
+    </div>
+  </div>
+</div><!-- /modal -->
+
+<div class="calendar" id="calendar1">
+  <div id="datepicker"></div>
+  <div class="calendar-section">
+    <div class="calendar-title">Время показа:</div>
+    <div class="calendar-row">
+      <label class="check-field ">
+  <input type="radio" name="time" class="form-radio" >
+  <span>В доступное время</span>
+  
+</label>
+    </div>
+    <div class="calendar-row">
+      <label class="check-field check-field__flex">
+  <input type="radio" name="time" class="form-radio" >
+  <span>В период</span>
+  
+    <div class="date_period">
+      <input type="text" class="form-control" placeholder="10:00">
+      <span class="date_period-divider"></span>
+      <input type="text" class="form-control" placeholder="22:00">
+    </div><!-- /date_period -->
+  
+</label>
+    </div>
+  </div>
+  <div class="calendar-footer">
+    <button class="btn btn-xs btn-accept js-calendar-dismiss"><span>Применить</span></button>
+  </div>
+</div><!-- /calendar -->
 
 </div><!-- /mainbox_container -->
 </div><!-- /mainbox -->

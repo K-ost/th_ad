@@ -5,6 +5,7 @@
   --color-grey: #C5CAD1;
   --color-text: #292E36;
   --color-text2: #48505B;
+  --color-hover: #EBF3FF;
   --color-blue: #226EE0;
   --color-red: #F22F52;
   --color-green: #0A9422;
@@ -605,6 +606,21 @@ textarea.form-control {
   background-image: url(../images/svg/star-active.svg);
 }
 
+/* btn-back */
+.btn-back {
+  background: url(../images/svg/chevron-blue-left.svg) center center no-repeat;
+  border: 0;
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  border-radius: 0;
+  cursor: pointer;
+  min-width: 32px;
+  height: 32px;
+}
+
 /* modal-simple */
 .modal-simple .modal-dialog {
   width: 100%;
@@ -664,6 +680,11 @@ textarea.form-control {
   width: 32px;
   height: 32px;
   margin-top: -16px;
+}
+.modal-simple .modal-title-icon .btn-back {
+  position: absolute;
+  left: 0;
+  top: -2px;
 }
 .modal-simple .btn-close {
   position: absolute;
@@ -728,6 +749,18 @@ textarea.form-control {
 
 #tableFilters .modal-dialog {
   max-width: 820px;
+}
+
+#makeSowing .modal-dialog {
+  max-width: 584px;
+}
+
+#choosePublics .modal-dialog {
+  max-width: 655px;
+}
+#choosePublics .text-center {
+  padding-top: 10px;
+  color: var(--color-text2);
 }
 
 #showRecord .modal-dialog {
@@ -1139,15 +1172,62 @@ textarea.form-control {
   text-transform: uppercase;
 }
 .datepicker .table-condensed tbody td {
-  height: 40px;
+  height: 32px;
   text-align: center;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--color-text2);
-  line-height: 16px;
-  padding-bottom: 8px;
+  line-height: 32px;
+  border-radius: 32px;
+  min-width: 32px;
+  padding: 0;
+  cursor: pointer;
 }
 .datepicker .table-condensed tbody td.old, .datepicker .table-condensed tbody td.new {
   color: #818a49;
+  font-weight: 400;
+}
+.datepicker .table-condensed tbody td.active {
+  background: var(--color-blue);
+  color: #fff;
+}
+.datepicker .table-condensed tbody td.today {
+  background: var(--color-hover);
+  color: var(--color-blue);
+}
+.datepicker-switch {
+  font-weight: 600;
+  color: var(--color-text2);
+  text-align: center;
+  padding: 10px 0;
+}
+.datepicker-prev, .datepicker-next {
+  min-width: 24px;
+  background: url(../images/svg/chevron-blue-right.svg) center center/6px no-repeat;
+  height: 24px;
+  border-radius: 50%;
+  display: block;
+  cursor: pointer;
+}
+.datepicker-prev {
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+.datepicker .month, .datepicker .year, .datepicker .decade, .datepicker .century {
+  width: 23%;
+  border-radius: 8px;
+  display: block;
+  float: left;
+  height: 40px;
+  margin: 1%;
+  line-height: 40px;
+  background: var(--color-bg);
+}
+.datepicker .month.focused, .datepicker .year.focused, .datepicker .decade.focused, .datepicker .century.focused {
+  background: var(--color-hover);
+  color: var(--color-blue);
+}
+.datepicker .month:hover, .datepicker .year:hover, .datepicker .decade:hover, .datepicker .century:hover {
+  background: var(--color-blue);
+  color: #fff;
 }
 
 .calendar {
@@ -1157,6 +1237,18 @@ textarea.form-control {
   box-shadow: 0px 8px 16px rgba(18, 42, 69, 0.25);
   padding: 8px 16px 16px;
   max-width: 256px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  transition: all 200ms ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.calendar.opened {
+  opacity: 1;
+  visibility: visible;
 }
 .calendar .datepicker {
   margin: 0 0 10px;

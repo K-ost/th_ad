@@ -9,49 +9,6 @@
 
 <p style="height: 70px;"></p>
 
-@@include('modules/inc/calendar.html')
-
-<div class="publicbox-container">
-  @@include('modules/inc/publicbox-head.html')
-  <div class="publicbox-scroll">
-    @@include('modules/inc/publicbox.html', {
-      "title": "Наименование паблика",
-      "status": "success",
-      "time": "success"
-    })
-    @@include('modules/inc/publicbox.html', {
-      "title": "Наименование паблика",
-      "status": "danger",
-      "time": "success"
-    })
-    @@include('modules/inc/publicbox.html', {
-      "title": "Наименование паблика",
-      "status": "progress",
-      "time": "success"
-    })
-    @@include('modules/inc/publicbox.html', {
-      "title": "Наименование паблика",
-      "time": "danger",
-      "disabled": true
-    })
-    @@include('modules/inc/publicbox.html', {
-      "title": "Наименование паблика",
-      "status": "danger",
-      "time": "success"
-    })
-    @@include('modules/inc/publicbox.html', {
-      "title": "Наименование паблика",
-      "status": "progress",
-      "time": "success"
-    })
-    @@include('modules/inc/publicbox.html', {
-      "title": "Наименование паблика",
-      "time": "danger",
-      "disabled": true
-    })
-  </div>
-</div><!-- /publicbox-container -->
-
 @@loop('modules/inc/recordbox.html', [ {}, {}, {} ])
 
 <p style="height: 70px;"></p>
