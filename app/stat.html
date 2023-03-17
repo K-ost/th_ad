@@ -112,7 +112,7 @@
               <div class="item-female">41.6%</div>
             </div>
           </div>
-          chart is gonna be here...
+          <canvas id="genderAgeChart"></canvas>
         </div>
       </div><!-- /module -->
 
@@ -138,10 +138,25 @@
         <div class="module-header">
           <div class="module-title">Активность по времени</div>
           <div>
-            tabs are gonna be here...
+            @@include('modules/tabs.html', {
+              list: [
+                { "name": "Все", "id": "#tab-all", "active": "active" },
+                { "name": "Пн", "id": "#tab-mo", "active": "" },
+                { "name": "Вт", "id": "#tab-tu", "active": "" },
+                { "name": "Ср", "id": "#tab-we", "active": "" },
+                { "name": "Чт", "id": "#tab-th", "active": "" },
+                { "name": "Пт", "id": "#tab-fr", "active": "" },
+                { "name": "Сб", "id": "#tab-sa", "active": "" },
+                { "name": "Вс", "id": "#tab-su", "active": "" },
+              ]
+            })
           </div>
         </div>
-        chart is gonna be here...
+        <div class="chartLineHead">
+          <div>Просмотры</div>
+          <div>Обратная связь</div>
+        </div>
+        <canvas id="activityChart"></canvas>
       </div>
     </div><!-- /module -->
 

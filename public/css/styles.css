@@ -1313,6 +1313,43 @@ textarea.form-control {
   justify-content: flex-end;
 }
 
+/* simpletabs */
+.simpletabs {
+  display: flex;
+  border-bottom: 1px solid #E6E9F0;
+  margin: 0;
+  padding: 0;
+}
+.simpletabs li {
+  list-style: none;
+  font-weight: 500;
+  line-height: 16px;
+  margin: 0 32px 0 0;
+}
+.simpletabs li:last-child {
+  margin: 0;
+}
+.simpletabs li a {
+  display: block;
+  padding: 8px 0;
+  text-decoration: none;
+  color: var(--color-text);
+  position: relative;
+}
+.simpletabs li a.active {
+  color: var(--color-blue);
+}
+.simpletabs li a.active::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background: var(--color-blue);
+  height: 2px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
 /* mainbox */
 .mainbox {
   height: 100vh;
@@ -2390,6 +2427,17 @@ textarea.form-control {
 .country_stat-range {
   background: var(--color-blue);
   height: 7px;
+}
+
+/* chartLineHead */
+.chartLineHead {
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--color-text2);
+  margin: 0 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* modulebox */

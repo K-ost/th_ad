@@ -448,6 +448,12 @@
   &-range {background: var(--color-blue); height: 7px;}
 }
 
+/* chartLineHead */
+.chartLineHead {
+  font-weight: 600; font-size: 12px; color: var(--color-text2); margin: 0 0 32px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+
 
 /* modulebox */
 .modulebox {

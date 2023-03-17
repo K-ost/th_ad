@@ -336,7 +336,7 @@
               <div class="item-female">41.6%</div>
             </div>
           </div>
-          chart is gonna be here...
+          <canvas id="genderAgeChart"></canvas>
         </div>
       </div><!-- /module -->
 
@@ -411,10 +411,32 @@
         <div class="module-header">
           <div class="module-title">Активность по времени</div>
           <div>
-            tabs are gonna be here...
+            <ul class="simpletabs" role="tablist">
+  
+    <li><a href="#" class="active" data-bs-toggle="pill" data-bs-target="#tab-all">Все</a></li>
+  
+    <li><a href="#" class="" data-bs-toggle="pill" data-bs-target="#tab-mo">Пн</a></li>
+  
+    <li><a href="#" class="" data-bs-toggle="pill" data-bs-target="#tab-tu">Вт</a></li>
+  
+    <li><a href="#" class="" data-bs-toggle="pill" data-bs-target="#tab-we">Ср</a></li>
+  
+    <li><a href="#" class="" data-bs-toggle="pill" data-bs-target="#tab-th">Чт</a></li>
+  
+    <li><a href="#" class="" data-bs-toggle="pill" data-bs-target="#tab-fr">Пт</a></li>
+  
+    <li><a href="#" class="" data-bs-toggle="pill" data-bs-target="#tab-sa">Сб</a></li>
+  
+    <li><a href="#" class="" data-bs-toggle="pill" data-bs-target="#tab-su">Вс</a></li>
+  
+</ul><!-- /simpletabs -->
           </div>
         </div>
-        chart is gonna be here...
+        <div class="chartLineHead">
+          <div>Просмотры</div>
+          <div>Обратная связь</div>
+        </div>
+        <canvas id="activityChart"></canvas>
       </div>
     </div><!-- /module -->
 
@@ -604,6 +626,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/vendor/bootstrap-datepicker.js"></script>
 <script src="js/vendor/bootstrap-datepicker.ru.js"></script>
+<script src="js/vendor/chart.js"></script>
 <script src="js/common.js"></script>
 
 </body>
