@@ -130,6 +130,26 @@ a {
   line-height: 15px;
 }
 
+.custom_dropdown {
+  background: #fff;
+  border: 1px solid #C5CAD1;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(18, 42, 69, 0.25);
+  padding: 8px 0;
+}
+.custom_dropdown li {
+  color: var(--color-text2);
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 12px 16px;
+  font-size: 13px;
+}
+.custom_dropdown li:hover {
+  background: var(--color-hover);
+  color: var(--color-blue);
+}
+
 /* input */
 .form-field {
   margin: 0 0 16px;
@@ -1350,6 +1370,31 @@ textarea.form-control {
   bottom: 0;
 }
 
+/* status_line */
+.status_line {
+  position: relative;
+  padding-left: 34px;
+  font-weight: 600;
+  color: var(--color-text2);
+  display: inline-block;
+}
+.status_line::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../images/svg/progress-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: inline-block;
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: 50%;
+  margin-top: -12px;
+}
+
 /* mainbox */
 .mainbox {
   height: 100vh;
@@ -2163,6 +2208,10 @@ textarea.form-control {
 .recordbox-title {
   font-weight: 600;
   color: var(--color-text);
+}
+.recordbox-scroll {
+  max-height: 130px;
+  overflow-y: scroll;
 }
 
 /* publicbox */

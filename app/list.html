@@ -1,0 +1,34 @@
+@@include('modules/header.html', { "flex": true })
+
+<div class="topbar">
+  <div class="row align-items-center">
+    <div class="col-2">
+      <button class="btn btn-primary btn-plus btn-sm"><span>Создать пост</span></button>
+    </div>
+    <div class="col-8 text-center">
+      @@include('modules/inc/topmenu.html')
+    </div>
+    <div class="col-2 text-end">
+      <div class="status_line">Размещено в 1 паблике из 3</div>
+    </div>
+  </div><!-- /row -->
+</div><!-- /topbar -->
+
+<div class="row middlebar">
+  <div class="col-12 col-lg-4">
+    @@include('modules/top_features.html', { "title": "Нет постов" })
+  </div>
+  <div class="col-12 col-lg-4">
+    <div class="recordbox-scroll">
+      @@loop('modules/inc/recordbox.html', [ {}, {}, {}, {}, {} ])
+    </div><!-- /recordbox-scroll -->
+  </div>
+</div><!-- /middlebar -->
+
+
+
+@@include('modules/table.html')
+
+@@include('modules/inc/show-record.html')
+
+@@include('modules/footer.html')

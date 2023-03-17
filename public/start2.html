@@ -228,7 +228,14 @@
   <div class="top_features-item">
     <div class="top_features-name">Наименование поста:</div>
     <div class="top_features-div">
-      <a href="#" class="link_select">Запись №1 от 01.01.2022 00:00</a>
+      <div class="dropdown js-dropdown">
+        <a href="#" class="dropdown-link link_select" data-bs-toggle="dropdown">Запись №1 от 01.01.2022 00:00</a>
+        <ul class="dropdown-menu custom_dropdown">
+          <li class="dropdown-item">Все записи</li>
+          <li class="dropdown-item">Запись №1 от 01.01.2022 00:00</li>
+          <li class="dropdown-item">Еще запись</li>
+        </ul>
+      </div>
     </div>
   </div>
   <div class="top_features-item">
@@ -567,6 +574,9 @@
     </div>
   </div>
 </div><!-- /modal -->
+
+
+
 <div class="modal modal-filter" id="filterAge" tabindex="-1">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">

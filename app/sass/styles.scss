@@ -340,6 +340,7 @@
   background: #fff; border-radius: 10px; display: flex; align-items: center;
   justify-content: space-between; padding: 10px 10px 10px 16px; margin: 0 0 10px;
   &-title {font-weight: 600; color: var(--color-text);}
+  &-scroll {max-height: 130px; overflow-y: scroll;}
 }
 
 
