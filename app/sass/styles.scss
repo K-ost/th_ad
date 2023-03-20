@@ -513,19 +513,57 @@
   margin: 0 0 16px;
   &-inner {display: flex; align-items: center;}
   .btn {margin-right: auto;}
+  &-item {
+    margin: 0 2px 0 0;
+    &:last-child {margin: 0;}
+  }
   &-btn {
     min-width: 32px; max-width: 32px; margin: 0; @include inp; border: 0; cursor: pointer;
-    background: 0; height: 32px; border-radius: 8px; margin: 0 2px 0 0; background-position: center center;
-    background-repeat: no-repeat;
-    &:last-child {margin: 0;}
+    background: 0; height: 32px; border-radius: 8px; background-position: center center;
+    background-repeat: no-repeat; display: block;
   }
   &-add {background-image: url(../images/svg/add.svg); background-size: 20px;}
   &-search {background-image: url(../images/svg/search-blue.svg); background-size: 24px;}
   &-sort {background-image: url(../images/svg/sort-blue.svg); background-size: 24px;}
   &-filter {background-image: url(../images/svg/filter-blue.svg); background-size: 24px;}
   &-settings {background-image: url(../images/svg/settings-blue.svg); background-size: 24px;}
+  &_drop {
+    background: #fff; box-shadow: 0px 8px 16px rgba(18, 42, 69, 0.25); border: 0;
+    border-radius: 8px; padding: 10px; width: 260px;
+  }
+  &_popup {
+    display: flex; flex-wrap: wrap; margin: 0; padding: 0;
+    li {flex: 0 0 50%; width: 100%; max-width: 50%; margin: 0; padding: 0 2px 4px; list-style: none;}
+    .btn {width: 100%;}
+  }
 }
 
+
+/* mobile_sort */
+.mobile_sort {
+  background: #fff; box-shadow: 0px 8px 16px rgba(18, 42, 69, 0.25);
+  border-radius: 16px 16px 0px 0px; width: 100%; position: absolute; left: 0;
+  bottom: 0; z-index: 1000; transition: all 200ms ease-in-out;
+  opacity: 0; visibility: hidden;
+  &.opened {opacity: 1; visibility: visible;}
+  &-header {padding: 16px 20px 8px;}
+  &-title {
+    font-weight: 600; font-size: 13px; line-height: 14px; letter-spacing: 0.02em;
+    text-transform: uppercase; color: #818A99;
+  }
+  .btn-close {position: absolute; right: 8px; top: 8px;}
+  &-list {
+    margin: 0; padding: 0; max-height: 392px; overflow-y: auto;
+    li {
+      list-style: none; border-bottom: 1px solid var(--color-bg); font-weight: 500; line-height: 16px;
+      a {color: var(--color-text2); display: block; padding: 16px 20px; text-decoration: none; position: relative;}
+      a.active {
+        padding-left: 40px;
+        &::before {@include bf; @include icon(check-blue,16px,16px); left: 20px; top: 50%; margin-top: -8px;}
+      }
+    }
+  }
+}
 
 
 

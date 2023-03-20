@@ -3,10 +3,42 @@
     
     <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#choosePublic">Подобрать паблики</button>
 
-    <button class="mobile_filters-btn mobile_filters-add"></button>
-    <button class="mobile_filters-btn mobile_filters-search"></button>
-    <button class="mobile_filters-btn mobile_filters-sort"></button>
-    <button class="mobile_filters-btn mobile_filters-filter"></button>
-    <button class="mobile_filters-btn mobile_filters-settings" data-bs-toggle="modal" data-bs-target="#tableFilters"></button>
+    <div class="mobile_filters-item">
+      <button class="mobile_filters-btn mobile_filters-add"></button>
+    </div>
+    <div class="mobile_filters-item">
+      <button class="mobile_filters-btn mobile_filters-search"></button>
+    </div>
+    <div class="mobile_filters-item">
+      <button class="mobile_filters-btn mobile_filters-sort js-mobileSort"></button>
+    </div>
+    
+    <div class="mobile_filters-item dropdown">
+      <button class="mobile_filters-btn mobile_filters-filter" data-bs-toggle="dropdown"></button>
+      <div class="dropdown-menu mobile_filters_drop">
+        <ul class="mobile_filters_popup">
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterPublic">Паблик</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterSubject">Тематика</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterPrice">Цена</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterCountry">Страна</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterArea">Регион</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterGender">Пол</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterAge">Возраст</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterMembers">Участников</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterPeople">Живые люди</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterCoverage">Охват записи</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterProgress">Прогресс</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterPosts">Посты на стене</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterAds">Реклама в группе</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterReturn">Отдача</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterEficient">Эффективность</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterSubs">Подписок</button></li>
+        </ul>
+      </div>
+    </div><!-- /dropdown -->
+
+    <div class="mobile_filters-item">
+      <button class="mobile_filters-btn mobile_filters-settings" data-bs-toggle="modal" data-bs-target="#tableFilters"></button>
+    </div>
   </div>
 </div><!-- /mobile_filters -->

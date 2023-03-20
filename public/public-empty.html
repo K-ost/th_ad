@@ -232,11 +232,43 @@
     
     <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#choosePublic">Подобрать паблики</button>
 
-    <button class="mobile_filters-btn mobile_filters-add"></button>
-    <button class="mobile_filters-btn mobile_filters-search"></button>
-    <button class="mobile_filters-btn mobile_filters-sort"></button>
-    <button class="mobile_filters-btn mobile_filters-filter"></button>
-    <button class="mobile_filters-btn mobile_filters-settings" data-bs-toggle="modal" data-bs-target="#tableFilters"></button>
+    <div class="mobile_filters-item">
+      <button class="mobile_filters-btn mobile_filters-add"></button>
+    </div>
+    <div class="mobile_filters-item">
+      <button class="mobile_filters-btn mobile_filters-search"></button>
+    </div>
+    <div class="mobile_filters-item">
+      <button class="mobile_filters-btn mobile_filters-sort js-mobileSort"></button>
+    </div>
+    
+    <div class="mobile_filters-item dropdown">
+      <button class="mobile_filters-btn mobile_filters-filter" data-bs-toggle="dropdown"></button>
+      <div class="dropdown-menu mobile_filters_drop">
+        <ul class="mobile_filters_popup">
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterPublic">Паблик</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterSubject">Тематика</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterPrice">Цена</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterCountry">Страна</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterArea">Регион</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterGender">Пол</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterAge">Возраст</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterMembers">Участников</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterPeople">Живые люди</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterCoverage">Охват записи</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterProgress">Прогресс</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterPosts">Посты на стене</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterAds">Реклама в группе</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterReturn">Отдача</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterEficient">Эффективность</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterSubs">Подписок</button></li>
+        </ul>
+      </div>
+    </div><!-- /dropdown -->
+
+    <div class="mobile_filters-item">
+      <button class="mobile_filters-btn mobile_filters-settings" data-bs-toggle="modal" data-bs-target="#tableFilters"></button>
+    </div>
   </div>
 </div><!-- /mobile_filters -->
 
@@ -331,7 +363,7 @@
   <div class="maintable-div">
     <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterAds"></button>
     <span class="maintable-icon maintable-icon__ads"></span>
-    <span class="maintable-name">Реклам в группе</span>
+    <span class="maintable-name">Реклама в группе</span>
   </div>
 </th><th class="maintable-locked">
   <div class="maintable-div">
@@ -371,81 +403,71 @@
 			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
       <ul class="tableFilters-list">
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Тематика
-</label>
-        </li>
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Цена
-</label>
-        </li>
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Страна
-</label>
-        </li>
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Регион
-</label>
-        </li>
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Пол
-</label>
-        </li>
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Возраст
-</label>
-        </li>
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Количество участников
-</label>
-        </li>
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Живые люди
-</label>
-        </li>
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Охват записи
-</label>
-        </li>
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Прогресс
-</label>
-        </li>
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Посты на стене
-</label>
-        </li>
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Реклам в группе
-</label>
-        </li>
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Отдача
-</label>
-        </li>
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Эффективность
-</label>
-        </li>
-        <li>
-          <label class="check-field">
-  <input type="checkbox" class="form-check" checked> Количество подписок
-</label>
-        </li>
+        <li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Тематика</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Цена</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Страна</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Регион</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Пол</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Возраст</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Количество участников</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Живые люди</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Охват записи</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Прогресс</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Посты на стене</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Тематика</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Реклама в группе</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Отдача</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Эффективность</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li><li class="tableFilters-item">
+  <label class="check-field"><input type="checkbox" class="form-check" checked> Количество подписок</label>
+  <button class="tableFilters-btn tableFilters-lock active"></button>
+  <button class="tableFilters-btn tableFilters-menu"></button>
+</li>
       </ul>
 			
       <div class="text-end">
@@ -1014,6 +1036,29 @@
     </div>
   </div>
 </div><!-- /modal -->
+
+<div class="mobile_sort" id="mobileSort">
+  <div class="mobile_sort-header">
+    <div class="mobile_sort-title">Сортировать по:</div>
+    <button class="btn-close"></button>
+  </div>
+  <ul class="mobile_sort-list">
+    <li><a href="#" class="active">Название: А-Я</a></li>
+    <li><a href="#">Название: Я-А</a></li>
+    <li><a href="#">Тематика</a></li>
+    <li><a href="#">Цена</a></li>
+    <li><a href="#">Страна</a></li>
+    <li><a href="#">Регион</a></li>
+    <li><a href="#">Пол</a></li>
+    <li><a href="#">Участников</a></li>
+    <li><a href="#">Тематика</a></li>
+    <li><a href="#">Цена</a></li>
+    <li><a href="#">Страна</a></li>
+    <li><a href="#">Регион</a></li>
+    <li><a href="#">Пол</a></li>
+    <li><a href="#">Участников</a></li>
+  </ul>
+</div><!-- /mobile_sort -->
 
 </div><!-- /mainbox_container -->
 </div><!-- /mainbox -->

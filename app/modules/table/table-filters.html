@@ -1,0 +1,33 @@
+<div class="modal modal-simple" id="tableFilters" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-content-bg">
+      <h5 class="modal-title">Отображение фильтров</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <ul class="tableFilters-list">
+        @@loop('table-filters-item.html', [
+          { "title": "Тематика" },
+          { "title": "Цена" },
+          { "title": "Страна" },
+          { "title": "Регион" },
+          { "title": "Пол" },
+          { "title": "Возраст" },
+          { "title": "Количество участников" },
+          { "title": "Живые люди" },
+          { "title": "Охват записи" },
+          { "title": "Прогресс" },
+          { "title": "Посты на стене" },
+          { "title": "Тематика" },
+          { "title": "Реклама в группе" },
+          { "title": "Отдача" },
+          { "title": "Эффективность" },
+          { "title": "Количество подписок" }
+        ])
+      </ul>
+			
+      <div class="text-end">
+        <button class="btn btn-primary">Применить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->

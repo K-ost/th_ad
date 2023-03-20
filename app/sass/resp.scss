@@ -81,6 +81,7 @@
   /* maintable */
   .maintable-empty {margin: 0 0 16px;}
   .maintable {
+    padding-right: 16px;
     thead th {
       height: 40px; padding: 4px 16px 4px 8px; position: relative; min-width: 130px;
       &.maintable-min {min-width: 0;}
@@ -98,8 +99,22 @@
     &-settings {
       border-radius: 4px; width: 16px;
       &-btn {display: none;}
-      &-scroll {top: 0;}
+      &-scroll {top: 0; background-size: 6px;}
     }
+  }
+
+  /* tableFilters */
+  .tableFilters {
+    &-list {
+      margin: 0 0 12px; padding: 0; column-count: auto; column-gap: auto;
+      // max-height: 320px; overflow-y: auto;
+      li {
+        background: #fff; list-style: none; display: block; width: auto; margin: 0 0 6px;
+        display: flex; align-items: center; border-radius: 6px; height: 28px; padding: 4px 6px;
+      }
+    }
+    &-btn {display: block;}
+    &-lock {margin-left: auto; margin-right: 4px;}
   }
 
 
@@ -112,9 +127,11 @@
 @media screen and (max-width: 480px) {
 
   /* modal */
+  .modal-dialog {margin: 0 auto !important;}
   .modal-simple {
-    .modal-dialog {margin: 0 auto !important; padding: 10px;}
+    .modal-dialog {padding: 10px;}
     .modal-content {border-radius: 8px; padding: 16px;}
+    .modal-title {font-weight: 600; font-size: 18px;}
     .btn-close {top: 16px; right: 16px;}
     &-bottom {
       display: block;
