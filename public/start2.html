@@ -21,25 +21,26 @@
 
 <header class="header">
 	<div class="d-flex align-items-center">
+		<button class="header-more d-block d-xl-none"></button>
 		<button class="btn-nav"></button>
 		<div class="header-logo">
 			<a href="index.html">TH Посевы</a>
 		</div>
 
-		<div class="dropdown">
+		<div class="dropdown d-none d-xl-block">
 			<a href="#" class="dropdown-btn" data-bs-toggle="dropdown">Первый проект</a>
 			<div class="dropdown-menu">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, a.</div>
 		</div>
 
-		<div class="dropdown">
+		<div class="dropdown d-none d-xl-block">
 			<a href="#" class="dropdown-btn" data-bs-toggle="modal" data-bs-target="#chooseCab">Рекламный кабинет #1</a>
 		</div>
 
-		<div class="header-wallet">5 995 106,81 ₽</div>
+		<div class="header-wallet d-none d-xl-block">5 995 106,81 ₽</div>
 	</div>
 
 	<div class="d-flex align-items-center">
-		<div class="dropdown">
+		<div class="dropdown d-none d-xl-block">
 			<a href="#" class="dropdown-btn dropdown-btn-pro">
 				<span>Тариф «ПРО» <small>до 13:35 26.10.2032</small></span>
 			</a>
@@ -47,8 +48,9 @@
 
 		<div class="dropdown userhead">
   <div class="userhead-link" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+    <span class="d-block d-xl-none userhead-link__account">5 995 106,81 ₽</span>
     <img src="images/uploads/avatar.jpg" alt="">
-		<span>Иван Иванов</span>
+		<span class="d-none d-xl-block">Иван Иванов</span>
   </div>
 
   <div class="dropdown-menu userhead-dropdown">
@@ -206,18 +208,18 @@
 
 <div class="topbar">
   <div class="row align-items-center">
-    <div class="col-2">
+    <div class="col-12 col-lg-2">
       <a href="#" class="btn btn-primary btn-sm btn-plus"><span>Создать пост</span></a>
     </div>
-    <div class="col-8 text-center">
+    <div class="col-12 col-lg-8 text-center">
       <ul class="topmenu">
-  <li><a href="start.html" class="topmenu_icon topmenu_icon-chart active">Мои посевы</a></li>
-  <li><span class="topmenu_icon topmenu_icon-grid disabled">Маркет платформа</span></li>
-  <li><span class="topmenu_icon topmenu_icon-list disabled">Списки пабликов</span></li>
-  <li><a href="main.html" class="topmenu_icon topmenu_icon-wallet">Рекламный кабинет</a></li>
+  <li><a href="start.html" class="topmenu_icon topmenu_icon-chart active"><i>Мои посевы</i></a></li>
+  <li><span class="topmenu_icon topmenu_icon-grid disabled"><i>Маркет платформа</i></span></li>
+  <li><span class="topmenu_icon topmenu_icon-list disabled"><i>Списки пабликов</i></li>
+  <li><a href="main.html" class="topmenu_icon topmenu_icon-wallet"><i>Рекламный кабинет</i></a></li>
 </ul>
     </div>
-    <div class="col-2 text-end">
+    <div class="col-12 col-lg-2 text-end">
     </div>
   </div><!-- /row -->
 </div><!-- /topbar -->
@@ -286,7 +288,8 @@
     <th>
       <div class="maintable-div">
         <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterPublic"></button>
-        <input type="text" class="form-control" placeholder="Паблик">
+        <input type="text" class="form-control d-none d-lg-block" placeholder="Паблик">
+        <span class="maintable-name d-inline d-lg-none">Паблик</span>
       </div>
     </th>
 
@@ -306,13 +309,13 @@
     
     <span class="maintable-name">Цена</span>
   </div>
-</th><th class="maintable-locked">
+</th><th class="maintable-locked maintable-min">
   <div class="maintable-div">
     <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterCountry"></button>
     
     <span class="maintable-name">Страна</span>
   </div>
-</th><th class="maintable-locked">
+</th><th class="maintable-locked maintable-min150">
   <div class="maintable-div">
     <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterArea"></button>
     
@@ -1175,6 +1178,7 @@
 <script src="js/vendor/bootstrap-datepicker.js"></script>
 <script src="js/vendor/bootstrap-datepicker.ru.js"></script>
 <script src="js/vendor/chart.js"></script>
+<script src="js/charts.js"></script>
 <script src="js/common.js"></script>
 
 </body>

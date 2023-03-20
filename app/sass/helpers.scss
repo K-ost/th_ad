@@ -385,6 +385,7 @@ textarea.form-control {display: block; height: 120px; resize: none;}
       color: #48505B; text-decoration: none; display: block; position: relative;
       border-bottom: 2px solid transparent;
     }
+    i {font-style: normal;}
     a.active {color: var(--color-blue); border-color: var(--color-blue);}
     span.disabled {opacity: 0.5;}
   }

@@ -7,7 +7,8 @@
     <th>
       <div class="maintable-div">
         <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterPublic"></button>
-        <input type="text" class="form-control" placeholder="Паблик">
+        <input type="text" class="form-control d-none d-lg-block" placeholder="Паблик">
+        <span class="maintable-name d-inline d-lg-none">Паблик</span>
       </div>
     </th>
 
@@ -18,8 +19,8 @@
     @@loop('th.html', [
       { "name": "Тематика", "popup": "filterSubject", "lock": true },
       { "name": "Цена", "popup": "filterPrice", "lock": true },
-      { "name": "Страна", "popup": "filterCountry", "lock": true },
-      { "name": "Регион", "popup": "filterArea", "lock": true },
+      { "name": "Страна", "popup": "filterCountry", "lock": true, "min": true },
+      { "name": "Регион", "popup": "filterArea", "lock": true, "min150": true },
       { "name": "Пол", "popup": "filterGender", "lock": true },
       { "name": "Возраст", "popup": "filterAge", "lock": true, "icon": "age" },
       { "name": "Участников", "popup": "filterMembers", "lock": true, "icon": "members" },

@@ -34,6 +34,11 @@
     position: relative; font-weight: 700; font-size: 15px; line-height: 18px; padding-right: 34px;
     &::after {@include bf; @include icon(wallet,24px,24px); right: 0; top: -4px;}
   }
+  &-more {
+    background: var(--color-text) url(../images/svg/chevron-white-right.svg) center center no-repeat;
+    @include inp; cursor: pointer; padding: 0; min-width: 52px; max-width: 52px; height: 52px;
+    border: 0; margin: 0 12px 0 0;
+  }
 }
 
 
@@ -45,9 +50,10 @@
     &.show::after {transform: matrix(1,0,0,-1,0,0);}
     img {
       border: 2px solid #226EE0; border-radius: 50%; height: 32px; min-width: 32px;
-      max-width: 32px; display: block; margin-right: 4px;
+      max-width: 32px; display: block;
     }
-    span {font-weight: 700; font-size: 15px; line-height: 18px;}
+    span {font-weight: 700; font-size: 15px; line-height: 18px; margin-left: 4px;}
+    &__account {margin-right: 8px; font-size: 13px !important;}
   }
   &-dropdown {
     background: #fff; box-shadow: 0px 8px 16px rgba(18, 42, 69, 0.25); border-radius: 8px;
@@ -261,17 +267,18 @@
 .maintable {
   position: relative; padding-right: 32px; flex: 1; overflow: hidden;
   &-area {overflow: auto; height: 100%;}
-  &-body {border-collapse: collapse; width: 2490px;}
+  &-body {border-collapse: collapse;}
   
   &-empty {flex: auto; margin-bottom: 43px;}
   &-empty &-area {height: auto; overflow: hidden;}
 
   thead {position: sticky; top: 0; z-index: 100;}
   thead th {
-    background: #F2F4F7; height: 59px; padding: 4px 8px; position: relative; min-width: 120px;
+    background: #F2F4F7; height: 59px; padding: 4px 22px 4px 8px; position: relative; min-width: 120px;
     &.maintable-min {min-width: 0;}
     &:first-child {padding-left: 17px;}
     &::before {@include bf; border-bottom: 1px solid rgba(72, 80, 91, 0.3); width: 100%; left: 0; bottom: 0;}
+    &.maintable-min150 {min-width: 150px;}
   }
   tbody td {
     background: #fff; border-bottom: 1px solid #e4e5e6; padding: 10px 8px;
@@ -501,7 +508,23 @@
 }
 
 
-
+/* mobile_filters */
+.mobile_filters {
+  margin: 0 0 16px;
+  &-inner {display: flex; align-items: center;}
+  .btn {margin-right: auto;}
+  &-btn {
+    min-width: 32px; max-width: 32px; margin: 0; @include inp; border: 0; cursor: pointer;
+    background: 0; height: 32px; border-radius: 8px; margin: 0 2px 0 0; background-position: center center;
+    background-repeat: no-repeat;
+    &:last-child {margin: 0;}
+  }
+  &-add {background-image: url(../images/svg/add.svg); background-size: 20px;}
+  &-search {background-image: url(../images/svg/search-blue.svg); background-size: 24px;}
+  &-sort {background-image: url(../images/svg/sort-blue.svg); background-size: 24px;}
+  &-filter {background-image: url(../images/svg/filter-blue.svg); background-size: 24px;}
+  &-settings {background-image: url(../images/svg/settings-blue.svg); background-size: 24px;}
+}
 
 
 

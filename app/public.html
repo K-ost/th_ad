@@ -2,19 +2,21 @@
 
 <div class="topbar">
   <div class="row align-items-center">
-    <div class="col-2">
+    <div class="col-12 col-lg-2 d-none d-lg-block">
       <button class="btn btn-primary btn-sm" data-bs-toggle="modal" data-bs-target="#choosePublic">Подобрать паблики</button>
     </div>
-    <div class="col-8 text-center">
+    <div class="col-12 col-lg-8 text-center">
       @@include('modules/inc/topmenu.html')
     </div>
-    <div class="col-2 text-end">
+    <div class="col-12 col-lg-2 text-end d-none d-lg-block">
       <button class="btn btn-outline-primary btn-plus btn-sm" data-bs-toggle="modal" data-bs-target="#createPost">
         <span>Новый пост</span>
       </button>
     </div>
   </div><!-- /row -->
 </div><!-- /topbar -->
+
+@@include('modules/m-filters.html')
 
 @@include('modules/table.html')
 
