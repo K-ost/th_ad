@@ -61,19 +61,21 @@ document.querySelectorAll('.js-calendar-dismiss').forEach(el => {
 const mobileSortBtn = document.querySelector('.js-mobileSort')
 const mobileSortItem = document.querySelectorAll('.mobile_sort-list li a')
 const mobileSortClose = document.querySelector('#mobileSort .btn-close')
-mobileSortBtn.addEventListener('click', () => {
-  document.querySelector('#mobileSort').classList.toggle('opened')
-})
-mobileSortClose.addEventListener('click', () => {
-  document.querySelector('#mobileSort').classList.remove('opened')
-})
-mobileSortItem.forEach(el => {
-  el.addEventListener('click', e => {
-    e.preventDefault()
-    mobileSortItem.forEach(i => i.classList.remove('active'))
-    el.classList.add('active')
+if ( document.querySelector('#mobileSort') ) {
+  mobileSortBtn.addEventListener('click', () => {
+    document.querySelector('#mobileSort').classList.toggle('opened')
   })
-})
+  mobileSortClose.addEventListener('click', () => {
+    document.querySelector('#mobileSort').classList.remove('opened')
+  })
+  mobileSortItem.forEach(el => {
+    el.addEventListener('click', e => {
+      e.preventDefault()
+      mobileSortItem.forEach(i => i.classList.remove('active'))
+      el.classList.add('active')
+    })
+  })
+}
 
 
 
