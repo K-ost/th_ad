@@ -1,7 +1,7 @@
 $(function() {
 
   // Select2
-  $('.js-select2').select2({
+  $('.select2').select2({
     minimumResultsForSearch: 5
   });
 
@@ -21,7 +21,23 @@ $(function() {
     templates: {
       leftArrow: '<span class="datepicker-prev"></span>',
       rightArrow: '<span class="datepicker-next"></span>'
-    }
+    },
+    viewMode: 'days',
+    multidate: true,
+    maxViewMode: 0
+  });
+
+  // gsel-select
+  $('.gsel-btn').each(function() {
+    let parent = $(this).closest('.gsel')
+    $(this).on('click', function() {
+      if (!parent.hasClass('opened')) {
+        $('.gsel').removeClass('opened');
+        parent.addClass('opened');
+      } else {
+        parent.removeClass('opened');
+      }
+    });
   });
 
 });

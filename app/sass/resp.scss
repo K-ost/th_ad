@@ -19,6 +19,7 @@
 
 /* max-width 760px */
 @media screen and (max-width: 760px) {
+  .tb-hidden {display: none !important;}
 
   /* topmenu */
   .topbar, .middlebar {margin-bottom: 16px;}
@@ -50,7 +51,6 @@
   .quality_chart_name:last-child {margin: 0;}
 
   /* simpletabs */
-  .simpletabs {}
   .simpletabs li {margin: 0 20px 0 0;}
   //.chartHeight {min-height: 300px;}
 
@@ -118,6 +118,32 @@
   }
 
 
+  /* homebanner */
+  .homebanner {
+    display: block;
+    .btn {width: 100%;}
+    &-desc {padding-right: 0;}
+  }
+
+
+  /* publicbox */
+  .publicbox {
+    &-col {padding: 7px;}
+    &-check {min-width: 30px; max-width: 30px; padding: 7px 0;}
+    &-img {display: none;}
+    &-title {margin: 0;}
+    &-time {min-width: 60px; max-width: 60px;}
+    &-price {min-width: 90px; max-width: 90px; justify-content: center;}
+    &-mb-success, &-mb-danger {
+      width: 18px; height: 18px; display: block; background-position: center center;
+      background-repeat: no-repeat; background-size: 16px; text-indent: -9999px;
+    }
+    &-mb-success {background-image: url(../images/svg/check-green.svg);}
+    &-mb-danger {background-image: url(../images/svg/error-red.svg);}
+    &-complete {display: block;}
+  }
+
+
 
 }
 
@@ -125,6 +151,7 @@
 
 /* max-width 480px */
 @media screen and (max-width: 480px) {
+  .btn {font-weight: 400; padding-left: 10px; padding-right: 10px;}
 
   /* modal */
   .modal-dialog {margin: 0 auto !important;}
@@ -137,8 +164,10 @@
       display: block;
       .btn {margin: 0 0 10px; width: 100%;}
     }
-    .modal-title {margin-bottom: 16px;}
+    .modal-title {margin-bottom: 16px; line-height: 22px;}
     .modal-title-icon {padding-left: 0;}
+    .modal-title-back {padding-left: 30px;}
+    .modal-title-back .btn-back {left: -7px;}
     .modal-title-icon::before {content: none; display: none;}
   }
   

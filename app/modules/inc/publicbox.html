@@ -1,27 +1,38 @@
 <div class="publicbox@@if(context.disabled){ publicbox-disabled}">
-  <div class="publicbox-col publicbox-check">
-    <input type="checkbox" class="form-check">
-  </div>
-  <div class="publicbox-col publicbox-desc">
-    <div class="publicbox-img">
-      <img src="images/svg/img-icon.svg" alt="">
+  
+  @@if(context.status === "success"){<div class="publicbox-complete publicbox-complete-success"></div>}
+  @@if(context.status === "danger"){<div class="publicbox-complete publicbox-complete-danger"></div>}
+  @@if(context.status === "progress"){<div class="publicbox-complete publicbox-complete-process" style="width: 55%;"></div>}
+
+  <div class="publicbox-inner">
+    <div class="publicbox-col publicbox-check">
+      <input type="checkbox" class="form-check">
     </div>
-    <div class="publicbox-body">
-      <div class="publicbox-title">
-        <a href="#">@@title</a>
+    <div class="publicbox-col publicbox-desc">
+      <div class="publicbox-img">
+        <img src="images/svg/img-icon.svg" alt="">
       </div>
-      <div class="publicbox-text">Описание паблика</div>
+      <div class="publicbox-body">
+        <div class="publicbox-title">
+          <a href="#">@@title</a>
+        </div>
+        <div class="publicbox-text tb-hidden">Описание паблика</div>
+      </div>
     </div>
-  </div>
-  <div class="publicbox-col publicbox-time">
-    @@if(context.time === "success"){<a href="#" class="text-success js-calendar">Установлено</a>}
-    @@if(context.time === "danger"){<a href="#" class="text-danger js-calendar">Установить</a>}
-  </div>
-  <div class="publicbox-col publicbox-price">1000 ₽</div>
-  <div class="publicbox-col publicbox-status">
-    @@if(!context.status){-}
-    @@if(context.status === "success"){<img src="images/svg/check-green.svg" alt="">}
-    @@if(context.status === "danger"){<img src="images/svg/error-red.svg" alt="">}
-    @@if(context.status === "progress"){<img src="images/svg/progress-icon.svg" alt="">}
+    <div class="publicbox-col publicbox-time">
+      @@if(context.time === "success"){
+        <a href="#" class="text-success publicbox-mb-success js-calendar">Установлено</a>
+      }
+      @@if(context.time === "danger"){
+        <a href="#" class="text-danger publicbox-mb-danger js-calendar">Установить</a>
+      }
+    </div>
+    <div class="publicbox-col publicbox-price">1000 ₽</div>
+    <div class="publicbox-col publicbox-status tb-hidden">
+      @@if(!context.status){-}
+      @@if(context.status === "success"){<img src="images/svg/check-green.svg" alt="">}
+      @@if(context.status === "danger"){<img src="images/svg/error-red.svg" alt="">}
+      @@if(context.status === "progress"){<img src="images/svg/progress-icon.svg" alt="">}
+    </div>
   </div>
 </div><!-- /publicbox -->

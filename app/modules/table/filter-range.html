@@ -9,19 +9,19 @@
         <div class="price_range">
 
           @@if(!context.sel){
-          <span>От</span>
-          <input type="text" class="form-control" placeholder="00 000">
-          <span>— до</span>
-          <input type="text" class="form-control" placeholder="00 000">
+          <span class="span">От</span>
+          <input type="text" class="form-control" placeholder="00">
+          <span class="span">— до</span>
+          <input type="text" class="form-control" placeholder="00">
           <span>@@val</span>
           }
 
           @@if(context.sel){
-          <span>@@sel</span>
+          <span class="span">@@sel</span>
           }
 
           @@if(context.select || context.sel){
-          <select class="select2">
+          <select class="select2" data-placeholder="Min">
             <option></option>
             <option>10%</option>
             <option>20%</option>
