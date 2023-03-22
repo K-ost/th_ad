@@ -197,11 +197,11 @@
     min-width: 40px; max-width: 40px; margin-right: 12px;
     img {display: block;}
   }
-  &-desc {flex-grow: 1;}
+  &-desc {flex-grow: 1; margin-right: 10px;}
   &-title {font-weight: 600; color: #292E36; margin: 0 0 4px;}
   &-text {color: #48505B;}
   &-balance {
-    text-align: right;
+    text-align: right; white-space: nowrap;
     small {
       font-weight: 600; font-size: 11px; line-height: 12px; letter-spacing: 0.03em;
       text-transform: uppercase; color: #818A99; display: block; margin: 0;

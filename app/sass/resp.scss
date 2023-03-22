@@ -190,4 +190,18 @@
   }
 
 
+  /* gsel */
+  .gsel {
+    .cabitem {margin: 0; padding: 4px 8px; height: 56px;}
+    .cabitem-img {min-width: 16px; max-width: 16px; margin: 0 8px 0 0;}
+    .cabitem-img img {max-width: 100%;}
+    .cabitem-title {font-weight: 400; margin: 0;}
+    .cabitem-text, .cabitem .btn-sm, .cabitem-balance small {display: none;}
+    .cabitem-balance__val {font-size: 13px; line-height: 18px;}
+    &-cab &-select {height: 56px; border-radius: 8px;}
+    &-cab &-dropdown {border-radius: 8px; padding-top: 56px;}
+    &-cab &-dropdown .cabitem {height: 40px;}
+  }
+
+
 }

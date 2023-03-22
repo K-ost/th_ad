@@ -40,6 +40,26 @@ $(function() {
     });
   });
 
+  // gsel-select hide on click outside
+  $(document).mouseup(function(e) {
+    const container = $(".gsel");
+    if (!container.is(e.target) && container.has(e.target).length === 0) {
+      container.removeClass('opened');
+    }
+  });
+
+
+  // gsel-cab
+  $('.gsel-cab .gsel-item').on('click', function() {
+    $(this).closest('.gsel-cab').find('.gsel-item').removeClass('choosed');
+    $(this).addClass('choosed');
+    let cab = $(this).html();
+    $(this).closest('.gsel-cab').find('.gsel-select__cab').html(cab);
+    $(this).closest('.gsel-cab').removeClass('opened');
+  });
+
+
+
 });
 
 

@@ -10,7 +10,16 @@
     <small>Баланс</small>
     <div class="cabitem-balance__val">@@price ₽</div>
   </div>
-  <button class="btn btn-light btn-sm">Выбрать</button>
+  @@if(!context.nobtn) {
+  <button class="btn btn-light btn-sm">
+    @@if(!context.btn){
+      Выбрать
+    }
+    @@if(context.btn){
+      Пополнить
+    }
+  </button>
+  }
   @@if(context.dots){
     <button class="btn-dots"></button>
   }

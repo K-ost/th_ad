@@ -26,8 +26,12 @@
         <a href="#">Убрать лимит</a>
       </div>
       <div class="modal-body">
-        <p>Select...</p>
-        <p>Select...</p>
+        <div class="form-field">
+          @@include('../gsel/gsel.html', { "title": "Выбрать тематику", "img": true })
+        </div>
+        <div class="form-field">
+          @@include('../gsel/gsel.html', { "title": "Исключить тематику", "img": true })
+        </div>
 			</div>
       <div class="modal-footer">
         <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
@@ -92,10 +96,10 @@
       </div>
       <div class="modal-body">
         <div class="form-field">
-          Select...
+          @@include('../gsel/gsel.html', { "title": "Добавить страны", "flag": true })
         </div>
         <div class="form-field">
-          Select...
+          @@include('../gsel/gsel.html', { "title": "Исключить страны", "flag": true })
         </div>
 
         <p>Соотношение полов</p>
@@ -158,10 +162,10 @@
         <div class="row row-big">
           <div class="col-6">
             <div class="form-field">
-              Select...
+              @@include('../gsel/gsel.html', { "title": "Выбрать регионы", "none": true })
             </div>
             <div class="form-field">
-              Select...
+              @@include('../gsel/gsel.html', { "title": "Выбрать регионы", "none": true })
             </div>
             <p>Соотношение регионов</p>
             <div class="gender_line">
@@ -201,10 +205,10 @@
 
           <div class="col-6">
             <div class="form-field">
-              Select...
+              @@include('../gsel/gsel.html', { "title": "Выбрать города", "none": true })
             </div>
             <div class="form-field">
-              Select...
+              @@include('../gsel/gsel.html', { "title": "Выбрать города", "none": true })
             </div>
             <p>Соотношение городов</p>
             <div class="gender_line">

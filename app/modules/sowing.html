@@ -3,10 +3,30 @@
     <div class="modal-content modal-content-bg">
       <h5 class="modal-title">Выберите кабинет и запись<br> для посева</h5>
 			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      
+      @@include('gsel/gsel-cab.html')
 
-      <div class="text-start">
+      <div class="form-field last">
         <button class="btn btn-outline-primary btn-plus"><span>Создать новый</span></button>
-      </div>
+      </div><!-- /form-field -->
+
+      <div class="form-field last">
+        <lanel class="form-label">рекламная кампания</lanel>
+        <select class="select2" data-placeholder="Выберите кампанию">
+          <option></option>
+          <option>Кампания №1</option>
+          <option>Кампания №2</option>
+        </select>
+      </div><!-- /form-field -->
+
+      <div class="form-field last">
+        <lanel class="form-label">ЗАПИСЬ ДЛЯ РАЗМЕЩЕНИЯ</lanel>
+        <select class="select2" data-placeholder="Введите наименование записи">
+          <option></option>
+          <option>Запись №1 от 01.01.2022 00:00</option>
+          <option>Запись №2 от 02.01.2022 00:00</option>
+        </select>
+      </div><!-- /form-field -->
       
       <div class="text-end">
         <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#choosePublics">Выбрать время</button>

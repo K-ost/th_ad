@@ -126,8 +126,10 @@ textarea.form-control {display: block; height: 120px; resize: none;}
 	.select2-results {
     &__option {
       padding: 10px 12px; color: var(--color-text) !important; line-height: 16px;
-      &:hover {background: var(--color-primary);}
+      &:hover {background: var(--color-blue); color: #fff;}
       &:last-child {border-radius: 0 0 7px 7px;}
+      &--highlighted.select2-results__option--selectable {background: #f1f1f1;}
+      //&--selected {background: #f1f1f1;}
     }
   }
 	.select2-search__field {border-radius: 6px; border-color: #C5CAD1 !important; outline: none;}
@@ -645,25 +647,28 @@ textarea.form-control {display: block; height: 120px; resize: none;}
 
 /* gsel */
 .gsel {
-  display: inline-block; position: relative;
+  display: block; position: relative;
+  &.margin {margin: 0 0 8px;}
   &-select {
     background: #fff; border: 1px solid #C5CAD1; border-radius: 8px;
-    height: 40px; padding: 4px; padding-right: 34px; position: relative; z-index: 10;
+    height: 40px; padding: 4px; padding-right: 34px; position: relative;
+    &.success {border-color: var(--color-green);}
   }
   &-input {background: 0; height: 30px; padding: 8px; width: 100%; border: 0; @include inp;}
   &-btn {
-    background: url(../images/svg/chevron-blue-down.svg) center center no-repeat; width: 28px; height: 32px;
+    background: url(../images/svg/chevron-blue-down.svg) center center no-repeat; width: 28px; bottom: 0;
     border: 0; cursor: pointer; @include inp; position: absolute; right: 4px; top: 4px;
   }
   &-dropdown {
     background: #fff; box-shadow: 0px 8px 16px rgba(18, 42, 69, 0.25);
-    border-radius: 8px; width: 100%; padding: 48px 8px 8px;
+    border-radius: 8px; width: 100%; padding: 48px 8px 8px; overflow: hidden;
     position: absolute; left: 0; top: 0; transition: all 200ms ease-in-out;
-    opacity: 0; visibility: hidden;
+    opacity: 0; visibility: hidden; z-index: 1000;
   }
   &-item {
+    position: relative;
     label {display: flex; padding: 12px; align-items: center; justify-content: space-between; cursor: pointer;}
-    img {min-width: 18px; max-width: 18px; display: block; margin: 0 8px 0 0;}
+    label img {min-width: 18px; max-width: 18px; display: block; margin: 0 8px 0 0;}
     &__title {margin-right: auto;}
   }
   &-check {
@@ -672,9 +677,24 @@ textarea.form-control {display: block; height: 120px; resize: none;}
     display: inline-block; cursor: pointer;
     &:checked {background-image: url(../images/svg/max.svg);}
   }
-  &.opened &-select {border-color: var(--color-blue);}
+  &.opened {z-index: 1100;}
+  &.opened &-select {z-index: 1100;}
   &.opened &-btn {transform: matrix(1,0,0,-1,0,0);}
   &.opened &-dropdown {opacity: 1; visibility: visible;}
+
+  .cabitem {margin: 0; padding: 16px 8px 16px 16px;}
+  &-cab {display: block;}
+  &-cab &-select {height: 72px; padding: 0 34px 0 0; border-radius: 16px;}
+  &-cab.opened &-select {background: #EBF3FF; border-color: var(--color-blue);}
+  &-cab &-dropdown {padding: 0; padding-top: 74px; border-radius: 16px;}
+  &-cab &-item {
+    &:hover .cabitem {background: #f1f1f1;}
+    &.choosed::before {
+      @include bf; background: #fff; border-radius: 8px; left: 0; top: 0; right: 0; bottom: 0;
+      opacity: 0.5; z-index: 10;
+    }
+    .cabitem .btn-sm {display: none;}
+  }
 }
 
 

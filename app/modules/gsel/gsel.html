@@ -1,15 +1,47 @@
 <div class="gsel">
   <div class="gsel-select">
-    <input type="text" class="gsel-input" placeholder="Choose...">
+    <input type="text" class="gsel-input" placeholder="@@title">
     <button class="gsel-btn"></button>
   </div>
   <div class="gsel-dropdown">
-    @@loop('gsel-item.html', [
-      { "title": "Тематика №1", "img": true },
-      { "title": "Тематика №2", "img": true },
-      { "title": "Тематика №3", "img": true },
-      { "title": "Тематика №4", "img": true },
-      { "title": "Тематика №5", "img": true }
-    ])
+    @@if(context.none) {
+      @@loop('gsel-item.html', [
+        { "title": "Регион 1", "none": true },
+        { "title": "Регион 2", "none": true },
+        { "title": "Регион 3", "none": true },
+        { "title": "Регион 4", "none": true },
+        { "title": "Регион 5", "none": true },
+      ])
+    }
+    
+    @@if(context.icon) {
+      @@loop('gsel-item.html', [
+        { "title": "Список №1<br> от 01.01.2022 00:00, 1000 ед. №1", "img": "img-icon" },
+        { "title": "Список №2<br> от 01.01.2022 00:00, 1000 ед. №1", "img": "img-icon" },
+        { "title": "Список №3<br> от 01.01.2022 00:00, 1000 ед. №1", "img": "img-icon" },
+        { "title": "Список №4<br> от 01.01.2022 00:00, 1000 ед. №1", "img": "img-icon" },
+        { "title": "Список №5<br> от 01.01.2022 00:00, 1000 ед. №1", "img": "img-icon" }
+      ])
+    }
+
+    @@if(context.flag) {
+      @@loop('gsel-item.html', [
+        { "title": "Страна №1", "img": "flag" },
+        { "title": "Страна №2", "img": "flag" },
+        { "title": "Страна №3", "img": "flag" },
+        { "title": "Страна №4", "img": "flag" },
+        { "title": "Страна №5", "img": "flag" }
+      ])
+    }
+    
+    @@if(context.img) {
+      @@loop('gsel-item.html', [
+        { "title": "Тематика №1", "img": "users-red" },
+        { "title": "Тематика №2", "img": "planet" },
+        { "title": "Тематика №3", "img": "earphones" },
+        { "title": "Тематика №4", "img": "btn" },
+        { "title": "Тематика №5", "img": "play" }
+      ])
+    }
   </div>
 </div><!-- /gsel -->
