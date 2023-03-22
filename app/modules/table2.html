@@ -1,0 +1,25 @@
+<div class="maintable @@if(context.empty){maintable-empty}">
+  <div class="maintable-area">
+    <table class="maintable-body">
+      @@include('table/thead2.html')
+      @@include('table/tbody2.html')
+    </table>
+  </div>
+  <div class="maintable-settings">
+    <button class="maintable-settings-btn" data-bs-toggle="modal" data-bs-target="#tableFilters2"></button>
+    <div class="maintable-settings-scroll"></div>
+  </div>
+</div><!-- /maintable -->
+
+
+@@include('table/table-filters2.html')
+@@include('table/filters2.html')
+@@include('table/filter-range.html', { "title": "Стоимость посева", "popup": "filterPrice", "val": "₽" })
+@@include('table/filter-range.html', { "title": "Статус", "popup": "filterStatus", "status": true })
+@@include('table/filter-range.html', { "title": "Дата размещения", "popup": "filterDate", "date": true })
+@@include('table/filter-range.html', { "title": "Подписок", "popup": "filterSubs", "val": "шт" })
+@@include('table/filter-range.html', { "title": "Просмотров", "popup": "filterViews", "val": "шт" })
+@@include('table/filter-range.html', { "title": "Лайков", "popup": "filterLikes", "val": "шт" })
+@@include('table/filter-range.html', { "title": "Комментариев", "popup": "filterComments", "val": "шт" })
+@@include('table/filter-range.html', { "title": "Переходов", "popup": "filterTransfers", "val": "шт" })
+@@include('table/filter-range.html', { "title": "CPM", "popup": "filterCRM", "val": "шт" })

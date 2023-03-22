@@ -1,0 +1,260 @@
+<div class="modal modal-filter" id="filterPublic" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Паблик</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        @@include('../inc/input.html', { "place": "Имя или ссылка (Enter)" })
+        @@include('../inc/input.html', { "place": "Исключить из выдачи (Enter)" })
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+
+
+<div class="modal modal-filter" id="filterSubject" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Тематика</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="form-field">
+          @@include('../gsel/gsel.html', { "title": "Выбрать тематику", "img": true })
+        </div>
+        <div class="form-field">
+          @@include('../gsel/gsel.html', { "title": "Исключить тематику", "img": true })
+        </div>
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+
+
+<div class="modal modal-filter" id="filterGender" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Пол</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <p>Соотношение полов</p>
+
+        <div class="gender_line">
+          <div class="gender_line-title gender_line-female">Женщины</div>
+          <select class="select2" data-placeholder="Min">
+            <option></option>
+            <option>10%</option>
+            <option>20%</option>
+            <option>30%</option>
+            <option>40%</option>
+            <option>50%</option>
+          </select>
+        </div><!-- /gender_line -->
+
+        <div class="gender_line">
+          <div class="gender_line-title gender_line-male">Мужчины</div>
+          <select class="select2" data-placeholder="Min">
+            <option></option>
+            <option>10%</option>
+            <option>20%</option>
+            <option>30%</option>
+            <option>40%</option>
+            <option>50%</option>
+          </select>
+        </div><!-- /gender_line -->
+
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+
+
+
+<div class="modal modal-filter" id="filterCountry" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Страна</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="form-field">
+          @@include('../gsel/gsel.html', { "title": "Добавить страны", "flag": true })
+        </div>
+        <div class="form-field">
+          @@include('../gsel/gsel.html', { "title": "Исключить страны", "flag": true })
+        </div>
+
+        <p>Соотношение полов</p>
+
+        <div class="gender_line">
+          <div class="gender_line-title flag"><img src="images/svg/flag.svg" alt=""> Страна 1</div>
+          <select class="select2" data-placeholder="Min">
+            <option></option>
+            <option>10%</option>
+            <option>20%</option>
+            <option>30%</option>
+            <option>40%</option>
+            <option>50%</option>
+          </select>
+        </div><!-- /gender_line -->
+
+        <div class="gender_line">
+          <div class="gender_line-title flag"><img src="images/svg/flag.svg" alt=""> Страна 2</div>
+          <select class="select2" data-placeholder="Min">
+            <option></option>
+            <option>10%</option>
+            <option>20%</option>
+            <option>30%</option>
+            <option>40%</option>
+            <option>50%</option>
+          </select>
+        </div><!-- /gender_line -->
+
+        <div class="gender_line">
+          <div class="gender_line-title flag"><img src="images/svg/flag.svg" alt=""> Страна 3</div>
+          <select class="select2" data-placeholder="Min">
+            <option></option>
+            <option>10%</option>
+            <option>20%</option>
+            <option>30%</option>
+            <option>40%</option>
+            <option>50%</option>
+          </select>
+        </div><!-- /gender_line -->
+
+			</div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+        <button class="btn btn-primary">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->
+
+
+
+<div class="modal modal-filter" id="filterArea" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Регион</h5>
+        <a href="#">Убрать лимит</a>
+      </div>
+      <div class="modal-body">
+        <div class="row row-big">
+          <div class="col-6">
+            <div class="form-field">
+              @@include('../gsel/gsel.html', { "title": "Выбрать регионы", "none": true })
+            </div>
+            <div class="form-field">
+              @@include('../gsel/gsel.html', { "title": "Выбрать регионы", "none": true })
+            </div>
+            <p>Соотношение регионов</p>
+            <div class="gender_line">
+              <div class="gender_line-title flag"><img src="images/svg/flag.svg" alt=""> Регион 1</div>
+              <select class="select2" data-placeholder="Min">
+                <option></option>
+                <option>10%</option>
+                <option>20%</option>
+                <option>30%</option>
+                <option>40%</option>
+                <option>50%</option>
+              </select>
+            </div><!-- /gender_line -->
+            <div class="gender_line">
+              <div class="gender_line-title flag"><img src="images/svg/flag.svg" alt=""> Регион 2</div>
+              <select class="select2" data-placeholder="Min">
+                <option></option>
+                <option>10%</option>
+                <option>20%</option>
+                <option>30%</option>
+                <option>40%</option>
+                <option>50%</option>
+              </select>
+            </div><!-- /gender_line -->
+            <div class="gender_line">
+              <div class="gender_line-title flag"><img src="images/svg/flag.svg" alt=""> Регион 3</div>
+              <select class="select2" data-placeholder="Min">
+                <option></option>
+                <option>10%</option>
+                <option>20%</option>
+                <option>30%</option>
+                <option>40%</option>
+                <option>50%</option>
+              </select>
+            </div><!-- /gender_line -->
+          </div><!-- /col-6 -->
+
+          <div class="col-6">
+            <div class="form-field">
+              @@include('../gsel/gsel.html', { "title": "Выбрать города", "none": true })
+            </div>
+            <div class="form-field">
+              @@include('../gsel/gsel.html', { "title": "Выбрать города", "none": true })
+            </div>
+            <p>Соотношение городов</p>
+            <div class="gender_line">
+              <div class="gender_line-title flag"><img src="images/svg/flag.svg" alt=""> Город 1</div>
+              <select class="select2" data-placeholder="Min">
+                <option></option>
+                <option>10%</option>
+                <option>20%</option>
+                <option>30%</option>
+                <option>40%</option>
+                <option>50%</option>
+              </select>
+            </div><!-- /gender_line -->
+            <div class="gender_line">
+              <div class="gender_line-title flag"><img src="images/svg/flag.svg" alt=""> Город 2</div>
+              <select class="select2" data-placeholder="Min">
+                <option></option>
+                <option>10%</option>
+                <option>20%</option>
+                <option>30%</option>
+                <option>40%</option>
+                <option>50%</option>
+              </select>
+            </div><!-- /gender_line -->
+            <div class="gender_line">
+              <div class="gender_line-title flag"><img src="images/svg/flag.svg" alt=""> Город 3</div>
+              <select class="select2" data-placeholder="Min">
+                <option></option>
+                <option>10%</option>
+                <option>20%</option>
+                <option>30%</option>
+                <option>40%</option>
+                <option>50%</option>
+              </select>
+            </div><!-- /gender_line -->
+          </div><!-- /col-6 -->
+        </div><!-- /row -->
+
+			</div>
+      
+      <div class="modal-footer">
+        <div class="modal-bottom">
+          <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>
+          <button class="btn btn-primary">Сохранить</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div><!-- /modal -->

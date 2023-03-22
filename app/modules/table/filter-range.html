@@ -6,6 +6,7 @@
         <a href="#">Убрать лимит</a>
       </div>
       <div class="modal-body">
+        @@if(!context.status && !context.date){
         <div class="price_range">
 
           @@if(!context.sel){
@@ -32,6 +33,29 @@
           }
           
         </div>
+        }
+
+        @@if(context.status){
+          <div class="form-field">
+            <label class="check-field"><input type="radio" class="form-radio" name="status" checked> Все</label>
+          </div>
+          <div class="form-field">
+            <label class="check-field"><input type="radio" class="form-radio" name="status"> В процессе</label>
+          </div>
+          <div class="form-field">
+            <label class="check-field"><input type="radio" class="form-radio" name="status"> Размещено</label>
+          </div>
+          <div class="form-field">
+            <label class="check-field"><input type="radio" class="form-radio" name="status"> Не размещено</label>
+          </div>
+        }
+
+        @@if(context.date){
+          <div class="date_range">
+            <span class="span">Период</span>
+            <input type="text" class="form-control datepicker_input" placeholder="05.08.2022 - 26.08.2022">
+          </div>
+        }
 			</div>
       <div class="modal-footer">
         <button class="btn btn-outline-primary" data-bs-dismiss="modal">Отмена</button>

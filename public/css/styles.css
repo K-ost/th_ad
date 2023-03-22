@@ -749,6 +749,9 @@ textarea.form-control {
 .btn-favorite.active {
   background-image: url(../images/svg/star-active.svg);
 }
+.btn-favorite-gold.active {
+  background-image: url(../images/svg/star-gold.svg);
+}
 
 /* btn-back */
 .btn-back {
@@ -904,6 +907,10 @@ textarea.form-control {
   max-width: 820px;
 }
 
+#tableFilters2 .modal-dialog {
+  max-width: 438px;
+}
+
 #makeSowing .modal-dialog {
   max-width: 584px;
 }
@@ -997,11 +1004,25 @@ textarea.form-control {
 .price_range .form-control {
   flex: 1;
   margin-right: 7px;
-  padding: 0 8px;
+  padding: 4px 8px;
   text-align: center;
 }
 .price_range .select2 {
   margin-left: 7px;
+}
+
+.date_range {
+  display: flex;
+  align-items: center;
+  line-height: 16px;
+  color: var(--color-text2);
+}
+.date_range .span {
+  margin-right: 7px;
+}
+.date_range .form-control {
+  flex: 1;
+  padding: 4px 8px;
 }
 
 /* topmenu */
@@ -1248,6 +1269,9 @@ textarea.form-control {
   column-count: 3;
   column-gap: 20px;
 }
+.tableFilters-list2 {
+  column-count: 2;
+}
 .tableFilters-list li {
   list-style: none;
   display: inline-block;
@@ -1352,6 +1376,13 @@ textarea.form-control {
 }
 
 /* calendar */
+.datepicker {
+  background: #fff;
+  border: 1px solid #C5CAD1;
+  border-radius: 8px;
+  box-shadow: 0px 8px 16px rgba(18, 42, 69, 0.25);
+  padding: 8px 16px 16px;
+}
 .datepicker .table-condensed {
   border-collapse: collapse;
   width: 100%;
@@ -1377,6 +1408,7 @@ textarea.form-control {
   min-width: 32px;
   padding: 0;
   cursor: pointer;
+  font-size: 13px;
 }
 .datepicker .table-condensed tbody td.old, .datepicker .table-condensed tbody td.new {
   color: #818a49;
@@ -1447,6 +1479,10 @@ textarea.form-control {
 }
 .calendar .datepicker {
   margin: 0 0 10px;
+  background: 0;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
 }
 .calendar-section {
   margin: 0 0 10px;
@@ -2396,6 +2432,9 @@ textarea.form-control {
 .maintable thead th.maintable-min150 {
   min-width: 150px;
 }
+.maintable thead th.maintable-min180 {
+  min-width: 180px;
+}
 .maintable tbody td {
   background: #fff;
   border-bottom: 1px solid #e4e5e6;
@@ -2485,6 +2524,21 @@ textarea.form-control {
 .maintable-icon__female {
   background-image: url(../images/svg/female.svg);
 }
+.maintable-icon__heart {
+  background-image: url(../images/svg/heart.svg);
+}
+.maintable-icon__date {
+  background-image: url(../images/svg/clock.svg);
+}
+.maintable-icon__status {
+  background-image: url(../images/svg/refresh.svg);
+}
+.maintable-icon__userplus {
+  background-image: url(../images/svg/user-plus.svg);
+}
+.maintable-icon__crm {
+  background-image: url(../images/svg/basket.svg);
+}
 .maintable-settings {
   border-radius: 8px;
   position: absolute;
@@ -2517,6 +2571,51 @@ textarea.form-control {
   bottom: 0;
   top: 52px;
   left: 0;
+}
+.maintable-info {
+  position: relative;
+  padding-left: 24px;
+}
+.maintable-info::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 18px;
+  left: 0;
+  top: 0;
+  background-size: 18px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.maintable-info__process::before {
+  background-image: url(../images/svg/progress-icon.svg);
+}
+.maintable-info__not::before {
+  background-image: url(../images/svg/error-red.svg);
+}
+.maintable-info__placed::before {
+  background-image: url(../images/svg/check-green.svg);
+}
+.maintable-tooltip {
+  background: #fff;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  font-weight: 400;
+  color: var(--color-red);
+  position: absolute;
+  padding: 4px 10px;
+  left: 0;
+  top: 100%;
+  min-width: 156px;
+  z-index: 1000;
+  transition: all 200ms ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+.maintable-info:hover .maintable-tooltip {
+  opacity: 1;
+  visibility: visible;
 }
 .maintable .form-control {
   background: url(../images/svg/search-black.svg) right center/12px no-repeat;

@@ -26,6 +26,20 @@ $(function() {
     multidate: true,
     maxViewMode: 0
   });
+  $('.datepicker_input').datepicker({
+    format: "dd.mm.yyyy",
+    language: "ru",
+    todayHighlight: true,
+    templates: {
+      leftArrow: '<span class="datepicker-prev"></span>',
+      rightArrow: '<span class="datepicker-next"></span>'
+    },
+    viewMode: 'days',
+    multidate: true,
+    maxViewMode: 0,
+    multidateSeparator: " - "
+  });
+
 
   // gsel-select
   $('.gsel-btn').each(function() {

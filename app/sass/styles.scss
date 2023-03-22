@@ -279,6 +279,7 @@
     &:first-child {padding-left: 17px;}
     &::before {@include bf; border-bottom: 1px solid rgba(72, 80, 91, 0.3); width: 100%; left: 0; bottom: 0;}
     &.maintable-min150 {min-width: 150px;}
+    &.maintable-min180 {min-width: 180px;}
   }
   tbody td {
     background: #fff; border-bottom: 1px solid #e4e5e6; padding: 10px 8px;
@@ -306,6 +307,11 @@
     &__users {background-image: url(../images/svg/users-red.svg);}
     &__basket {background-image: url(../images/svg/basket.svg);}
     &__female {background-image: url(../images/svg/female.svg);}
+    &__heart {background-image: url(../images/svg/heart.svg);}
+    &__date {background-image: url(../images/svg/clock.svg);}
+    &__status {background-image: url(../images/svg/refresh.svg);}
+    &__userplus {background-image: url(../images/svg/user-plus.svg);}
+    &__crm {background-image: url(../images/svg/basket.svg);}
   }
   &-settings {
     border-radius: 8px; position: absolute; right: 0; top: 0; bottom: 0; width: 32px;
@@ -319,6 +325,25 @@
       border-radius: 8px; width: 100%; position: absolute; bottom: 0; top: 52px; left: 0;
     }
   }
+
+  &-info {
+    position: relative; padding-left: 24px;
+    &::before {
+      @include bf; width: 18px; height: 18px; left: 0; top: 0; background-size: 18px;
+      background-position: center center; background-repeat: no-repeat;
+    }
+    &__process::before {background-image: url(../images/svg/progress-icon.svg);}
+    &__not::before {background-image: url(../images/svg/error-red.svg);}
+    &__placed::before {background-image: url(../images/svg/check-green.svg);}
+  }
+
+  &-tooltip {
+    background: #fff; box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25); border-radius: 4px;
+    font-weight: 400; color: var(--color-red); position: absolute; padding: 4px 10px;
+    left: 0; top: 100%; min-width: 156px; z-index: 1000; transition: all 200ms ease-in-out;
+    opacity: 0; visibility: hidden;
+  }
+  &-info:hover &-tooltip {opacity: 1; visibility: visible;}
 
   .form-control {
     background: url(../images/svg/search-black.svg) right center / 12px no-repeat;

@@ -1,0 +1,32 @@
+<thead>
+  <tr>
+    <th class="maintable-min">
+      <input type="checkbox" class="form-check">
+    </th>
+
+    <th>
+      <div class="maintable-div">
+        <button class="btn-filter" data-bs-toggle="modal" data-bs-target="#filterPublic"></button>
+        <input type="text" class="form-control d-none d-lg-block" placeholder="Паблик">
+        <span class="maintable-name d-inline d-lg-none">Паблик</span>
+      </div>
+    </th>
+
+    <th class="maintable-locked maintable-min">
+      <button class="btn-favorite"></button>
+    </th>
+
+    @@loop('th.html', [
+      { "name": "Запись", "popup": "filterRecord", "lock": true, "min180": true },
+      { "name": "Стоимость посева", "popup": "filterPrice", "lock": true },
+      { "name": "Дата размещения", "popup": "filterDate", "lock": true, "icon": "date" },
+      { "name": "Статус", "popup": "filterStatus", "lock": true, "icon": "status", "min180": true },
+      { "name": "Подписок", "popup": "filterSubs", "lock": true, "icon": "userplus" },
+      { "name": "Просмотров", "popup": "filterViews", "lock": true, "icon": "cover" },
+      { "name": "Лайков", "popup": "filterLikes", "lock": true, "icon": "heart" },
+      { "name": "Комментариев", "popup": "filterComments", "lock": true, "icon": "posts" },
+      { "name": "Переходов", "popup": "filterTransfers", "lock": true, "icon": "return" },
+      { "name": "CPM", "popup": "filterCRM", "lock": true, "icon": "crm" }
+    ])
+  </tr>
+</thead>
