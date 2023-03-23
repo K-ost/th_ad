@@ -2305,7 +2305,7 @@ textarea.form-control {
   flex-grow: 1;
   margin: 0 20px 0 0;
 }
-.pageheader .icon_link {
+.pageheader-info {
   margin-right: 16px;
 }
 
@@ -3125,6 +3125,10 @@ textarea.form-control {
   background-image: url(../images/svg/settings-blue.svg);
   background-size: 24px;
 }
+.mobile_filters-progress {
+  background-image: url(../images/svg/progress-icon.svg);
+  background-size: 20px;
+}
 .mobile_filters_drop {
   background: #fff;
   box-shadow: 0px 8px 16px rgba(18, 42, 69, 0.25);
@@ -3533,6 +3537,35 @@ textarea.form-control {
   .publicbox-complete {
     display: block;
   }
+
+  /* top_features */
+  .top_features-item {
+    display: block;
+  }
+
+  .top_features-name {
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 12px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #48505B;
+    margin: 0 0 8px;
+  }
+
+  /* pageheader */
+  .pageheader {
+    display: block;
+    padding-top: 0;
+  }
+  .pageheader-title {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 0 10px;
+  }
+  .pageheader-info {
+    margin: 0 0 8px;
+  }
 }
 /* max-width 480px */
 @media screen and (max-width: 480px) {
@@ -3663,5 +3696,10 @@ textarea.form-control {
   }
   .gsel-cab .gsel-dropdown .cabitem {
     height: 40px;
+  }
+
+  /* pageheader */
+  .pageheader .btn {
+    width: 100%;
   }
 }

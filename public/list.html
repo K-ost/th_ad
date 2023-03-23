@@ -208,10 +208,10 @@
 
 <div class="topbar">
   <div class="row align-items-center">
-    <div class="col-2">
+    <div class="col-12 col-lg-2 d-none d-lg-block">
       <button class="btn btn-primary btn-plus btn-sm"><span>Создать пост</span></button>
     </div>
-    <div class="col-8 text-center">
+    <div class="col-12 col-lg-8 text-center">
       <ul class="topmenu">
   <li><a href="start.html" class="topmenu_icon topmenu_icon-chart active"><i>Мои посевы</i></a></li>
   <li><span class="topmenu_icon topmenu_icon-grid disabled"><i>Маркет платформа</i></span></li>
@@ -219,7 +219,7 @@
   <li><a href="main.html" class="topmenu_icon topmenu_icon-wallet"><i>Рекламный кабинет</i></a></li>
 </ul>
     </div>
-    <div class="col-2 text-end">
+    <div class="col-12 col-lg-2 text-end d-none d-lg-block">
       <div class="status_line">Размещено в 1 паблике из 3</div>
     </div>
   </div><!-- /row -->
@@ -241,25 +241,25 @@
       </div>
     </div>
   </div>
-  <div class="top_features-item">
+  <div class="top_features-item d-none d-lg-block">
     <div class="top_features-name">Всего заявок:</div>
     <div class="top_features-div">-</div>
   </div>
-  <div class="top_features-item">
+  <div class="top_features-item d-none d-lg-block">
     <div class="top_features-name">Размещено:</div>
     <div class="top_features-div">-</div>
   </div>
-  <div class="top_features-item">
+  <div class="top_features-item d-none d-lg-block">
     <div class="top_features-name">С ошибкой</div>
     <div class="top_features-div">-</div>
   </div>
-  <div class="top_features-item">
+  <div class="top_features-item d-none d-lg-block">
     <div class="top_features-name">Потрачено всего:</div>
     <div class="top_features-div">-</div>
   </div>
 </div><!-- /top_features -->
   </div>
-  <div class="col-12 col-lg-4">
+  <div class="col-12 col-lg-4 d-none d-lg-block">
     <div class="recordbox-scroll">
       <div class="recordbox">
   <div class="recordbox-title">Запись №1 от 01.01.2022 00:00</div>
@@ -281,7 +281,45 @@
   </div>
 </div><!-- /middlebar -->
 
+<div class="mobile_filters d-block d-lg-none">
+  <div class="mobile_filters-inner">
+    
+    <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#choosePublic">Подобрать паблики</button>
 
+    <div class="mobile_filters-item">
+      <button class="mobile_filters-btn mobile_filters-search"></button>
+    </div>
+    <div class="mobile_filters-item">
+      <button class="mobile_filters-btn mobile_filters-sort js-mobileSort"></button>
+    </div>
+    
+    <div class="mobile_filters-item dropdown">
+      <button class="mobile_filters-btn mobile_filters-filter" data-bs-toggle="dropdown"></button>
+      <div class="dropdown-menu mobile_filters_drop">
+        <ul class="mobile_filters_popup">
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterPublic">Паблик</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterStatus">Статус</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterPrice">Стоимость посева</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterDate">Дата размещения</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterSubs">Подписок</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterViews">Просмотров</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterLikes">Лайков</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterComments">Комментариев</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterTransfers">Переходов</button></li>
+          <li><button class="btn btn-block btn-xs btn-primary" data-bs-toggle="modal" data-bs-target="#filterCRM">CPM</button></li>
+        </ul>
+      </div>
+    </div><!-- /dropdown -->
+
+    <div class="mobile_filters-item">
+      <button class="mobile_filters-btn mobile_filters-settings" data-bs-toggle="modal" data-bs-target="#tableFilters2"></button>
+    </div>
+
+    <div class="mobile_filters-item">
+      <button class="mobile_filters-btn mobile_filters-progress"></button>
+    </div>
+  </div>
+</div><!-- /mobile_filters -->
 
 <div class="maintable ">
   <div class="maintable-area">
@@ -2042,6 +2080,154 @@
     </div>
   </div>
 </div><!-- /modal -->
+
+<div class="modal modal-simple" id="choosePublic" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-content-bg">
+      <h5 class="modal-title">Подбор пабликов</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+      <ul class="public_menu">
+        <li><a href="#" class="public_menu-list active">По списку</a></li>
+        <li><a href="#" class="public_menu-users">По целевой аудитории</a></li>
+      </ul><!-- /public_menu -->
+      
+      <ul class="iconmenu" role="tablist">
+  <li><a href="#" class="iconmenu-icon iconmenu-icon-edit active" data-bs-toggle="pill" data-bs-target="#choosePublic1"></a></li>
+  <li><a href="#" class="iconmenu-icon iconmenu-icon-copy" data-bs-toggle="pill" data-bs-target="#choosePublic2"></a></li>
+  <li><a href="#" class="iconmenu-icon iconmenu-icon-cloud" data-bs-toggle="pill" data-bs-target="#choosePublic3"></a></li>
+  <li><a href="#" class="iconmenu-icon iconmenu-icon-book" data-bs-toggle="pill" data-bs-target="#choosePublic4"></a></li>
+</ul><!-- /iconmenu -->
+
+      <div class="tab-content">
+        <div class="tab-pane fade show active" id="choosePublic1">
+          <div class="form-field ">
+  <label class="form-label">пользователи ВКОНТАКТЕ</label>
+  
+  
+  
+    <textarea class="form-control" placeholder="По одной ссылке или ID пользователей в строке"></textarea>
+  
+
+  
+</div>
+        </div><!-- /tab-pane -->
+
+        <div class="tab-pane fade" id="choosePublic2">
+          <div class="form-field">
+            <label class="form-label">ПАБЛИКИ ВКОНТАКТЕ</label>
+            <div class="filebox">
+  <div class="filebox-name disabled">Загрузить из файла</div>
+  <input type="file" class="form-file" disabled>
+</div><!-- /filebox -->
+            <div class="form-field__text">Поддерживаются списки в формате .csv и .xls</div>
+          </div>
+          <div class="form-field">
+            <div class="chosenfile">
+  <span>Последняя выгрузка паблики.csv</span>
+  <button class="chosenfile-remove"></button>
+</div><!-- /chosenfile -->
+          </div>
+        </div><!-- /tab-pane -->
+
+        <div class="tab-pane fade" id="choosePublic3">
+          <div class="form-field">
+            <label class="form-label">списки пабликов</label>
+            Select...
+          </div>
+        </div><!-- /tab-pane -->
+
+        <div class="tab-pane fade" id="choosePublic4">
+          <div class="form-field">
+            <label class="form-label">ПАБЛИКИ ВКОНТАКТЕ</label>
+            Select...
+          </div>
+        </div><!-- /tab-pane -->
+      </div><!-- /tab-content -->
+
+      <div class="form-field text-end">
+        <button class="btn btn-primary" disabled>Добавить</button>
+      </div>
+
+      <div class="form-field last">
+        <label class="form-label">добавленные паблики</label>
+        <div class="gsel">
+  <div class="gsel-select">
+    <input type="text" class="gsel-input" placeholder="добавленные паблики">
+    <button class="gsel-btn"></button>
+  </div>
+  <div class="gsel-dropdown">
+    
+    
+    
+      <div class="gsel-item">
+  <label>
+    <img src="images/svg/img-icon.svg" alt="">
+    <span class="gsel-item__title">Список №1<br> от 01.01.2022 00:00, 1000 ед. №1</span>
+    <input type="checkbox" class="gsel-check">
+  </label>
+</div><!-- /gsel-item --><div class="gsel-item">
+  <label>
+    <img src="images/svg/img-icon.svg" alt="">
+    <span class="gsel-item__title">Список №2<br> от 01.01.2022 00:00, 1000 ед. №1</span>
+    <input type="checkbox" class="gsel-check">
+  </label>
+</div><!-- /gsel-item --><div class="gsel-item">
+  <label>
+    <img src="images/svg/img-icon.svg" alt="">
+    <span class="gsel-item__title">Список №3<br> от 01.01.2022 00:00, 1000 ед. №1</span>
+    <input type="checkbox" class="gsel-check">
+  </label>
+</div><!-- /gsel-item --><div class="gsel-item">
+  <label>
+    <img src="images/svg/img-icon.svg" alt="">
+    <span class="gsel-item__title">Список №4<br> от 01.01.2022 00:00, 1000 ед. №1</span>
+    <input type="checkbox" class="gsel-check">
+  </label>
+</div><!-- /gsel-item --><div class="gsel-item">
+  <label>
+    <img src="images/svg/img-icon.svg" alt="">
+    <span class="gsel-item__title">Список №5<br> от 01.01.2022 00:00, 1000 ед. №1</span>
+    <input type="checkbox" class="gsel-check">
+  </label>
+</div><!-- /gsel-item -->
+    
+
+    
+    
+    
+  </div>
+</div><!-- /gsel -->
+        <div class="form-field__text">Добавлено 0 пабликов</div>
+      </div>
+
+      <button class="btn btn-primary btn-plus" disabled>Применить</button>
+    </div>
+  </div>
+</div><!-- /modal -->
+
+<div class="mobile_sort" id="mobileSort">
+  <div class="mobile_sort-header">
+    <div class="mobile_sort-title">Сортировать по:</div>
+    <button class="btn-close"></button>
+  </div>
+  <ul class="mobile_sort-list">
+    <li><a href="#" class="active">Название: А-Я</a></li>
+    <li><a href="#">Название: Я-А</a></li>
+    <li><a href="#">Тематика</a></li>
+    <li><a href="#">Цена</a></li>
+    <li><a href="#">Страна</a></li>
+    <li><a href="#">Регион</a></li>
+    <li><a href="#">Пол</a></li>
+    <li><a href="#">Участников</a></li>
+    <li><a href="#">Тематика</a></li>
+    <li><a href="#">Цена</a></li>
+    <li><a href="#">Страна</a></li>
+    <li><a href="#">Регион</a></li>
+    <li><a href="#">Пол</a></li>
+    <li><a href="#">Участников</a></li>
+  </ul>
+</div><!-- /mobile_sort -->
 
 </div><!-- /mainbox_container -->
 </div><!-- /mainbox -->

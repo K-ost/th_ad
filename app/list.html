@@ -2,13 +2,13 @@
 
 <div class="topbar">
   <div class="row align-items-center">
-    <div class="col-2">
+    <div class="col-12 col-lg-2 d-none d-lg-block">
       <button class="btn btn-primary btn-plus btn-sm"><span>Создать пост</span></button>
     </div>
-    <div class="col-8 text-center">
+    <div class="col-12 col-lg-8 text-center">
       @@include('modules/inc/topmenu.html')
     </div>
-    <div class="col-2 text-end">
+    <div class="col-12 col-lg-2 text-end d-none d-lg-block">
       <div class="status_line">Размещено в 1 паблике из 3</div>
     </div>
   </div><!-- /row -->
@@ -18,17 +18,21 @@
   <div class="col-12 col-lg-4">
     @@include('modules/top_features.html', { "title": "Нет постов" })
   </div>
-  <div class="col-12 col-lg-4">
+  <div class="col-12 col-lg-4 d-none d-lg-block">
     <div class="recordbox-scroll">
       @@loop('modules/inc/recordbox.html', [ {}, {}, {}, {}, {} ])
     </div><!-- /recordbox-scroll -->
   </div>
 </div><!-- /middlebar -->
 
-
+@@include('modules/m-filters2.html')
 
 @@include('modules/table2.html')
 
 @@include('modules/inc/show-record.html')
+
+@@include('modules/public-choose.html')
+
+@@include('modules/m-sort.html')
 
 @@include('modules/footer.html')

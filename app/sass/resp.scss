@@ -144,6 +144,20 @@
   }
 
 
+  /* top_features */
+  .top_features-item {display: block;}
+  .top_features-name {
+    font-weight: 600; font-size: 11px; line-height: 12px; letter-spacing: 0.03em;
+    text-transform: uppercase; color: #48505B; margin: 0 0 8px;
+  }
+
+  /* pageheader */
+  .pageheader {
+    display: block; padding-top: 0;
+    &-title {font-size: 20px; line-height: 24px; margin: 0 0 10px;}
+    &-info {margin: 0 0 8px;}
+  }
+
 
 }
 
@@ -201,6 +215,11 @@
     &-cab &-select {height: 56px; border-radius: 8px;}
     &-cab &-dropdown {border-radius: 8px; padding-top: 56px;}
     &-cab &-dropdown .cabitem {height: 40px;}
+  }
+
+  /* pageheader */
+  .pageheader {
+    .btn {width: 100%;}
   }
 
 
