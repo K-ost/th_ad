@@ -612,7 +612,10 @@ textarea.form-control {display: block; height: 120px; resize: none;}
   max-width: 256px; position: absolute; left: 50%; top: 50%; z-index: 10000;
   transform: translate(-50%,-50%); opacity: 0; visibility: hidden;
   &.opened {opacity: 1; visibility: visible;}
-  .datepicker {margin: 0 0 10px; background: 0; box-shadow: none; padding: 0; border-radius: 0;}
+  .datepicker {
+    margin: 0 0 10px; background: 0; box-shadow: none; padding: 0;
+    border: 0; border-radius: 0;
+  }
   &-section {margin: 0 0 10px;}
   &-title {font-weight: 600; color: var(--color-text2); margin: 0 0 6px;}
   &-row {
