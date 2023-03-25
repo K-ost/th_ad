@@ -13,33 +13,6 @@ $(function() {
     });
   });
 
-  // datepicker
-  $('#datepicker').datepicker({
-    format: "dd.mm.yyyy",
-    language: "ru",
-    todayHighlight: true,
-    templates: {
-      leftArrow: '<span class="datepicker-prev"></span>',
-      rightArrow: '<span class="datepicker-next"></span>'
-    },
-    viewMode: 'days',
-    multidate: true,
-    maxViewMode: 0
-  });
-  $('.datepicker_input').datepicker({
-    format: "dd.mm.yyyy",
-    language: "ru",
-    todayHighlight: true,
-    templates: {
-      leftArrow: '<span class="datepicker-prev"></span>',
-      rightArrow: '<span class="datepicker-next"></span>'
-    },
-    viewMode: 'days',
-    multidate: true,
-    maxViewMode: 0,
-    multidateSeparator: " - "
-  });
-
 
   // gsel-select
   $('.gsel-btn').each(function() {
@@ -73,6 +46,32 @@ $(function() {
   });
 
 
+  // Datepicker
+  $('input[name="daterange"]').daterangepicker({
+    opens: "right",
+    locale: {
+      format: "DD.MM.YYYY",
+      separator: " - ",
+      applyLabel: "Применить",
+      cancelLabel: "Отмена",
+      fromLabel: "От",
+      toLabel: "До",
+      customRangeLabel: "Custom",
+      weekLabel: "Н",
+      daysOfWeek: [ "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс" ],
+      monthNames: [
+        "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+      ],
+      firstDay: 0
+    },
+    startDate: "14.03.2023",
+    endDate: "25.03.2023",
+    buttonClasses: "btn btn-sm",
+    cancelClass: "btn-light btn-sm"
+  });
+
+
 
 });
 
@@ -90,19 +89,6 @@ backs.forEach(el => {
     e.preventDefault()
     document.querySelector('#uh-page1').classList.add('show')
     document.querySelector('#uh-page2').classList.remove('show')
-  })
-})
-
-// Show calendar
-document.querySelectorAll('.js-calendar').forEach(el => {
-  el.addEventListener('click', e => {
-    e.preventDefault()
-    document.querySelector('#calendar1').classList.add('opened')
-  })
-})
-document.querySelectorAll('.js-calendar-dismiss').forEach(el => {
-  el.addEventListener('click', e => {
-    e.target.closest('.calendar').classList.remove('opened')
   })
 })
 

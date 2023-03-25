@@ -1407,6 +1407,9 @@ textarea.form-control {
   border-collapse: collapse;
   width: 100%;
 }
+.datepicker .table-condensed thead th {
+  height: 40px;
+}
 .datepicker .table-condensed thead .dow {
   text-align: center;
   height: 40px;
@@ -1485,17 +1488,6 @@ textarea.form-control {
   box-shadow: 0px 8px 16px rgba(18, 42, 69, 0.25);
   padding: 8px 16px 16px;
   max-width: 256px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  z-index: 10000;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  visibility: hidden;
-}
-.calendar.opened {
-  opacity: 1;
-  visibility: visible;
 }
 .calendar .datepicker {
   margin: 0 0 10px;
