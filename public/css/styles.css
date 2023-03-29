@@ -1561,6 +1561,7 @@ textarea.form-control {
   font-weight: 600;
   color: var(--color-text2);
   display: inline-block;
+  text-align: left;
 }
 .status_line::before {
   content: "";
@@ -1577,6 +1578,9 @@ textarea.form-control {
   left: 0;
   top: 50%;
   margin-top: -12px;
+}
+.status_line.nowrap {
+  white-space: nowrap;
 }
 
 /* gender_line */

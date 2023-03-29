@@ -640,8 +640,9 @@ textarea.form-control {display: block; height: 120px; resize: none;}
 
 /* status_line */
 .status_line {
-  position: relative; padding-left: 34px; font-weight: 600; color: var(--color-text2); display: inline-block;
+  position: relative; padding-left: 34px; font-weight: 600; color: var(--color-text2); display: inline-block; text-align: left;
   &::before {@include bf; @include icon(progress-icon,24px,24px); left: 0; top: 50%; margin-top: -12px;}
+  &.nowrap {white-space: nowrap;}
 }
 
 
